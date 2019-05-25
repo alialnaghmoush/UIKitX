@@ -2,7 +2,7 @@
 
 [![CI Status](https://img.shields.io/travis/alialnaghmoush/UIKitX.svg?style=flat)](https://travis-ci.org/alialnaghmoush/UIKitX)
 [![Version](https://img.shields.io/cocoapods/v/UIKitX.svg?style=flat)](https://cocoapods.org/pods/UIKitX)
-[![License](https://img.shields.io/cocoapods/l/UIKitX.svg?style=flat)](https://cocoapods.org/pods/UIKitX)
+[![License: MIL](https://img.shields.io/cocoapods/l/UIKitX.svg?style=flat)](https://cocoapods.org/pods/UIKitX)
 [![Platform](https://img.shields.io/cocoapods/p/UIKitX.svg?style=flat)](https://cocoapods.org/pods/UIKitX)
 
 **UIKitX** it is easy & powerful code for human use.
