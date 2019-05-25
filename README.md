@@ -5,6 +5,12 @@
 [![License](https://img.shields.io/cocoapods/l/UIKitX.svg?style=flat)](https://cocoapods.org/pods/UIKitX)
 [![Platform](https://img.shields.io/cocoapods/p/UIKitX.svg?style=flat)](https://cocoapods.org/pods/UIKitX)
 
+**UIKitX** it is easy & powerful code for human use.
+
+[![Language: Swift 2, 3, 4 and 5](https://img.shields.io/badge/Language-swift%205-orange.svg)](https://developer.apple.com/swift)
+![Platform: iOS 8+](https://img.shields.io/badge/Platform-iOS%20-blue.svg?style=flat)
+[![GitHub tag](https://img.shields.io/badge/Release-v1.0-green.svg?style=flat)]()
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
