@@ -1,0 +1,6 @@
+framework module Pods_UIKitX_Tests {
+  umbrella header "Pods-UIKitX_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

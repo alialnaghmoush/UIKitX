@@ -1,0 +1,16 @@
+PODS:
+  - UIKitX (0.1.0)
+
+DEPENDENCIES:
+  - UIKitX (from `../`)
+
+EXTERNAL SOURCES:
+  UIKitX:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  UIKitX: 1367d805b89853fc3141b9974bc7c90d0bd2ed4c
+
+PODFILE CHECKSUM: bc83cf1afc2bf76725feac3ae5dc30951e707eca
+
+COCOAPODS: 1.5.3
