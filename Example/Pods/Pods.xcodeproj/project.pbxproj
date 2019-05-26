@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		2AC729EADB95463A9EDF8A59A34F27E2 /* Pods-UIKitX_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3811372375C162AA4C1591B4E2891FA6 /* Pods-UIKitX_Tests-dummy.m */; };
 		38F143C32716BF06A286B17BFE2E5897 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		40ECF7BB229A0D1400742016 /* CornerMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7BA229A0D1400742016 /* CornerMask.swift */; };
+		40ECF7BD229A0D3300742016 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7BC229A0D3300742016 /* Direction.swift */; };
+		40ECF7C1229A0DAB00742016 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7C0229A0DAB00742016 /* Typealias.swift */; };
+		40ECF7C3229A0DBE00742016 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7C2229A0DBE00742016 /* Utility.swift */; };
+		40ECF7C5229A0DFC00742016 /* Easy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7C4229A0DFC00742016 /* Easy.swift */; };
+		40ECF7C7229A0E1800742016 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7C6229A0E1800742016 /* Shadow.swift */; };
 		65448F9C01E76506CFA700A16E35FFE2 /* Pods-UIKitX_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B5C4DA827B6C5893FD85BB41ADE6C090 /* Pods-UIKitX_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70E55F2E8B55988DB2E7FD43F58BD12D /* Pods-UIKitX_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 686686DA5416FC27F1220424B2C1D769 /* Pods-UIKitX_Example-dummy.m */; };
 		87B612B226050ADC17BBAE15B3719A9B /* UIKitX-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0899DCEEC6A2B784F59247CAA5FA6F11 /* UIKitX-dummy.m */; };
@@ -49,6 +55,12 @@
 		3811372375C162AA4C1591B4E2891FA6 /* Pods-UIKitX_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UIKitX_Tests-dummy.m"; sourceTree = "<group>"; };
 		3E2912CFF9013DDFD5759F273818DA59 /* Pods-UIKitX_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UIKitX_Tests-resources.sh"; sourceTree = "<group>"; };
 		3EF6C3FA64F480F435598F3BE5A06F22 /* Pods-UIKitX_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UIKitX_Example-frameworks.sh"; sourceTree = "<group>"; };
+		40ECF7BA229A0D1400742016 /* CornerMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CornerMask.swift; path = UIKitX/Classes/Helper/CornerMask.swift; sourceTree = "<group>"; };
+		40ECF7BC229A0D3300742016 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Direction.swift; path = UIKitX/Classes/Helper/Direction.swift; sourceTree = "<group>"; };
+		40ECF7C0229A0DAB00742016 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Typealias.swift; path = UIKitX/Classes/Helper/Typealias.swift; sourceTree = "<group>"; };
+		40ECF7C2229A0DBE00742016 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = UIKitX/Classes/Helper/Utility.swift; sourceTree = "<group>"; };
+		40ECF7C4229A0DFC00742016 /* Easy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Easy.swift; path = UIKitX/Classes/Easy/Easy.swift; sourceTree = "<group>"; };
+		40ECF7C6229A0E1800742016 /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Shadow.swift; path = UIKitX/Classes/Easy/Shadow.swift; sourceTree = "<group>"; };
 		4218CB9D255B12BFBEF1C7E5B433DE7B /* Pods-UIKitX_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UIKitX_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4AA61F03D2237C8ACA8B01D4D6BE3287 /* Pods-UIKitX_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UIKitX_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		4D7B94B8D5214F21DACDB59A302F23D2 /* Pods-UIKitX_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UIKitX_Example-resources.sh"; sourceTree = "<group>"; };
@@ -169,6 +181,12 @@
 			children = (
 				2DD208FE02A31C0BAFC69E7E51F852E4 /* Pod */,
 				8781390699F15D26DAFA412A5E19911A /* Support Files */,
+				40ECF7BA229A0D1400742016 /* CornerMask.swift */,
+				40ECF7BC229A0D3300742016 /* Direction.swift */,
+				40ECF7C0229A0DAB00742016 /* Typealias.swift */,
+				40ECF7C2229A0DBE00742016 /* Utility.swift */,
+				40ECF7C4229A0DFC00742016 /* Easy.swift */,
+				40ECF7C6229A0E1800742016 /* Shadow.swift */,
 			);
 			name = UIKitX;
 			path = ../..;
@@ -376,7 +394,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40ECF7C3229A0DBE00742016 /* Utility.swift in Sources */,
+				40ECF7BB229A0D1400742016 /* CornerMask.swift in Sources */,
 				87B612B226050ADC17BBAE15B3719A9B /* UIKitX-dummy.m in Sources */,
+				40ECF7C1229A0DAB00742016 /* Typealias.swift in Sources */,
+				40ECF7BD229A0D3300742016 /* Direction.swift in Sources */,
+				40ECF7C7229A0E1800742016 /* Shadow.swift in Sources */,
+				40ECF7C5229A0DFC00742016 /* Easy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +638,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8A46F417E1337F46237EF7A1FE6A11AD /* UIKitX.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -634,6 +659,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -717,6 +743,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8A46F417E1337F46237EF7A1FE6A11AD /* UIKitX.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
