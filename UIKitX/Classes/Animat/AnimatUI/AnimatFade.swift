@@ -5,7 +5,7 @@
 //  Created by Ali AlNaghmoush on 26/05/2019.
 //
 
-public extension UIView {
+extension UIView {
     
     /**
      Fade in a view with a duration and delay
@@ -13,7 +13,7 @@ public extension UIView {
      - parameter duration: custom animation duration
      - parameter delay: custom animation delay
      */
-    @discardableResult func fadeIn(from: CGFloat = 0.0, to: CGFloat = 1.0 ,duration: TimeInterval = 1, delay: TimeInterval = 0.0, curve: CurveType = .EaseInOut) -> UIView {
+    @discardableResult public func fadeIn(from: CGFloat = 0.0, to: CGFloat = 1.0 ,duration: TimeInterval = 1, delay: TimeInterval = 0.0, curve: CurveType = .EaseInOut) -> UIView {
         
         self.alpha = from
         
@@ -36,7 +36,7 @@ public extension UIView {
      - parameter duration: custom animation duration
      - parameter delay: custom animation delay
      */
-    @discardableResult func fadeOut(from: CGFloat = 1.0, to: CGFloat = 0.0 ,duration: TimeInterval = 1, delay: TimeInterval = 0.0, curve: CurveType = .EaseInOut) -> UIView {
+    @discardableResult public func fadeOut(from: CGFloat = 1.0, to: CGFloat = 0.0 ,duration: TimeInterval = 1, delay: TimeInterval = 0.0, curve: CurveType = .EaseInOut) -> UIView {
         
         self.alpha = from
         

@@ -5,10 +5,10 @@
 //  Created by Ali AlNaghmoush on 26/05/2019.
 //
 
-public extension UIView {
+extension UIView {
     
     @discardableResult
-    func center(_ to: UIView,
+    public func center(_ to: UIView,
                 moveX: CGFloat = 0,
                 moveY: CGFloat = 0,
                 safeArea: Bool = false,
@@ -23,7 +23,7 @@ public extension UIView {
     }
     
     @discardableResult
-    func center(moveX: CGFloat = 0,
+    public func center(moveX: CGFloat = 0,
                 moveY: CGFloat = 0,
                 safeArea: Bool = false,
                 relation: ConstraintRelation = .equal,

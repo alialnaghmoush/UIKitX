@@ -5,10 +5,10 @@
 //  Created by Ali AlNaghmoush on 26/05/2019.
 //
 
-public extension UIView {
+extension UIView {
     
     @discardableResult
-    func height(_ size: CGFloat,
+    public func height(_ size: CGFloat,
                 relation: ConstraintRelation = .equal,
                 priority: UILayoutPriority = .required,
                 active: Bool = true) -> UIView {

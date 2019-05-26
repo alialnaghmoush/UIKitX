@@ -5,10 +5,10 @@
 //  Created by Ali AlNaghmoush on 26/05/2019.
 //
 
-public extension UIView {
+extension UIView {
     
     @discardableResult
-    func fillHorizontally(_ to:      UIView,
+    public func fillHorizontally(_ to:      UIView,
                           spacLeft:  CGFloat,
                           spacRight: CGFloat,
                           safeArea:  Bool = false,
@@ -23,7 +23,7 @@ public extension UIView {
     }
     
     @discardableResult
-    func fillHorizontally(_ to:     UIView,
+    public func fillHorizontally(_ to:     UIView,
                           spaces:   CGFloat = 0,
                           safeArea: Bool = false,
                           relation: ConstraintRelation = .equal,
@@ -37,7 +37,7 @@ public extension UIView {
     }
     
     @discardableResult
-    func fillHorizontally(_ to:     UIView,
+    public func fillHorizontally(_ to:     UIView,
                           spaces:   [CGFloat],
                           safeArea: Bool = false,
                           relation: ConstraintRelation = .equal,
@@ -54,7 +54,7 @@ public extension UIView {
     // MARK: - With SafeArea
     
     @discardableResult
-    func fillHorizontally(spacLeft:  CGFloat,
+    public func fillHorizontally(spacLeft:  CGFloat,
                           spacRight: CGFloat ,
                           safeArea:  Bool,
                           relation:  ConstraintRelation = .equal,
@@ -68,7 +68,7 @@ public extension UIView {
     }
     
     @discardableResult
-    func fillHorizontally(_ spaces: [CGFloat],
+    public func fillHorizontally(_ spaces: [CGFloat],
                           safeArea: Bool = false,
                           relation: ConstraintRelation = .equal,
                           priority: UILayoutPriority = .required,
@@ -81,7 +81,7 @@ public extension UIView {
     }
     
     @discardableResult
-    func fillHorizontally(_ spaces:  CGFloat = 0,
+    public func fillHorizontally(_ spaces:  CGFloat = 0,
                           safeArea:  Bool = false,
                           relation:  ConstraintRelation = .equal,
                           priority:  UILayoutPriority = .required,

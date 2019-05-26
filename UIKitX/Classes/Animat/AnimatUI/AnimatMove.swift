@@ -5,7 +5,7 @@
 //  Created by Ali AlNaghmoush on 26/05/2019.
 //
 
-public extension UIView {
+extension UIView {
     
     /**
      Move Up a view with a duration and delay
@@ -13,7 +13,7 @@ public extension UIView {
      - parameter duration: custom animation duration
      - parameter delay: custom animation delay
      */
-    @discardableResult func moveUp(fromX: CGFloat = 0, fromY: CGFloat = 20,
+    @discardableResult public func moveUp(fromX: CGFloat = 0, fromY: CGFloat = 20,
                                    toX: CGFloat = 0, toY: CGFloat = 0,
                                    duration: TimeInterval = 1, delay: TimeInterval = 0.0,
                                    curve: CurveType = .EaseInOut) -> UIView {
@@ -39,7 +39,7 @@ public extension UIView {
      - parameter duration: custom animation duration
      - parameter delay: custom animation delay
      */
-    @discardableResult func moveDown(fromX: CGFloat = 0, fromY: CGFloat = -20,
+    @discardableResult public func moveDown(fromX: CGFloat = 0, fromY: CGFloat = -20,
                                      toX: CGFloat = 0, toY: CGFloat = 0,
                                      duration: TimeInterval = 1, delay: TimeInterval = 0.0,
                                      curve: CurveType = .EaseInOut) -> UIView {
@@ -65,7 +65,7 @@ public extension UIView {
      - parameter duration: custom animation duration
      - parameter delay: custom animation delay
      */
-    @discardableResult func moveDownOut(fromX: CGFloat = 0, fromY: CGFloat = 0,
+    @discardableResult public func moveDownOut(fromX: CGFloat = 0, fromY: CGFloat = 0,
                                         toX: CGFloat = 0, toY: CGFloat = -20,
                                         duration: TimeInterval = 1, delay: TimeInterval = 0.0,
                                         curve: CurveType = .EaseInOut) -> UIView {
@@ -91,7 +91,7 @@ public extension UIView {
      - parameter duration: custom animation duration
      - parameter delay: custom animation delay
      */
-    @discardableResult func moveRight(fromX: CGFloat = 20, fromY: CGFloat = 0,
+    @discardableResult public func moveRight(fromX: CGFloat = 20, fromY: CGFloat = 0,
                                       toX: CGFloat = 0, toY: CGFloat = 0,
                                       duration: TimeInterval = 1, delay: TimeInterval = 0.0,
                                       curve: CurveType = .EaseInOut) -> UIView {
@@ -117,7 +117,7 @@ public extension UIView {
      - parameter duration: custom animation duration
      - parameter delay: custom animation delay
      */
-    @discardableResult func moveLeft(fromX: CGFloat = -20, fromY: CGFloat = 0,
+    @discardableResult public func moveLeft(fromX: CGFloat = -20, fromY: CGFloat = 0,
                                      toX: CGFloat = 0, toY: CGFloat = 0,
                                      duration: TimeInterval = 1, delay: TimeInterval = 0.0,
                                      curve: CurveType = .EaseInOut) -> UIView {

@@ -5,10 +5,10 @@
 //  Created by Ali AlNaghmoush on 26/05/2019.
 //
 
-public extension UIView {
+extension UIView {
     
     @discardableResult
-    func left(_ to: NSLayoutXAxisAnchor,
+    public func left(_ to: NSLayoutXAxisAnchor,
               spacing: CGFloat = 0,
               relation: ConstraintRelation = .equal,
               priority: UILayoutPriority = .required,
@@ -42,7 +42,7 @@ public extension UIView {
     }
     
     @discardableResult
-    func left(_ to: UIView,
+    public func left(_ to: UIView,
               spacing: CGFloat = 0,
               safeArea: Bool = false,
               relation: ConstraintRelation = .equal,
@@ -59,7 +59,7 @@ public extension UIView {
     }
     
     @discardableResult
-    func left(_ spacing: CGFloat = 0,
+    public func left(_ spacing: CGFloat = 0,
               safeArea: Bool = false,
               relation: ConstraintRelation = .equal,
               priority: UILayoutPriority = .required,

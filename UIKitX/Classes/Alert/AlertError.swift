@@ -5,9 +5,9 @@
 //  Created by Ali AlNaghmoush on 26/05/2019.
 //
 
-public extension Alert {
+extension Alert {
     
-    static func error(_ show: Error?, direction: Direction = .rtl) {
+    static public func error(_ show: Error?, direction: Direction = .rtl) {
         
         switch direction {
         case .rtl:

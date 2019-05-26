@@ -5,10 +5,10 @@
 //  Created by Ali AlNaghmoush on 26/05/2019.
 //
 
-public extension UIView {
+extension UIView {
     
     @discardableResult
-    func fillRight(_ to:       UIView,
+    public func fillRight(_ to:       UIView,
                    spacUp:     CGFloat,
                    spacRight:  CGFloat,
                    spacBottom: CGFloat,
@@ -25,7 +25,7 @@ public extension UIView {
     }
     
     @discardableResult
-    func fillRight(_ to:     UIView,
+    public func fillRight(_ to:     UIView,
                    spaces:   CGFloat = 0,
                    safeArea: Bool = false,
                    relation: ConstraintRelation = .equal,
@@ -39,7 +39,7 @@ public extension UIView {
     }
     
     @discardableResult
-    func fillRight(_ to:     UIView,
+    public func fillRight(_ to:     UIView,
                    spaces:   [CGFloat],
                    safeArea: Bool = false,
                    relation: ConstraintRelation = .equal,
@@ -56,7 +56,7 @@ public extension UIView {
     // MARK: - With SafeArea
     
     @discardableResult
-    func fillRight(spacUp:     CGFloat,
+    public func fillRight(spacUp:     CGFloat,
                    spacRight:  CGFloat ,
                    spacBottom: CGFloat,
                    safeArea:   Bool,
@@ -72,7 +72,7 @@ public extension UIView {
     }
     
     @discardableResult
-    func fillRight(_ spaces:  CGFloat = 0,
+    public func fillRight(_ spaces:  CGFloat = 0,
                    safeArea:  Bool = false,
                    relation:  ConstraintRelation = .equal,
                    priority:  UILayoutPriority = .required,
@@ -85,7 +85,7 @@ public extension UIView {
     }
     
     @discardableResult
-    func fillRight(_ spaces: [CGFloat],
+    public func fillRight(_ spaces: [CGFloat],
                    safeArea: Bool = false,
                    relation: ConstraintRelation = .equal,
                    priority: UILayoutPriority = .required,

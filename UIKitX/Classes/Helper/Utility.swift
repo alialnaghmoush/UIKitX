@@ -26,3 +26,12 @@ extension String {
         }
     }
 }
+
+
+extension UIView {
+    public func toCGColor(_ colors: [UIColor]) -> [CGColor] {
+        let to: [CGColor] = colors.map({$0.cgColor})
+        return to
+    }
+}
+

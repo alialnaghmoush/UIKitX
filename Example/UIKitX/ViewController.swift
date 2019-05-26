@@ -15,8 +15,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        t()
+    }
+    
+    func t() {
         
         viewX.shadow(.down5).cornerRadius(10).moveUp().fadeIn()
+        
     }
     
 }

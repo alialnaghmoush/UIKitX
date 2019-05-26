@@ -5,10 +5,10 @@
 //  Created by Ali AlNaghmoush on 26/05/2019.
 //
 
-public extension UIView {
+extension UIView {
     
     @discardableResult
-    func centerY(_ to: NSLayoutYAxisAnchor,
+    public func centerY(_ to: NSLayoutYAxisAnchor,
                  move: CGFloat = 0,
                  relation: ConstraintRelation = .equal,
                  priority: UILayoutPriority = .required,
@@ -42,7 +42,7 @@ public extension UIView {
     }
     
     @discardableResult
-    func centerY(_ to: UIView,
+    public func centerY(_ to: UIView,
                  move: CGFloat = 0,
                  safeArea: Bool = false,
                  relation: ConstraintRelation = .equal,
@@ -60,7 +60,7 @@ public extension UIView {
     }
     
     @discardableResult
-    func centerY(_ move: CGFloat = 0,
+    public func centerY(_ move: CGFloat = 0,
                  safeArea: Bool = false,
                  relation: ConstraintRelation = .equal,
                  priority: UILayoutPriority = .required,

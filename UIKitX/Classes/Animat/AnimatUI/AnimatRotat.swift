@@ -5,7 +5,7 @@
 //  Created by Ali AlNaghmoush on 26/05/2019.
 //
 
-public extension UIView {
+extension UIView {
     
     /**
      Move Up a view with a duration and delay
@@ -14,7 +14,7 @@ public extension UIView {
      - parameter delay: custom animation delay
      */
     
-    @discardableResult func rotat(from: CGFloat = 0.0, to: CGFloat ,duration: TimeInterval = 1, delay: TimeInterval = 0.0, curve: CurveType = .EaseInOut) -> UIView {
+    @discardableResult public func rotat(from: CGFloat = 0.0, to: CGFloat ,duration: TimeInterval = 1, delay: TimeInterval = 0.0, curve: CurveType = .EaseInOut) -> UIView {
         
         self.transform = CGAffineTransform(rotationAngle: from * .pi / 180)
         

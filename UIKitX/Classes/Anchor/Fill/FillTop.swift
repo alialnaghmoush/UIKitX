@@ -5,10 +5,10 @@
 //  Created by Ali AlNaghmoush on 26/05/2019.
 //
 
-public extension UIView {
+extension UIView {
     
     @discardableResult
-    func fillTop(_ to:   UIView,
+    public func fillTop(_ to:   UIView,
                  spacUp:    CGFloat,
                  spacLeft:  CGFloat,
                  spacRight: CGFloat,
@@ -25,7 +25,7 @@ public extension UIView {
     }
     
     @discardableResult
-    func fillTop(_ to:     UIView,
+    public func fillTop(_ to:     UIView,
                  spaces:   CGFloat = 0,
                  safeArea: Bool = false,
                  relation: ConstraintRelation = .equal,
@@ -39,7 +39,7 @@ public extension UIView {
     }
     
     @discardableResult
-    func fillTop(_ to:  UIView,
+    public func fillTop(_ to:  UIView,
                  spaces:   [CGFloat],
                  safeArea: Bool = false,
                  relation: ConstraintRelation = .equal,
@@ -57,7 +57,7 @@ public extension UIView {
     // MARK: - With Superview
     
     @discardableResult
-    func fillTop(spacUp:     CGFloat,
+    public func fillTop(spacUp:     CGFloat,
                  spacLeft:   CGFloat,
                  spacRight:  CGFloat ,
                  safeArea:   Bool,
@@ -73,7 +73,7 @@ public extension UIView {
     }
     
     @discardableResult
-    func fillTop(_ spaces:  CGFloat = 0,
+    public func fillTop(_ spaces:  CGFloat = 0,
                  safeArea:  Bool = false,
                  relation:  ConstraintRelation = .equal,
                  priority:  UILayoutPriority = .required,
@@ -86,7 +86,7 @@ public extension UIView {
     }
     
     @discardableResult
-    func fillTop(_ spaces: [CGFloat],
+    public func fillTop(_ spaces: [CGFloat],
                  safeArea: Bool = false,
                  relation: ConstraintRelation = .equal,
                  priority: UILayoutPriority = .required,

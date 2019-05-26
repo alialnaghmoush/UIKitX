@@ -5,10 +5,10 @@
 //  Created by Ali AlNaghmoush on 26/05/2019.
 //
 
-public extension UIView {
+extension UIView {
     
     @discardableResult
-    func fillVertically(_ to:       UIView,
+    public func fillVertically(_ to:       UIView,
                         spacUp:     CGFloat,
                         spacBottom: CGFloat,
                         safeArea:   Bool = false,
@@ -23,7 +23,7 @@ public extension UIView {
     }
     
     @discardableResult
-    func fillVertically(_ to:     UIView,
+    public func fillVertically(_ to:     UIView,
                         spaces:   CGFloat = 0,
                         safeArea: Bool = false,
                         relation: ConstraintRelation = .equal,
@@ -37,7 +37,7 @@ public extension UIView {
     }
     
     @discardableResult
-    func fillVertically(_ to:     UIView,
+    public func fillVertically(_ to:     UIView,
                         spaces:   [CGFloat],
                         safeArea: Bool = false,
                         relation: ConstraintRelation = .equal,
@@ -55,7 +55,7 @@ public extension UIView {
     // MARK: - With SafeArea
     
     @discardableResult
-    func fillVertically(spacUp:     CGFloat,
+    public func fillVertically(spacUp:     CGFloat,
                         spacBottom: CGFloat,
                         safeArea:   Bool,
                         relation:   ConstraintRelation = .equal,
@@ -69,7 +69,7 @@ public extension UIView {
     }
     
     @discardableResult
-    func fillVertically(_ spaces:  CGFloat = 0,
+    public func fillVertically(_ spaces:  CGFloat = 0,
                         safeArea:  Bool = false,
                         relation:  ConstraintRelation = .equal,
                         priority:  UILayoutPriority = .required,
@@ -82,7 +82,7 @@ public extension UIView {
     }
     
     @discardableResult
-    func fillVertically(_ spaces: [CGFloat],
+    public func fillVertically(_ spaces: [CGFloat],
                         safeArea: Bool = false,
                         relation: ConstraintRelation = .equal,
                         priority: UILayoutPriority = .required,

@@ -8,3 +8,4 @@
 public enum Direction {
     case rtl, ltr
 }
+

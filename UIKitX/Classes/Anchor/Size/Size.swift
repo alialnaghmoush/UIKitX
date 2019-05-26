@@ -5,10 +5,10 @@
 //  Created by Ali AlNaghmoush on 26/05/2019.
 //
 
-public extension UIView {
+extension UIView {
     
     @discardableResult
-    func size(_ h: CGFloat,
+    public func size(_ h: CGFloat,
               _ w: CGFloat,
               relation: ConstraintRelation = .equal,
               priority: UILayoutPriority = .required,
@@ -22,7 +22,7 @@ public extension UIView {
     
     
     @discardableResult
-    func size(_ set: CGFloat,
+    public func size(_ set: CGFloat,
               relation: ConstraintRelation = .equal,
               priority: UILayoutPriority = .required,
               active: Bool = true) -> UIView {
@@ -33,7 +33,7 @@ public extension UIView {
     }
     
     @discardableResult
-    func size(_ set: [CGFloat],
+    public func size(_ set: [CGFloat],
               relation: ConstraintRelation = .equal,
               priority: UILayoutPriority = .required,
               active: Bool = true) -> UIView {
