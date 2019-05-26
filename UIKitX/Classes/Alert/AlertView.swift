@@ -97,7 +97,6 @@ public class AlertView: UIView {
         
     }
     
-    
     //MARK: - Private Methods Animation
     /// Swipe Up Gesture Recognizer
     @objc private func dismissAlert(_ sender: Any) {

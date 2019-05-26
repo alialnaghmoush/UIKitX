@@ -90,19 +90,19 @@
 		3811372375C162AA4C1591B4E2891FA6 /* Pods-UIKitX_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UIKitX_Tests-dummy.m"; sourceTree = "<group>"; };
 		3E2912CFF9013DDFD5759F273818DA59 /* Pods-UIKitX_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UIKitX_Tests-resources.sh"; sourceTree = "<group>"; };
 		3EF6C3FA64F480F435598F3BE5A06F22 /* Pods-UIKitX_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UIKitX_Example-frameworks.sh"; sourceTree = "<group>"; };
-		40ECF7BA229A0D1400742016 /* CornerMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerMask.swift; sourceTree = "<group>"; };
-		40ECF7BC229A0D3300742016 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
-		40ECF7C0229A0DAB00742016 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
-		40ECF7C2229A0DBE00742016 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
-		40ECF7C4229A0DFC00742016 /* Easy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Easy.swift; sourceTree = "<group>"; };
-		40ECF7C6229A0E1800742016 /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
-		40ECF7C8229A0F4E00742016 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		40ECF7CA229A0FB600742016 /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
-		40ECF7CC229A0FC700742016 /* MaterialColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialColor.swift; sourceTree = "<group>"; };
-		40ECF7CE229A10FF00742016 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
-		40ECF7D0229A111B00742016 /* AlertError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertError.swift; sourceTree = "<group>"; };
-		40ECF7D2229A112800742016 /* AlertStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertStatus.swift; sourceTree = "<group>"; };
-		40ECF7D4229A114000742016 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		40ECF7BA229A0D1400742016 /* CornerMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CornerMask.swift; path = UIKitX/Classes/Helper/CornerMask.swift; sourceTree = "<group>"; };
+		40ECF7BC229A0D3300742016 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Direction.swift; path = UIKitX/Classes/Helper/Direction.swift; sourceTree = "<group>"; };
+		40ECF7C0229A0DAB00742016 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Typealias.swift; path = UIKitX/Classes/Helper/Typealias.swift; sourceTree = "<group>"; };
+		40ECF7C2229A0DBE00742016 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = UIKitX/Classes/Helper/Utility.swift; sourceTree = "<group>"; };
+		40ECF7C4229A0DFC00742016 /* Easy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Easy.swift; path = UIKitX/Classes/Easy/Easy.swift; sourceTree = "<group>"; };
+		40ECF7C6229A0E1800742016 /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Shadow.swift; path = UIKitX/Classes/Easy/Shadow.swift; sourceTree = "<group>"; };
+		40ECF7C8229A0F4E00742016 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Color.swift; path = UIKitX/Classes/Color/Color.swift; sourceTree = "<group>"; };
+		40ECF7CA229A0FB600742016 /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HexColor.swift; path = UIKitX/Classes/Color/HexColor.swift; sourceTree = "<group>"; };
+		40ECF7CC229A0FC700742016 /* MaterialColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MaterialColor.swift; path = UIKitX/Classes/Color/MaterialColor.swift; sourceTree = "<group>"; };
+		40ECF7CE229A10FF00742016 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Alert.swift; path = UIKitX/Classes/Alert/Alert.swift; sourceTree = "<group>"; };
+		40ECF7D0229A111B00742016 /* AlertError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertError.swift; path = UIKitX/Classes/Alert/AlertError.swift; sourceTree = "<group>"; };
+		40ECF7D2229A112800742016 /* AlertStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertStatus.swift; path = UIKitX/Classes/Alert/AlertStatus.swift; sourceTree = "<group>"; };
+		40ECF7D4229A114000742016 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertView.swift; path = UIKitX/Classes/Alert/AlertView.swift; sourceTree = "<group>"; };
 		40ECF7DE229A128F00742016 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Shapes.swift; path = UIKitX/Classes/Shapes/ShapesUtility/Shapes.swift; sourceTree = "<group>"; };
 		40ECF7E0229A12D200742016 /* ResizingBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResizingBehavior.swift; path = UIKitX/Classes/Shapes/ShapesUtility/ResizingBehavior.swift; sourceTree = "<group>"; };
 		40ECF7E7229A135A00742016 /* ErrorShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ErrorShape.swift; path = UIKitX/Classes/Shapes/ShapesUI/ErrorShape.swift; sourceTree = "<group>"; };
@@ -403,12 +403,12 @@
 		8244BC2F8358700B684F86BB894355BA /* UIKitX */ = {
 			isa = PBXGroup;
 			children = (
-				40ECF7FC229A151000742016 /* Anchor */,
-				40ECF7EF229A140800742016 /* Animat */,
 				40ECF7D9229A11D100742016 /* Helper */,
 				40ECF7DB229A11FE00742016 /* Easy */,
 				40ECF7DD229A121400742016 /* Color */,
 				40ECF7D7229A11AC00742016 /* Alert */,
+				40ECF7FC229A151000742016 /* Anchor */,
+				40ECF7EF229A140800742016 /* Animat */,
 				40ECF7E4229A131200742016 /* Shapes */,
 				2DD208FE02A31C0BAFC69E7E51F852E4 /* Pod */,
 				8781390699F15D26DAFA412A5E19911A /* Support Files */,
