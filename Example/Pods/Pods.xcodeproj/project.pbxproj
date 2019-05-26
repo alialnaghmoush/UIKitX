@@ -95,7 +95,7 @@
 		3811372375C162AA4C1591B4E2891FA6 /* Pods-UIKitX_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UIKitX_Tests-dummy.m"; sourceTree = "<group>"; };
 		3E2912CFF9013DDFD5759F273818DA59 /* Pods-UIKitX_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UIKitX_Tests-resources.sh"; sourceTree = "<group>"; };
 		3EF6C3FA64F480F435598F3BE5A06F22 /* Pods-UIKitX_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UIKitX_Example-frameworks.sh"; sourceTree = "<group>"; };
-		402DFA0A229AB9520027FF71 /* EasyLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyLayer.swift; sourceTree = "<group>"; };
+		402DFA0A229AB9520027FF71 /* EasyLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EasyLayer.swift; path = UIKitX/Classes/Easy/EasyLayer.swift; sourceTree = "<group>"; };
 		402DFA10229ACC660027FF71 /* GradientColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradientColor.swift; path = UIKitX/Classes/Color/GradientColor/GradientColor.swift; sourceTree = "<group>"; };
 		402DFA13229ACD810027FF71 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Position.swift; path = UIKitX/Classes/Helper/Position.swift; sourceTree = "<group>"; };
 		402DFA15229AD48B0027FF71 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Gradient.swift; path = UIKitX/Classes/Color/GradientColor/Gradient.swift; sourceTree = "<group>"; };
