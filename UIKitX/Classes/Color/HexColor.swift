@@ -5,10 +5,9 @@
 //  Created by Ali AlNaghmoush on 26/05/2019.
 //
 
-public extension HexColor {
-    typealias Hex = String
-    
-    convenience init?(_ hex: Hex, alpha: CGFloat? = nil) {
+extension HexColor {
+        
+    convenience public init?(_ hex: Hex, alpha: CGFloat? = nil) {
         
         guard let hexType = Type(from: hex), let components = hexType.components() else {
             return nil

@@ -7,13 +7,17 @@
 //
 
 import UIKit
+import UIKitX
 
 class ViewController: UIViewController {
-
+        
+    @IBOutlet weak var viewX: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        viewX.shadow(.down5).cornerRadius(10).moveUp().fadeIn()
     }
-
+    
 }
 

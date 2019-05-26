@@ -15,7 +15,7 @@ public enum Elevation {
     
 }
 
-public extension UIView {
+extension UIView {
     
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
     // MARK: - Shadow Layer
@@ -27,7 +27,7 @@ public extension UIView {
     /// - Parameter x: There is a direction of the shadow from the right in case the number is positive (+) and the amy in case the number is negative (-) - (0.0 is the default).
     /// - Parameter y: There is a direction of the shadow from the bottom in case the number is positive (+) and the highest in case the number is negative (-) - (8.0 is the default).
     @discardableResult
-    func shadow(_ color: UIColor = .black,
+    public func shadow(_ color: UIColor = .black,
                 _ opacity: Float = 0.10,
                 _ blur: CGFloat = 10.0,
                 _ x: CGFloat = 0.0,
@@ -47,7 +47,7 @@ public extension UIView {
     /// - Parameter elevation: Here you can choose the direction and depth of shadows up to 5 levels.
     /// - Parameter color: Here you can put shadow color (black is the default color).
     @discardableResult
-    func shadow(_ elevation: Elevation, color: UIColor = .black) -> UIView {
+    public func shadow(_ elevation: Elevation, color: UIColor = .black) -> UIView {
         
         switch elevation {
             

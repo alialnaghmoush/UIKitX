@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		2AC729EADB95463A9EDF8A59A34F27E2 /* Pods-UIKitX_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3811372375C162AA4C1591B4E2891FA6 /* Pods-UIKitX_Tests-dummy.m */; };
 		38F143C32716BF06A286B17BFE2E5897 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		402DFA0B229AB9520027FF71 /* EasyLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402DFA0A229AB9520027FF71 /* EasyLayer.swift */; };
+		402DFA0D229ABB050027FF71 /* GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402DFA0C229ABB050027FF71 /* GradientColor.swift */; };
 		40ECF7BB229A0D1400742016 /* CornerMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7BA229A0D1400742016 /* CornerMask.swift */; };
 		40ECF7BD229A0D3300742016 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7BC229A0D3300742016 /* Direction.swift */; };
 		40ECF7C1229A0DAB00742016 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7C0229A0DAB00742016 /* Typealias.swift */; };
 		40ECF7C3229A0DBE00742016 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7C2229A0DBE00742016 /* Utility.swift */; };
-		40ECF7C5229A0DFC00742016 /* Easy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7C4229A0DFC00742016 /* Easy.swift */; };
+		40ECF7C5229A0DFC00742016 /* EasyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7C4229A0DFC00742016 /* EasyView.swift */; };
 		40ECF7C7229A0E1800742016 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7C6229A0E1800742016 /* Shadow.swift */; };
 		40ECF7C9229A0F4E00742016 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7C8229A0F4E00742016 /* Color.swift */; };
 		40ECF7CB229A0FB600742016 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7CA229A0FB600742016 /* HexColor.swift */; };
@@ -90,11 +92,13 @@
 		3811372375C162AA4C1591B4E2891FA6 /* Pods-UIKitX_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UIKitX_Tests-dummy.m"; sourceTree = "<group>"; };
 		3E2912CFF9013DDFD5759F273818DA59 /* Pods-UIKitX_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UIKitX_Tests-resources.sh"; sourceTree = "<group>"; };
 		3EF6C3FA64F480F435598F3BE5A06F22 /* Pods-UIKitX_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UIKitX_Example-frameworks.sh"; sourceTree = "<group>"; };
+		402DFA0A229AB9520027FF71 /* EasyLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyLayer.swift; sourceTree = "<group>"; };
+		402DFA0C229ABB050027FF71 /* GradientColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradientColor.swift; path = UIKitX/Classes/Color/GradientColor.swift; sourceTree = "<group>"; };
 		40ECF7BA229A0D1400742016 /* CornerMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CornerMask.swift; path = UIKitX/Classes/Helper/CornerMask.swift; sourceTree = "<group>"; };
 		40ECF7BC229A0D3300742016 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Direction.swift; path = UIKitX/Classes/Helper/Direction.swift; sourceTree = "<group>"; };
 		40ECF7C0229A0DAB00742016 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Typealias.swift; path = UIKitX/Classes/Helper/Typealias.swift; sourceTree = "<group>"; };
 		40ECF7C2229A0DBE00742016 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = UIKitX/Classes/Helper/Utility.swift; sourceTree = "<group>"; };
-		40ECF7C4229A0DFC00742016 /* Easy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Easy.swift; path = UIKitX/Classes/Easy/Easy.swift; sourceTree = "<group>"; };
+		40ECF7C4229A0DFC00742016 /* EasyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EasyView.swift; path = UIKitX/Classes/Easy/EasyView.swift; sourceTree = "<group>"; };
 		40ECF7C6229A0E1800742016 /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Shadow.swift; path = UIKitX/Classes/Easy/Shadow.swift; sourceTree = "<group>"; };
 		40ECF7C8229A0F4E00742016 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Color.swift; path = UIKitX/Classes/Color/Color.swift; sourceTree = "<group>"; };
 		40ECF7CA229A0FB600742016 /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HexColor.swift; path = UIKitX/Classes/Color/HexColor.swift; sourceTree = "<group>"; };
@@ -252,7 +256,8 @@
 		40ECF7DB229A11FE00742016 /* Easy */ = {
 			isa = PBXGroup;
 			children = (
-				40ECF7C4229A0DFC00742016 /* Easy.swift */,
+				40ECF7C4229A0DFC00742016 /* EasyView.swift */,
+				402DFA0A229AB9520027FF71 /* EasyLayer.swift */,
 				40ECF7C6229A0E1800742016 /* Shadow.swift */,
 			);
 			name = Easy;
@@ -264,6 +269,7 @@
 				40ECF7C8229A0F4E00742016 /* Color.swift */,
 				40ECF7CA229A0FB600742016 /* HexColor.swift */,
 				40ECF7CC229A0FC700742016 /* MaterialColor.swift */,
+				402DFA0C229ABB050027FF71 /* GradientColor.swift */,
 			);
 			name = Color;
 			sourceTree = "<group>";
@@ -638,6 +644,7 @@
 				40ECF81A229A195600742016 /* FillTop.swift in Sources */,
 				40ECF80A229A189E00742016 /* Center.swift in Sources */,
 				40ECF7EE229A139B00742016 /* WarningShape.swift in Sources */,
+				402DFA0D229ABB050027FF71 /* GradientColor.swift in Sources */,
 				40ECF7DF229A128F00742016 /* Shapes.swift in Sources */,
 				40ECF818229A193C00742016 /* Fill.swift in Sources */,
 				87B612B226050ADC17BBAE15B3719A9B /* UIKitX-dummy.m in Sources */,
@@ -659,8 +666,9 @@
 				40ECF7CF229A10FF00742016 /* Alert.swift in Sources */,
 				40ECF7CB229A0FB600742016 /* HexColor.swift in Sources */,
 				40ECF7EC229A138400742016 /* SuccessShape.swift in Sources */,
+				402DFA0B229AB9520027FF71 /* EasyLayer.swift in Sources */,
 				40ECF814229A190F00742016 /* Height.swift in Sources */,
-				40ECF7C5229A0DFC00742016 /* Easy.swift in Sources */,
+				40ECF7C5229A0DFC00742016 /* EasyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

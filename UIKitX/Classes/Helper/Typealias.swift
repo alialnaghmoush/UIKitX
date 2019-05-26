@@ -17,3 +17,5 @@ public typealias StackAlignment = UIStackView.Alignment
 public typealias StackDistribution = UIStackView.Distribution
 
 public typealias HexColor = UIColor
+public typealias Hex = String
+
