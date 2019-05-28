@@ -3,17 +3,65 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2AC729EADB95463A9EDF8A59A34F27E2 /* Pods-UIKitX_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3811372375C162AA4C1591B4E2891FA6 /* Pods-UIKitX_Tests-dummy.m */; };
 		38F143C32716BF06A286B17BFE2E5897 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		402DFA0B229AB9520027FF71 /* EasyLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402DFA0A229AB9520027FF71 /* EasyLayer.swift */; };
 		402DFA11229ACC660027FF71 /* GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402DFA10229ACC660027FF71 /* GradientColor.swift */; };
 		402DFA14229ACD810027FF71 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402DFA13229ACD810027FF71 /* Position.swift */; };
 		402DFA16229AD48B0027FF71 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402DFA15229AD48B0027FF71 /* Gradient.swift */; };
-		402DFA18229AD4DF0027FF71 /* GradientName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402DFA17229AD4DF0027FF71 /* GradientName.swift */; };
+		408EB3DD229B460B00548216 /* EasyLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EB3DC229B460B00548216 /* EasyLayer.swift */; };
+		408EB3EB229CB01000548216 /* AxesPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EB3EA229CB01000548216 /* AxesPoint.swift */; };
+		408EB3ED229CB15400548216 /* GradientName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EB3EC229CB15400548216 /* GradientName.swift */; };
+		408EB3EE229CB1F300548216 /* GradientName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EB3EC229CB15400548216 /* GradientName.swift */; };
+		408EB3EF229CB1F600548216 /* GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402DFA10229ACC660027FF71 /* GradientColor.swift */; };
+		408EB3F0229CB1F800548216 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402DFA15229AD48B0027FF71 /* Gradient.swift */; };
+		408EB3F1229CB1FC00548216 /* MaterialColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7CC229A0FC700742016 /* MaterialColor.swift */; };
+		408EB3F2229CB1FF00548216 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7CA229A0FB600742016 /* HexColor.swift */; };
+		408EB3F3229CB20100548216 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7C8229A0F4E00742016 /* Color.swift */; };
+		408EB3F4229CB20500548216 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7C6229A0E1800742016 /* Shadow.swift */; };
+		408EB3F5229CB20800548216 /* EasyLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EB3DC229B460B00548216 /* EasyLayer.swift */; };
+		408EB3F6229CB20A00548216 /* EasyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7C4229A0DFC00742016 /* EasyView.swift */; };
+		408EB3F7229CB20D00548216 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7C2229A0DBE00742016 /* Utility.swift */; };
+		408EB3F8229CB20F00548216 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7C0229A0DAB00742016 /* Typealias.swift */; };
+		408EB3F9229CB21200548216 /* AxesPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EB3EA229CB01000548216 /* AxesPoint.swift */; };
+		408EB3FA229CB21400548216 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402DFA13229ACD810027FF71 /* Position.swift */; };
+		408EB3FB229CB21700548216 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7BC229A0D3300742016 /* Direction.swift */; };
+		408EB3FC229CB21900548216 /* CornerMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7BA229A0D1400742016 /* CornerMask.swift */; };
+		408EB3FD229CB70400548216 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7CE229A10FF00742016 /* Alert.swift */; };
+		408EB3FE229CB70400548216 /* AlertError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7D0229A111B00742016 /* AlertError.swift */; };
+		408EB3FF229CB70400548216 /* AlertStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7D2229A112800742016 /* AlertStatus.swift */; };
+		408EB400229CB70400548216 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7D4229A114000742016 /* AlertView.swift */; };
+		408EB401229CB70E00548216 /* Top.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF801229A185300742016 /* Top.swift */; };
+		408EB402229CB70E00548216 /* Left.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF803229A186500742016 /* Left.swift */; };
+		408EB403229CB70E00548216 /* Right.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF805229A187500742016 /* Right.swift */; };
+		408EB404229CB70E00548216 /* Bottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF807229A188500742016 /* Bottom.swift */; };
+		408EB405229CB71300548216 /* Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF809229A189E00742016 /* Center.swift */; };
+		408EB406229CB71300548216 /* CenterX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF80D229A18D300742016 /* CenterX.swift */; };
+		408EB407229CB71300548216 /* CenterY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF80F229A18E500742016 /* CenterY.swift */; };
+		408EB408229CB71800548216 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF811229A18FC00742016 /* Size.swift */; };
+		408EB409229CB71800548216 /* Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF813229A190F00742016 /* Height.swift */; };
+		408EB40A229CB71800548216 /* Width.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF815229A192200742016 /* Width.swift */; };
+		408EB40B229CB71E00548216 /* Fill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF817229A193C00742016 /* Fill.swift */; };
+		408EB40C229CB71E00548216 /* FillTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF819229A195600742016 /* FillTop.swift */; };
+		408EB40D229CB71E00548216 /* FillLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF81B229A196A00742016 /* FillLeft.swift */; };
+		408EB40E229CB71E00548216 /* FillRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF81D229A197A00742016 /* FillRight.swift */; };
+		408EB40F229CB71E00548216 /* FillBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF81F229A198D00742016 /* FillBottom.swift */; };
+		408EB410229CB71E00548216 /* FillVertically.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF821229A199F00742016 /* FillVertically.swift */; };
+		408EB411229CB71E00548216 /* FillHorizontally.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF823229A19B000742016 /* FillHorizontally.swift */; };
+		408EB412229CB72600548216 /* AnimatFade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7F4229A14A700742016 /* AnimatFade.swift */; };
+		408EB413229CB72600548216 /* AnimatMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7F6229A14C100742016 /* AnimatMove.swift */; };
+		408EB414229CB72600548216 /* AnimatRotat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7F8229A14D500742016 /* AnimatRotat.swift */; };
+		408EB415229CB72600548216 /* AnimatScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7FA229A14E500742016 /* AnimatScale.swift */; };
+		408EB416229CB72B00548216 /* CurveType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7F1229A145A00742016 /* CurveType.swift */; };
+		408EB417229CB73E00548216 /* ErrorShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7E7229A135A00742016 /* ErrorShape.swift */; };
+		408EB418229CB73E00548216 /* InfoShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7E9229A137000742016 /* InfoShape.swift */; };
+		408EB419229CB73E00548216 /* SuccessShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7EB229A138400742016 /* SuccessShape.swift */; };
+		408EB41A229CB73E00548216 /* WarningShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7ED229A139B00742016 /* WarningShape.swift */; };
+		408EB41B229CB74200548216 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7DE229A128F00742016 /* Shapes.swift */; };
+		408EB41C229CB74200548216 /* ResizingBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7E0229A12D200742016 /* ResizingBehavior.swift */; };
 		40ECF7BB229A0D1400742016 /* CornerMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7BA229A0D1400742016 /* CornerMask.swift */; };
 		40ECF7BD229A0D3300742016 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7BC229A0D3300742016 /* Direction.swift */; };
 		40ECF7C1229A0DAB00742016 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7C0229A0DAB00742016 /* Typealias.swift */; };
@@ -95,11 +143,12 @@
 		3811372375C162AA4C1591B4E2891FA6 /* Pods-UIKitX_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UIKitX_Tests-dummy.m"; sourceTree = "<group>"; };
 		3E2912CFF9013DDFD5759F273818DA59 /* Pods-UIKitX_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UIKitX_Tests-resources.sh"; sourceTree = "<group>"; };
 		3EF6C3FA64F480F435598F3BE5A06F22 /* Pods-UIKitX_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UIKitX_Example-frameworks.sh"; sourceTree = "<group>"; };
-		402DFA0A229AB9520027FF71 /* EasyLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EasyLayer.swift; path = UIKitX/Classes/Easy/EasyLayer.swift; sourceTree = "<group>"; };
 		402DFA10229ACC660027FF71 /* GradientColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradientColor.swift; path = UIKitX/Classes/Color/GradientColor/GradientColor.swift; sourceTree = "<group>"; };
 		402DFA13229ACD810027FF71 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Position.swift; path = UIKitX/Classes/Helper/Position.swift; sourceTree = "<group>"; };
 		402DFA15229AD48B0027FF71 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Gradient.swift; path = UIKitX/Classes/Color/GradientColor/Gradient.swift; sourceTree = "<group>"; };
-		402DFA17229AD4DF0027FF71 /* GradientName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradientName.swift; path = UIKitX/Classes/Color/GradientColor/GradientName.swift; sourceTree = "<group>"; };
+		408EB3DC229B460B00548216 /* EasyLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EasyLayer.swift; path = UIKitX/Classes/Easy/EasyLayer.swift; sourceTree = "<group>"; };
+		408EB3EA229CB01000548216 /* AxesPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AxesPoint.swift; path = UIKitX/Classes/Helper/AxesPoint.swift; sourceTree = "<group>"; };
+		408EB3EC229CB15400548216 /* GradientName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradientName.swift; path = UIKitX/Classes/Color/GradientColor/GradientName.swift; sourceTree = "<group>"; };
 		40ECF7BA229A0D1400742016 /* CornerMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CornerMask.swift; path = UIKitX/Classes/Helper/CornerMask.swift; sourceTree = "<group>"; };
 		40ECF7BC229A0D3300742016 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Direction.swift; path = UIKitX/Classes/Helper/Direction.swift; sourceTree = "<group>"; };
 		40ECF7C0229A0DAB00742016 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Typealias.swift; path = UIKitX/Classes/Helper/Typealias.swift; sourceTree = "<group>"; };
@@ -242,7 +291,7 @@
 			children = (
 				402DFA15229AD48B0027FF71 /* Gradient.swift */,
 				402DFA10229ACC660027FF71 /* GradientColor.swift */,
-				402DFA17229AD4DF0027FF71 /* GradientName.swift */,
+				408EB3EC229CB15400548216 /* GradientName.swift */,
 			);
 			name = GradientColor;
 			sourceTree = "<group>";
@@ -264,6 +313,7 @@
 				40ECF7BA229A0D1400742016 /* CornerMask.swift */,
 				40ECF7BC229A0D3300742016 /* Direction.swift */,
 				402DFA13229ACD810027FF71 /* Position.swift */,
+				408EB3EA229CB01000548216 /* AxesPoint.swift */,
 				40ECF7C0229A0DAB00742016 /* Typealias.swift */,
 				40ECF7C2229A0DBE00742016 /* Utility.swift */,
 			);
@@ -274,7 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				40ECF7C4229A0DFC00742016 /* EasyView.swift */,
-				402DFA0A229AB9520027FF71 /* EasyLayer.swift */,
+				408EB3DC229B460B00548216 /* EasyLayer.swift */,
 				40ECF7C6229A0E1800742016 /* Shadow.swift */,
 			);
 			name = Easy;
@@ -594,7 +644,7 @@
 				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -647,7 +697,7 @@
 				40ECF7F7229A14C100742016 /* AnimatMove.swift in Sources */,
 				40ECF810229A18E500742016 /* CenterY.swift in Sources */,
 				40ECF7F5229A14A700742016 /* AnimatFade.swift in Sources */,
-				402DFA18229AD4DF0027FF71 /* GradientName.swift in Sources */,
+				408EB3EB229CB01000548216 /* AxesPoint.swift in Sources */,
 				40ECF7FB229A14E500742016 /* AnimatScale.swift in Sources */,
 				40ECF7C3229A0DBE00742016 /* Utility.swift in Sources */,
 				402DFA16229AD48B0027FF71 /* Gradient.swift in Sources */,
@@ -662,6 +712,8 @@
 				40ECF822229A199F00742016 /* FillVertically.swift in Sources */,
 				40ECF824229A19B000742016 /* FillHorizontally.swift in Sources */,
 				40ECF81A229A195600742016 /* FillTop.swift in Sources */,
+				408EB3DD229B460B00548216 /* EasyLayer.swift in Sources */,
+				408EB3ED229CB15400548216 /* GradientName.swift in Sources */,
 				40ECF80A229A189E00742016 /* Center.swift in Sources */,
 				40ECF7EE229A139B00742016 /* WarningShape.swift in Sources */,
 				402DFA11229ACC660027FF71 /* GradientColor.swift in Sources */,
@@ -686,7 +738,6 @@
 				40ECF7CF229A10FF00742016 /* Alert.swift in Sources */,
 				40ECF7CB229A0FB600742016 /* HexColor.swift in Sources */,
 				40ECF7EC229A138400742016 /* SuccessShape.swift in Sources */,
-				402DFA0B229AB9520027FF71 /* EasyLayer.swift in Sources */,
 				40ECF814229A190F00742016 /* Height.swift in Sources */,
 				40ECF7C5229A0DFC00742016 /* EasyView.swift in Sources */,
 			);
@@ -696,7 +747,54 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				408EB405229CB71300548216 /* Center.swift in Sources */,
+				408EB406229CB71300548216 /* CenterX.swift in Sources */,
+				408EB40C229CB71E00548216 /* FillTop.swift in Sources */,
+				408EB403229CB70E00548216 /* Right.swift in Sources */,
+				408EB3FC229CB21900548216 /* CornerMask.swift in Sources */,
+				408EB412229CB72600548216 /* AnimatFade.swift in Sources */,
+				408EB3FA229CB21400548216 /* Position.swift in Sources */,
+				408EB3F6229CB20A00548216 /* EasyView.swift in Sources */,
+				408EB3FD229CB70400548216 /* Alert.swift in Sources */,
+				408EB3EE229CB1F300548216 /* GradientName.swift in Sources */,
+				408EB410229CB71E00548216 /* FillVertically.swift in Sources */,
+				408EB408229CB71800548216 /* Size.swift in Sources */,
+				408EB400229CB70400548216 /* AlertView.swift in Sources */,
+				408EB401229CB70E00548216 /* Top.swift in Sources */,
+				408EB407229CB71300548216 /* CenterY.swift in Sources */,
+				408EB40D229CB71E00548216 /* FillLeft.swift in Sources */,
+				408EB413229CB72600548216 /* AnimatMove.swift in Sources */,
+				408EB3F2229CB1FF00548216 /* HexColor.swift in Sources */,
+				408EB3F7229CB20D00548216 /* Utility.swift in Sources */,
+				408EB3F3229CB20100548216 /* Color.swift in Sources */,
+				408EB3F1229CB1FC00548216 /* MaterialColor.swift in Sources */,
+				408EB416229CB72B00548216 /* CurveType.swift in Sources */,
+				408EB3F9229CB21200548216 /* AxesPoint.swift in Sources */,
+				408EB40E229CB71E00548216 /* FillRight.swift in Sources */,
+				408EB40B229CB71E00548216 /* Fill.swift in Sources */,
+				408EB414229CB72600548216 /* AnimatRotat.swift in Sources */,
+				408EB419229CB73E00548216 /* SuccessShape.swift in Sources */,
+				408EB3FF229CB70400548216 /* AlertStatus.swift in Sources */,
+				408EB41C229CB74200548216 /* ResizingBehavior.swift in Sources */,
+				408EB41A229CB73E00548216 /* WarningShape.swift in Sources */,
+				408EB40A229CB71800548216 /* Width.swift in Sources */,
+				408EB3FB229CB21700548216 /* Direction.swift in Sources */,
+				408EB3FE229CB70400548216 /* AlertError.swift in Sources */,
+				408EB411229CB71E00548216 /* FillHorizontally.swift in Sources */,
+				408EB3F5229CB20800548216 /* EasyLayer.swift in Sources */,
+				408EB402229CB70E00548216 /* Left.swift in Sources */,
+				408EB409229CB71800548216 /* Height.swift in Sources */,
+				408EB40F229CB71E00548216 /* FillBottom.swift in Sources */,
+				408EB41B229CB74200548216 /* Shapes.swift in Sources */,
+				408EB3EF229CB1F600548216 /* GradientColor.swift in Sources */,
+				408EB3F4229CB20500548216 /* Shadow.swift in Sources */,
+				408EB404229CB70E00548216 /* Bottom.swift in Sources */,
+				408EB415229CB72600548216 /* AnimatScale.swift in Sources */,
+				408EB418229CB73E00548216 /* InfoShape.swift in Sources */,
 				70E55F2E8B55988DB2E7FD43F58BD12D /* Pods-UIKitX_Example-dummy.m in Sources */,
+				408EB3F8229CB20F00548216 /* Typealias.swift in Sources */,
+				408EB3F0229CB1F800548216 /* Gradient.swift in Sources */,
+				408EB417229CB73E00548216 /* ErrorShape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -743,7 +841,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-UIKitX_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-UIKitX_Tests/Pods-UIKitX_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -883,7 +985,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -906,7 +1009,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-UIKitX_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-UIKitX_Tests/Pods-UIKitX_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -940,7 +1047,11 @@
 				INFOPLIST_FILE = "Target Support Files/UIKitX/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/UIKitX/UIKitX.modulemap";
 				PRODUCT_MODULE_NAME = UIKitX;
 				PRODUCT_NAME = UIKitX;
@@ -973,7 +1084,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-UIKitX_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-UIKitX_Example/Pods-UIKitX_Example.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1009,7 +1124,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-UIKitX_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-UIKitX_Example/Pods-UIKitX_Example.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1045,7 +1164,11 @@
 				INFOPLIST_FILE = "Target Support Files/UIKitX/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/UIKitX/UIKitX.modulemap";
 				PRODUCT_MODULE_NAME = UIKitX;
 				PRODUCT_NAME = UIKitX;

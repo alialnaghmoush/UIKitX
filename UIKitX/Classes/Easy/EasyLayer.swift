@@ -2,7 +2,7 @@
 //  EasyLayer.swift
 //  UIKitX
 //
-//  Created by Ali AlNaghmoush on 26/05/2019.
+//  Created by Ali AlNaghmoush on 27/05/2019.
 //
 
 extension CALayer {
@@ -45,6 +45,14 @@ extension CALayer {
     @discardableResult
     public func maskedCorners(_ set: CACornerMask) -> CALayer {
         maskedCorners = [set]
+        return self
+    }
+    
+    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+    // MARK: - Besic Layer
+    @discardableResult
+    public func backgroundColor(_ set: CGColor) -> CALayer {
+        backgroundColor = set
         return self
     }
 }

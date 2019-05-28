@@ -12,17 +12,23 @@ import UIKitX
 class ViewController: UIViewController {
         
     @IBOutlet weak var viewX: UIView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        t()
+        setupUI()
+
     }
+
     
-    func t() {
+    func setupUI() {
         
+        view.addSubview(viewX)
         viewX.shadow(.down5).cornerRadius(10).moveUp().fadeIn()
-        
+        viewX.gradient(.springWarmth, corner: 10)
+
     }
     
 }
+
 
