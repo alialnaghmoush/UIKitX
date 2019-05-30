@@ -15,7 +15,7 @@ extension UIView {
         switch set {
         case .warmFlame:
             let c = [#colorLiteral(red: 1, green: 0.6039215686, blue: 0.6196078431, alpha: 1),#colorLiteral(red: 0.9803921569, green: 0.8156862745, blue: 0.768627451, alpha: 1),#colorLiteral(red: 0.9803921569, green: 0.8156862745, blue: 0.768627451, alpha: 1)]
-            self.gradient(colors: c, start: .left, end: .right, corner: corner, style: .axial, layerAt: 0)
+            self.gradient(colors: c, corner: corner)
         case .nightFade:
             let c = [#colorLiteral(red: 0.631372549, green: 0.5490196078, blue: 0.8196078431, alpha: 1),#colorLiteral(red: 0.9843137255, green: 0.7607843137, blue: 0.9215686275, alpha: 1)]
             self.gradient(colors: c, corner: corner)

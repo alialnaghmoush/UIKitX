@@ -12,8 +12,8 @@ extension UIView {
     
     @discardableResult
     public func gradient(colors: [UIColor],
-                         start: AxesPoint = .topLeft,
-                         end: AxesPoint = .bottom,
+                         start: AxesPoint = .left,
+                         end: AxesPoint = .right,
                          locations: [NSNumber]? = nil,
                          corner: CGFloat = 0,
                          style: CAGradientLayerType = .axial,
@@ -22,14 +22,16 @@ extension UIView {
         let gLayer = CAGradientLayer()
         
         gLayer.frame = bounds
-        gLayer.startPoint = start.point
-        gLayer.endPoint = end.point
+        gLayer.startPoint = CGPoint(x: 0.0, y: 0.5)//start.point
+        gLayer.endPoint = CGPoint(x: 1.0, y: 0.5)//end.point
         gLayer.colors = colors.map({ $0.cgColor })
         gLayer.cornerRadius(corner)
         gLayer.type = style
         
         if locations != nil { gLayer.locations = locations }
         
+        gLayer.layoutIfNeeded()
+
         layer.insertSublayer(gLayer, at: layerAt)
         
         return self

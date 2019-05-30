@@ -18,15 +18,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         setup2UI()
-
-        print(y.bounds)
-        print(x.bounds)
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
     }
     
     override func viewDidLayoutSubviews() {
