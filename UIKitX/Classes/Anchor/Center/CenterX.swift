@@ -9,26 +9,19 @@ extension UIView {
     
     @discardableResult
     public func centerX(_ to: NSLayoutXAxisAnchor,
-                 move: CGFloat = 0,
-                 relation: ConstraintRelation = .equal,
-                 priority: UILayoutPriority = .required,
-                 active: Bool = true) -> UIView {
+                        move: CGFloat = 0,
+                        relation: ConstraintRelation = .equal,
+                        priority: UILayoutPriority = .required,
+                        active: Bool = true) -> UIView {
         
         self.translatesAutoresizingMaskIntoConstraints = false
         var x =  NSLayoutConstraint()
         
         switch relation {
-        case .equal:
-            x = self.centerXAnchor.constraint(equalTo: to)
-            
-        case .greaterThanOrEqual:
-            x = self.centerXAnchor.constraint(greaterThanOrEqualTo: to)
-            
-        case .lessThanOrEqual:
-            x = self.centerXAnchor.constraint(lessThanOrEqualTo: to)
-            
-        @unknown default:
-            fatalError()
+        case .equal: x = self.centerXAnchor.constraint(equalTo: to)
+        case .greaterThanOrEqual: x = self.centerXAnchor.constraint(greaterThanOrEqualTo: to)
+        case .lessThanOrEqual: x = self.centerXAnchor.constraint(lessThanOrEqualTo: to)
+        @unknown default: fatalError()
         }
         
         x.isActive = active
@@ -43,11 +36,11 @@ extension UIView {
     
     @discardableResult
     public func centerX(_ to: UIView,
-                 move: CGFloat = 0,
-                 safeArea: Bool = false,
-                 relation: ConstraintRelation = .equal,
-                 priority: UILayoutPriority = .required,
-                 active: Bool = true) -> UIView {
+                        move: CGFloat = 0,
+                        safeArea: Bool = false,
+                        relation: ConstraintRelation = .equal,
+                        priority: UILayoutPriority = .required,
+                        active: Bool = true) -> UIView {
         
         if !safeArea {
             centerX(to.centerXAnchor, move: move, relation: relation, priority: priority, active: active)
@@ -62,10 +55,10 @@ extension UIView {
     
     @discardableResult
     public func centerX(_ move: CGFloat = 0,
-                 safeArea: Bool = false,
-                 relation: ConstraintRelation = .equal,
-                 priority: UILayoutPriority = .required,
-                 active: Bool = true) -> UIView {
+                        safeArea: Bool = false,
+                        relation: ConstraintRelation = .equal,
+                        priority: UILayoutPriority = .required,
+                        active: Bool = true) -> UIView {
         
         let sv = safeSuperview(for: superview)
         if !safeArea {

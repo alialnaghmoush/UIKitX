@@ -62,6 +62,8 @@
 		408EB41A229CB73E00548216 /* WarningShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7ED229A139B00742016 /* WarningShape.swift */; };
 		408EB41B229CB74200548216 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7DE229A128F00742016 /* Shapes.swift */; };
 		408EB41C229CB74200548216 /* ResizingBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7E0229A12D200742016 /* ResizingBehavior.swift */; };
+		40E3E11D229F273000D0F32F /* DegreePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E3E11C229F273000D0F32F /* DegreePoint.swift */; };
+		40E3E11E229F273000D0F32F /* DegreePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E3E11C229F273000D0F32F /* DegreePoint.swift */; };
 		40ECF7BB229A0D1400742016 /* CornerMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7BA229A0D1400742016 /* CornerMask.swift */; };
 		40ECF7BD229A0D3300742016 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7BC229A0D3300742016 /* Direction.swift */; };
 		40ECF7C1229A0DAB00742016 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7C0229A0DAB00742016 /* Typealias.swift */; };
@@ -149,6 +151,7 @@
 		408EB3DC229B460B00548216 /* EasyLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EasyLayer.swift; path = UIKitX/Classes/Easy/EasyLayer.swift; sourceTree = "<group>"; };
 		408EB3EA229CB01000548216 /* AxesPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AxesPoint.swift; path = UIKitX/Classes/Helper/AxesPoint.swift; sourceTree = "<group>"; };
 		408EB3EC229CB15400548216 /* GradientName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradientName.swift; path = UIKitX/Classes/Color/GradientColor/GradientName.swift; sourceTree = "<group>"; };
+		40E3E11C229F273000D0F32F /* DegreePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DegreePoint.swift; path = UIKitX/Classes/Helper/DegreePoint.swift; sourceTree = "<group>"; };
 		40ECF7BA229A0D1400742016 /* CornerMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CornerMask.swift; path = UIKitX/Classes/Helper/CornerMask.swift; sourceTree = "<group>"; };
 		40ECF7BC229A0D3300742016 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Direction.swift; path = UIKitX/Classes/Helper/Direction.swift; sourceTree = "<group>"; };
 		40ECF7C0229A0DAB00742016 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Typealias.swift; path = UIKitX/Classes/Helper/Typealias.swift; sourceTree = "<group>"; };
@@ -296,6 +299,13 @@
 			name = GradientColor;
 			sourceTree = "<group>";
 		};
+		40E3E11F229F5FBD00D0F32F /* XUI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = XUI;
+			sourceTree = "<group>";
+		};
 		40ECF7D7229A11AC00742016 /* Alert */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +324,7 @@
 				40ECF7BC229A0D3300742016 /* Direction.swift */,
 				402DFA13229ACD810027FF71 /* Position.swift */,
 				408EB3EA229CB01000548216 /* AxesPoint.swift */,
+				40E3E11C229F273000D0F32F /* DegreePoint.swift */,
 				40ECF7C0229A0DAB00742016 /* Typealias.swift */,
 				40ECF7C2229A0DBE00742016 /* Utility.swift */,
 			);
@@ -476,6 +487,7 @@
 		8244BC2F8358700B684F86BB894355BA /* UIKitX */ = {
 			isa = PBXGroup;
 			children = (
+				40E3E11F229F5FBD00D0F32F /* XUI */,
 				40ECF7D9229A11D100742016 /* Helper */,
 				40ECF7DB229A11FE00742016 /* Easy */,
 				40ECF7DD229A121400742016 /* Color */,
@@ -723,6 +735,7 @@
 				40ECF7C1229A0DAB00742016 /* Typealias.swift in Sources */,
 				40ECF7BD229A0D3300742016 /* Direction.swift in Sources */,
 				40ECF7D1229A111B00742016 /* AlertError.swift in Sources */,
+				40E3E11E229F273000D0F32F /* DegreePoint.swift in Sources */,
 				40ECF820229A198D00742016 /* FillBottom.swift in Sources */,
 				40ECF7C9229A0F4E00742016 /* Color.swift in Sources */,
 				40ECF806229A187500742016 /* Right.swift in Sources */,
@@ -778,6 +791,7 @@
 				408EB41C229CB74200548216 /* ResizingBehavior.swift in Sources */,
 				408EB41A229CB73E00548216 /* WarningShape.swift in Sources */,
 				408EB40A229CB71800548216 /* Width.swift in Sources */,
+				40E3E11D229F273000D0F32F /* DegreePoint.swift in Sources */,
 				408EB3FB229CB21700548216 /* Direction.swift in Sources */,
 				408EB3FE229CB70400548216 /* AlertError.swift in Sources */,
 				408EB411229CB71E00548216 /* FillHorizontally.swift in Sources */,

@@ -20,6 +20,11 @@ extension UIColor {
     public static let Red700 = UIColor(red: 211, green:  47, blue:  47) // Dark Color
     public static let Red800 = UIColor(red: 198, green:  40, blue:  40) // Dark Color
     public static let Red900 = UIColor(red: 183, green:  28, blue:  28) // Dark Color
+    
+    public static let RedA100 = UIColor(red: 255, green:  138, blue:  128) // Lighting Color
+    public static let RedA200 = UIColor(red: 255, green:   82, blue:   82) // Lighting Color
+    public static let RedA400 = UIColor(red: 255, green:   23, blue:   68) // Dark Color
+    public static let RedA700 = UIColor(red: 213, green:    0, blue:    0) // Dark Color
     // end Red
     
     //Google Material Design Color: Pink

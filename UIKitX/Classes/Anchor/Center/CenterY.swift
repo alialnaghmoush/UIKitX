@@ -9,26 +9,19 @@ extension UIView {
     
     @discardableResult
     public func centerY(_ to: NSLayoutYAxisAnchor,
-                 move: CGFloat = 0,
-                 relation: ConstraintRelation = .equal,
-                 priority: UILayoutPriority = .required,
-                 active: Bool = true) -> UIView {
+                        move: CGFloat = 0,
+                        relation: ConstraintRelation = .equal,
+                        priority: UILayoutPriority = .required,
+                        active: Bool = true) -> UIView {
         
         self.translatesAutoresizingMaskIntoConstraints = false
         var x =  NSLayoutConstraint()
         
         switch relation {
-        case .equal:
-            x = self.centerYAnchor.constraint(equalTo: to)
-            
-        case .greaterThanOrEqual:
-            x = self.centerYAnchor.constraint(greaterThanOrEqualTo: to)
-            
-        case .lessThanOrEqual:
-            x = self.centerYAnchor.constraint(lessThanOrEqualTo: to)
-            
-        @unknown default:
-            fatalError()
+        case .equal: x = self.centerYAnchor.constraint(equalTo: to)
+        case .greaterThanOrEqual: x = self.centerYAnchor.constraint(greaterThanOrEqualTo: to)
+        case .lessThanOrEqual: x = self.centerYAnchor.constraint(lessThanOrEqualTo: to)
+        @unknown default: fatalError()
         }
         
         x.isActive = active

@@ -8,23 +8,24 @@
 extension UIView {
     
     @discardableResult
-    public func height(_ size: CGFloat,
+    public func height(_ set: CGFloat,
                 relation: ConstraintRelation = .equal,
                 priority: UILayoutPriority = .required,
                 active: Bool = true) -> UIView {
-        
+
         self.translatesAutoresizingMaskIntoConstraints = false
         var x =  NSLayoutConstraint()
+        self.frame.size.height = set
         
         switch relation {
         case .equal:
-            x = self.heightAnchor.constraint(equalToConstant: size)
+            x = self.heightAnchor.constraint(equalToConstant: set)
             
         case .greaterThanOrEqual:
-            x = self.heightAnchor.constraint(greaterThanOrEqualToConstant: size)
+            x = self.heightAnchor.constraint(greaterThanOrEqualToConstant: set)
             
         case .lessThanOrEqual:
-            x = self.heightAnchor.constraint(lessThanOrEqualToConstant: size)
+            x = self.heightAnchor.constraint(lessThanOrEqualToConstant: set)
             
         @unknown default:
             fatalError()

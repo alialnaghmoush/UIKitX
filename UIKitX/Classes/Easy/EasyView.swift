@@ -50,7 +50,7 @@ extension UIView {
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
     // MARK: - Besic View
     @discardableResult
-    public func backgroundColor(_ set: UIColor) -> UIView {
+    public func backColor(_ set: UIColor) -> UIView {
         backgroundColor = set
         return self
     }
