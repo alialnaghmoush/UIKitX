@@ -22,8 +22,8 @@ extension UIView {
         let gLayer = CAGradientLayer()
         
         gLayer.frame = bounds
-        gLayer.startPoint = CGPoint(x: 0.0, y: 0.5)//start.point
-        gLayer.endPoint = CGPoint(x: 1.0, y: 0.5)//end.point
+        gLayer.startPoint = start.point
+        gLayer.endPoint = end.point
         gLayer.colors = colors.map({ $0.cgColor })
         gLayer.cornerRadius(corner)
         gLayer.type = style
