@@ -5,69 +5,72 @@
 //  Created by Ali AlNaghmoush on 26/05/2019.
 //
 
+extension Anchorable {
+    
+    @discardableResult
+    func xCenterY(to view: Anchorable,
+                  _ anchor: NSLayoutYAxisAnchor? = nil,
+                  move: CGFloat = 0,
+                  relation: ConstraintRelation = .equal,
+                  priority: UILayoutPriority = .required,
+                  isActive: Bool = true) -> Constraint {
+        
+        prepareForLayout()
+        
+        switch relation {
+        case .equal:
+            return centerYAnchor.constraint(equalTo: anchor ?? view.centerYAnchor, constant: move).with(priority).set(isActive)
+        case .lessThanOrEqual:
+            return centerYAnchor.constraint(lessThanOrEqualTo: anchor ?? view.centerYAnchor, constant: move).with(priority).set(isActive)
+        case .greaterThanOrEqual:
+            return centerYAnchor.constraint(greaterThanOrEqualTo: anchor ?? view.centerYAnchor, constant: move).with(priority).set(isActive)
+        @unknown default:
+            fatalError()
+        }
+        
+    }
+}
+
 extension UIView {
     
     @discardableResult
-    public func centerY(_ to: NSLayoutYAxisAnchor,
+    public func centerY(_ to: Anchorable,
+                        move: CGFloat = 0,
+                        safeArea: Bool = false,
+                        relation: ConstraintRelation = .equal,
+                        priority: UILayoutPriority = .required,
+                        active: Bool = true) -> UIView {
+        
+        xCenterY(to: to, move: move, relation: relation, priority: priority, isActive: active)
+        
+        return self
+    }
+    
+    @discardableResult
+    public func centerY(_ anchorTo: NSLayoutYAxisAnchor,
                         move: CGFloat = 0,
                         relation: ConstraintRelation = .equal,
                         priority: UILayoutPriority = .required,
                         active: Bool = true) -> UIView {
         
-        self.translatesAutoresizingMaskIntoConstraints = false
-        var x =  NSLayoutConstraint()
-        
-        switch relation {
-        case .equal: x = self.centerYAnchor.constraint(equalTo: to)
-        case .greaterThanOrEqual: x = self.centerYAnchor.constraint(greaterThanOrEqualTo: to)
-        case .lessThanOrEqual: x = self.centerYAnchor.constraint(lessThanOrEqualTo: to)
-        @unknown default: fatalError()
-        }
-        
-        x.isActive = active
-        x.constant = move
-        x.priority = priority
-        
-        self.layoutIfNeeded()
+        let anchorable = safeAnchorable(for: superview)
+        xCenterY(to: anchorable, anchorTo, move: move, relation: relation, priority: priority, isActive: active)
         
         return self
-        
     }
     
-    @discardableResult
-    public func centerY(_ to: UIView,
-                 move: CGFloat = 0,
-                 safeArea: Bool = false,
-                 relation: ConstraintRelation = .equal,
-                 priority: UILayoutPriority = .required,
-                 active: Bool = true) -> UIView {
-        
-        if !safeArea {
-            centerY(to.centerYAnchor, move: move, relation: relation, priority: priority, active: active)
-        } else {
-            centerY(to.safeAreaLayoutGuide.centerYAnchor, move: move, relation: relation, priority: priority, active: active)
-        }
-        
-        return self
-        
-    }
     
     @discardableResult
     public func centerY(_ move: CGFloat = 0,
-                 safeArea: Bool = false,
-                 relation: ConstraintRelation = .equal,
-                 priority: UILayoutPriority = .required,
-                 active: Bool = true) -> UIView {
+                        safeArea: Bool = false,
+                        relation: ConstraintRelation = .equal,
+                        priority: UILayoutPriority = .required,
+                        active: Bool = true) -> UIView {
         
-        let sv = safeSuperview(for: superview)
-        if !safeArea {
-            centerY(sv.centerYAnchor, move: move, relation: relation, priority: priority, active: active)
-        } else {
-            centerY(sv.safeAreaLayoutGuide.centerYAnchor, move: move, relation: relation, priority: priority, active: active)
-        }
+        let anchorable = safeAnchorable(for: superview, usingSafeArea: safeArea)
+        xCenterY(to: anchorable, move: move, relation: relation, priority: priority, isActive: active)
         
         return self
-        
     }
     
 }

@@ -5,52 +5,57 @@
 //  Created by Ali AlNaghmoush on 26/05/2019.
 //
 
-extension UIView {
+extension Anchorable {
     
     @discardableResult
-    public func bottom(_ to: NSLayoutYAxisAnchor,
-                       spacing: CGFloat = 0,
-                       relation: ConstraintRelation = .equal,
-                       priority: UILayoutPriority = .required,
-                       active: Bool = true) -> UIView {
+    func xBottom(to view: Anchorable,
+                 _ anchor: NSLayoutYAxisAnchor? = nil,
+                 spacing: CGFloat = 0,
+                 relation: ConstraintRelation = .equal,
+                 priority: UILayoutPriority = .required,
+                 isActive: Bool = true) -> Constraint {
         
-        self.translatesAutoresizingMaskIntoConstraints = false
-        var x =  NSLayoutConstraint()
+        prepareForLayout()
+        
         
         switch relation {
         case .equal:
-            x = self.bottomAnchor.constraint(equalTo: to)
-        case .greaterThanOrEqual:
-            x = self.bottomAnchor.constraint(greaterThanOrEqualTo: to)
+            return bottomAnchor.constraint(equalTo: anchor ?? view.bottomAnchor, constant: -spacing).with(priority).set(isActive)
         case .lessThanOrEqual:
-            x = self.bottomAnchor.constraint(lessThanOrEqualTo: to)
+            return bottomAnchor.constraint(lessThanOrEqualTo: anchor ?? view.bottomAnchor, constant: -spacing).with(priority).set(isActive)
+        case .greaterThanOrEqual:
+            return bottomAnchor.constraint(greaterThanOrEqualTo: anchor ?? view.bottomAnchor, constant: -spacing).with(priority).set(isActive)
         @unknown default:
             fatalError()
         }
-        
-        x.isActive = active
-        x.constant = -spacing
-        x.priority = priority
-        
-        self.layoutIfNeeded()
-        
-        return self
     }
     
+}
+
+extension UIView {
+    
     @discardableResult
-    public func bottom(_ to: UIView,
+    public func bottom(_ to: Anchorable,
                        spacing: CGFloat = 0,
                        safeArea: Bool = false,
                        relation: ConstraintRelation = .equal,
                        priority: UILayoutPriority = .required,
                        active: Bool = true) -> UIView {
         
-        if !safeArea {
-            bottom(to.bottomAnchor, spacing: spacing, relation: relation, priority: priority, active: active)
-        } else {
-            bottom(to.safeAreaLayoutGuide.bottomAnchor, spacing: spacing, relation: relation, priority: priority, active: active)
-        }
+        xBottom(to: to, spacing: spacing, relation: relation, priority: priority, isActive: active)
         
+        return self
+    }
+    
+    @discardableResult
+    public func bottom(_ anchor: NSLayoutYAxisAnchor? = nil,
+                       spacing: CGFloat = 0,
+                       relation: ConstraintRelation = .equal,
+                       priority: UILayoutPriority = .required,
+                       active: Bool = true) -> UIView {
+        
+        let anchorable = safeAnchorable(for: superview)
+        xBottom(to: anchorable, anchor, spacing: spacing, relation: relation, priority: priority, isActive: active)
         
         return self
     }
@@ -58,19 +63,14 @@ extension UIView {
     @discardableResult
     public func bottom(_ spacing: CGFloat = 0,
                        safeArea: Bool = false,
+                       anchor: NSLayoutYAxisAnchor? = nil,
                        relation: ConstraintRelation = .equal,
                        priority: UILayoutPriority = .required,
                        active: Bool = true) -> UIView {
         
-        let sv = safeSuperview(for: superview)
-        if !safeArea {
-            bottom(sv.bottomAnchor, spacing: spacing, relation: relation, priority: priority, active: active)
-        } else {
-            bottom(sv.safeAreaLayoutGuide.bottomAnchor, spacing: spacing, relation: relation, priority: priority, active: active)
-        }
+        let anchorable = safeAnchorable(for: superview, usingSafeArea: safeArea)
+        xBottom(to: anchorable, anchor, spacing: spacing, relation: relation, priority: priority, isActive: active)
         
         return self
     }
-    
 }
-

@@ -12,6 +12,10 @@
 		402DFA11229ACC660027FF71 /* GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402DFA10229ACC660027FF71 /* GradientColor.swift */; };
 		402DFA14229ACD810027FF71 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402DFA13229ACD810027FF71 /* Position.swift */; };
 		402DFA16229AD48B0027FF71 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402DFA15229AD48B0027FF71 /* Gradient.swift */; };
+		406D389322A1651F00A1C39D /* Anchorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406D389222A1651F00A1C39D /* Anchorable.swift */; };
+		406D389422A1651F00A1C39D /* Anchorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406D389222A1651F00A1C39D /* Anchorable.swift */; };
+		406D389622A1661200A1C39D /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406D389522A1661200A1C39D /* Constraints.swift */; };
+		406D389722A1661200A1C39D /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406D389522A1661200A1C39D /* Constraints.swift */; };
 		408EB3DD229B460B00548216 /* EasyLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EB3DC229B460B00548216 /* EasyLayer.swift */; };
 		408EB3EB229CB01000548216 /* AxesPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EB3EA229CB01000548216 /* AxesPoint.swift */; };
 		408EB3ED229CB15400548216 /* GradientName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EB3EC229CB15400548216 /* GradientName.swift */; };
@@ -148,6 +152,8 @@
 		402DFA10229ACC660027FF71 /* GradientColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradientColor.swift; path = UIKitX/Classes/Color/GradientColor/GradientColor.swift; sourceTree = "<group>"; };
 		402DFA13229ACD810027FF71 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Position.swift; path = UIKitX/Classes/Helper/Position.swift; sourceTree = "<group>"; };
 		402DFA15229AD48B0027FF71 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Gradient.swift; path = UIKitX/Classes/Color/GradientColor/Gradient.swift; sourceTree = "<group>"; };
+		406D389222A1651F00A1C39D /* Anchorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Anchorable.swift; path = UIKitX/Classes/Anchor/UtilityAnchor/Anchorable.swift; sourceTree = "<group>"; };
+		406D389522A1661200A1C39D /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constraints.swift; path = UIKitX/Classes/Anchor/UtilityAnchor/Constraints.swift; sourceTree = "<group>"; };
 		408EB3DC229B460B00548216 /* EasyLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EasyLayer.swift; path = UIKitX/Classes/Easy/EasyLayer.swift; sourceTree = "<group>"; };
 		408EB3EA229CB01000548216 /* AxesPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AxesPoint.swift; path = UIKitX/Classes/Helper/AxesPoint.swift; sourceTree = "<group>"; };
 		408EB3EC229CB15400548216 /* GradientName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradientName.swift; path = UIKitX/Classes/Color/GradientColor/GradientName.swift; sourceTree = "<group>"; };
@@ -299,6 +305,15 @@
 			name = GradientColor;
 			sourceTree = "<group>";
 		};
+		406D389022A164A500A1C39D /* UtilityAnchor */ = {
+			isa = PBXGroup;
+			children = (
+				406D389222A1651F00A1C39D /* Anchorable.swift */,
+				406D389522A1661200A1C39D /* Constraints.swift */,
+			);
+			name = UtilityAnchor;
+			sourceTree = "<group>";
+		};
 		40E3E11F229F5FBD00D0F32F /* XUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +427,7 @@
 		40ECF7FC229A151000742016 /* Anchor */ = {
 			isa = PBXGroup;
 			children = (
+				406D389022A164A500A1C39D /* UtilityAnchor */,
 				40ECF7FD229A151D00742016 /* Position */,
 				40ECF7FE229A152A00742016 /* Center */,
 				40ECF7FF229A153300742016 /* Size */,
@@ -723,6 +739,7 @@
 				40ECF808229A188500742016 /* Bottom.swift in Sources */,
 				40ECF822229A199F00742016 /* FillVertically.swift in Sources */,
 				40ECF824229A19B000742016 /* FillHorizontally.swift in Sources */,
+				406D389722A1661200A1C39D /* Constraints.swift in Sources */,
 				40ECF81A229A195600742016 /* FillTop.swift in Sources */,
 				408EB3DD229B460B00548216 /* EasyLayer.swift in Sources */,
 				408EB3ED229CB15400548216 /* GradientName.swift in Sources */,
@@ -744,6 +761,7 @@
 				40ECF812229A18FC00742016 /* Size.swift in Sources */,
 				40ECF7C7229A0E1800742016 /* Shadow.swift in Sources */,
 				40ECF804229A186500742016 /* Left.swift in Sources */,
+				406D389422A1651F00A1C39D /* Anchorable.swift in Sources */,
 				40ECF7F9229A14D500742016 /* AnimatRotat.swift in Sources */,
 				40ECF7D5229A114000742016 /* AlertView.swift in Sources */,
 				40ECF7D3229A112800742016 /* AlertStatus.swift in Sources */,
@@ -779,6 +797,7 @@
 				408EB413229CB72600548216 /* AnimatMove.swift in Sources */,
 				408EB3F2229CB1FF00548216 /* HexColor.swift in Sources */,
 				408EB3F7229CB20D00548216 /* Utility.swift in Sources */,
+				406D389622A1661200A1C39D /* Constraints.swift in Sources */,
 				408EB3F3229CB20100548216 /* Color.swift in Sources */,
 				408EB3F1229CB1FC00548216 /* MaterialColor.swift in Sources */,
 				408EB416229CB72B00548216 /* CurveType.swift in Sources */,
@@ -800,6 +819,7 @@
 				408EB409229CB71800548216 /* Height.swift in Sources */,
 				408EB40F229CB71E00548216 /* FillBottom.swift in Sources */,
 				408EB41B229CB74200548216 /* Shapes.swift in Sources */,
+				406D389322A1651F00A1C39D /* Anchorable.swift in Sources */,
 				408EB3EF229CB1F600548216 /* GradientColor.swift in Sources */,
 				408EB3F4229CB20500548216 /* Shadow.swift in Sources */,
 				408EB404229CB70E00548216 /* Bottom.swift in Sources */,

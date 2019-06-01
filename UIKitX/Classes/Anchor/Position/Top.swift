@@ -5,51 +5,56 @@
 //  Created by Ali AlNaghmoush on 26/05/2019.
 //
 
-extension UIView {
+extension Anchorable {
     
     @discardableResult
-    public func top(_ to: NSLayoutYAxisAnchor,
-                    spacing: CGFloat = 0,
-                    relation: ConstraintRelation = .equal,
-                    priority: UILayoutPriority = .required,
-                    active: Bool = true) -> UIView {
+    func xTop(to view: Anchorable,
+              _ anchor: NSLayoutYAxisAnchor? = nil,
+              spacing: CGFloat = 0,
+              relation: ConstraintRelation = .equal,
+              priority: UILayoutPriority = .required,
+              isActive: Bool = true) -> Constraint {
         
-        self.translatesAutoresizingMaskIntoConstraints = false
-        var x = NSLayoutConstraint()
-    
+        prepareForLayout()
+        
+        
         switch relation {
         case .equal:
-            x = self.topAnchor.constraint(equalTo: to)
-        case .greaterThanOrEqual:
-            x = self.topAnchor.constraint(greaterThanOrEqualTo: to)
+            return topAnchor.constraint(equalTo: anchor ?? view.topAnchor, constant: spacing).with(priority).set(isActive)
         case .lessThanOrEqual:
-            x = self.topAnchor.constraint(lessThanOrEqualTo: to)
+            return topAnchor.constraint(lessThanOrEqualTo: anchor ?? view.topAnchor, constant: spacing).with(priority).set(isActive)
+        case .greaterThanOrEqual:
+            return topAnchor.constraint(greaterThanOrEqualTo: anchor ?? view.topAnchor, constant: spacing).with(priority).set(isActive)
         @unknown default:
             fatalError()
         }
         
-        x.isActive = active
-        x.constant = spacing
-        x.priority = priority
-    
-        self.layoutIfNeeded()
-                
-        return self
     }
+}
+
+extension UIView {
     
     @discardableResult
-    public func top(_ to: UIView,
+    public func top(_ to: Anchorable,
                     spacing: CGFloat = 0,
-                    safeArea: Bool = false,
                     relation: ConstraintRelation = .equal,
                     priority: UILayoutPriority = .required,
                     active: Bool = true) -> UIView {
         
-        if !safeArea {
-            top(to.topAnchor, spacing: spacing, relation: relation, priority: priority, active: active)
-        } else {
-            top(to.safeAreaLayoutGuide.topAnchor, spacing: spacing, relation: relation, priority: priority, active: active)
-        }
+        xTop(to: to, spacing: spacing, relation: relation, priority: priority, isActive: active)
+        
+        return self
+    }
+    
+    @discardableResult
+    public func top(_ anchorTo: NSLayoutYAxisAnchor,
+                    spacing: CGFloat = 0,
+                    relation: ConstraintRelation = .equal,
+                    priority: UILayoutPriority = .required,
+                    active: Bool = true) -> UIView {
+        
+        let anchorable = safeAnchorable(for: superview)
+        xTop(to: anchorable, anchorTo, spacing: spacing, relation: relation, priority: priority, isActive: active)
         
         return self
     }
@@ -57,18 +62,14 @@ extension UIView {
     @discardableResult
     public func top(_ spacing: CGFloat = 0,
                     safeArea: Bool = false,
+                    anchor: NSLayoutYAxisAnchor? = nil,
                     relation: ConstraintRelation = .equal,
                     priority: UILayoutPriority = .required,
                     active: Bool = true) -> UIView {
         
-        let sv = safeSuperview(for: superview)
-        if !safeArea {
-            top(sv.topAnchor, spacing: spacing, relation: relation, priority: priority, active: active)
-        } else {
-            top(sv.safeAreaLayoutGuide.topAnchor, spacing: spacing, relation: relation, priority: priority, active: active)
-        }
+        let anchorable = safeAnchorable(for: superview, usingSafeArea: safeArea)
+        xTop(to: anchorable, anchor, spacing: spacing, relation: relation, priority: priority, isActive: active)
         
         return self
     }
-    
 }

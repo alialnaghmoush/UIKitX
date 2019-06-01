@@ -27,3 +27,22 @@ extension String {
     }
 }
 
+
+extension UIView {
+    
+    public func safeAnchorable(for superview: UIView?, usingSafeArea: Bool = false) -> Anchorable {
+        guard let superview = superview else {
+            fatalError("Unable to create this constraint to it's superview, because it has no superview.")
+        }
+        
+        prepareForLayout()
+        
+        if #available(iOS 11, tvOS 11, *){
+            if usingSafeArea {
+                return superview.safeAreaLayoutGuide
+            }
+        }
+        
+        return superview
+    }    
+}

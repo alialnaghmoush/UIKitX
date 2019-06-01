@@ -5,70 +5,72 @@
 //  Created by Ali AlNaghmoush on 26/05/2019.
 //
 
-extension UIView {
+extension Anchorable {
     
     @discardableResult
-    public func left(_ to: NSLayoutXAxisAnchor,
-                     spacing: CGFloat = 0,
-                     relation: ConstraintRelation = .equal,
-                     priority: UILayoutPriority = .required,
-                     active: Bool = true) -> UIView {
+    func xLeft(to view: Anchorable,
+               _ anchor: NSLayoutXAxisAnchor? = nil,
+               spacing: CGFloat = 0,
+               relation: ConstraintRelation = .equal,
+               priority: UILayoutPriority = .required,
+               isActive: Bool = true) -> Constraint {
         
-        self.translatesAutoresizingMaskIntoConstraints = false
-        var x =  NSLayoutConstraint()
+        prepareForLayout()
+        
         
         switch relation {
         case .equal:
-            x = self.leadingAnchor.constraint(equalTo: to)
-        case .greaterThanOrEqual:
-            x = self.leadingAnchor.constraint(greaterThanOrEqualTo: to)
+            return leadingAnchor.constraint(equalTo: anchor ?? view.leadingAnchor, constant: spacing).with(priority).set(isActive)
         case .lessThanOrEqual:
-            x = self.leadingAnchor.constraint(lessThanOrEqualTo: to)
+            return leadingAnchor.constraint(lessThanOrEqualTo: anchor ?? view.leadingAnchor, constant: spacing).with(priority).set(isActive)
+        case .greaterThanOrEqual:
+            return leadingAnchor.constraint(greaterThanOrEqualTo: anchor ?? view.leadingAnchor, constant: spacing).with(priority).set(isActive)
         @unknown default:
             fatalError()
         }
-        
-        x.isActive = active
-        x.constant = spacing
-        x.priority = priority
-        
-        self.layoutIfNeeded()
-        
-        return self
     }
     
+}
+
+extension UIView {
+    
     @discardableResult
-    public func left(_ to: UIView,
+    public func left(_ to: Anchorable,
                      spacing: CGFloat = 0,
                      safeArea: Bool = false,
                      relation: ConstraintRelation = .equal,
                      priority: UILayoutPriority = .required,
                      active: Bool = true) -> UIView {
         
-        if !safeArea {
-            left(to.leadingAnchor, spacing: spacing, relation: relation, priority: priority, active: active)
-        } else {
-            left(to.safeAreaLayoutGuide.leadingAnchor, spacing: spacing, relation: relation, priority: priority, active: active)
-        }
+        xLeft(to: to, spacing: spacing, relation: relation, priority: priority, isActive: active)
+        
+        return self
+    }
+    
+    @discardableResult
+    public func left(_ anchorTo: NSLayoutXAxisAnchor,
+                     spacing: CGFloat = 0,
+                     relation: ConstraintRelation = .equal,
+                     priority: UILayoutPriority = .required,
+                     active: Bool = true) -> UIView {
+        
+        let anchorable = safeAnchorable(for: superview)
+        xLeft(to: anchorable, anchorTo, spacing: spacing, relation: relation, priority: priority, isActive: active)
         
         return self
     }
     
     @discardableResult
     public func left(_ spacing: CGFloat = 0,
-            	  safeArea: Bool = false,
-            	  relation: ConstraintRelation = .equal,
-            	  priority: UILayoutPriority = .required,
-            	  active: Bool = true) -> UIView {
+                     safeArea: Bool = false,
+                     anchor: NSLayoutXAxisAnchor? = nil,
+                     relation: ConstraintRelation = .equal,
+                     priority: UILayoutPriority = .required,
+                     active: Bool = true) -> UIView {
         
-        let sv = safeSuperview(for: superview)
-        if !safeArea {
-            left(sv.leadingAnchor, spacing: spacing, relation: relation, priority: priority, active: active)
-        } else {
-            left(sv.safeAreaLayoutGuide.leadingAnchor, spacing: spacing, relation: relation, priority: priority, active: active)
-        }
+        let anchorable = safeAnchorable(for: superview, usingSafeArea: safeArea)
+        xLeft(to: anchorable, anchor, spacing: spacing, relation: relation, priority: priority, isActive: active)
         
         return self
     }
-    
 }

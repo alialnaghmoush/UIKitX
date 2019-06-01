@@ -5,103 +5,115 @@
 //  Created by Ali AlNaghmoush on 26/05/2019.
 //
 
-extension UIView {
+extension Anchorable {
     
     @discardableResult
-    public func fill(_ to:       UIView,
-                     spacUp:     CGFloat,
+    func xFill(to: Anchorable,
+               spacTop:    CGFloat = 0,
+               spacLeft:  CGFloat = 0,
+               spacRight: CGFloat = 0,
+               spacBottom: CGFloat = 0,
+               relation: ConstraintRelation = .equal,
+               priority: UILayoutPriority = .required,
+               isActive: Bool = true) -> Constraints {
+        
+        prepareForLayout()
+        
+        let constraints = [
+            xTop(to: to, spacing: spacTop, relation: relation, priority: priority, isActive: isActive),
+            xLeft(to: to, spacing: spacLeft, relation: relation, priority: priority, isActive: isActive),
+            xRight(to: to, spacing: spacRight, relation: relation, priority: priority, isActive: isActive),
+            xBottom(to: to, spacing: spacBottom, relation: relation, priority: priority, isActive: isActive)
+            
+        ]
+        
+        return constraints
+    }
+    
+}
+
+
+extension UIView {
+    
+    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+    // MARK: - Main Fill Top
+    
+    @discardableResult
+    public func fill(_ to:       Anchorable,
+                     spacTop:     CGFloat,
                      spacLeft:   CGFloat,
                      spacRight:  CGFloat,
                      spacBottom: CGFloat,
-                     safeArea:   Bool = false,
                      relation:   ConstraintRelation = .equal,
                      priority:   UILayoutPriority = .required,
                      active:     Bool = true) -> UIView {
         
-        top(to, spacing: spacUp, safeArea: safeArea, relation: relation, priority: priority, active: active)
-        left(to, spacing: spacLeft, safeArea: safeArea, relation: relation, priority: priority, active: active)
-        right(to, spacing: spacRight, safeArea: safeArea, relation: relation, priority: priority, active: active)
-        bottom(to, spacing: spacBottom, safeArea: safeArea, relation: relation, priority: priority, active: active)
+        xFill(to: to, spacTop: spacTop, spacLeft: spacLeft, spacRight: spacRight, spacBottom: spacBottom,
+              relation: relation, priority: priority, isActive: active)
+        
+        return self
+    }
+    
+    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+    // MARK: - To View
+    
+    @discardableResult
+    public func fill(to: Anchorable,
+                        spaces:   CGFloat = 0,
+                        relation: ConstraintRelation = .equal,
+                        priority: UILayoutPriority = .required,
+                        active:   Bool = true) -> UIView {
+        
+        xFill(to: to, spacTop: spaces, spacLeft: spaces, spacRight: spaces, spacBottom: spaces,
+              relation: relation, priority: priority, isActive: active)
         
         return self
     }
     
     @discardableResult
-    public func fill(_ to:     UIView,
-                     spaces:   CGFloat = 0,
-                     safeArea: Bool = false,
-                     relation: ConstraintRelation = .equal,
-                     priority: UILayoutPriority = .required,
-                     active:   Bool = true) -> UIView {
+    public func fill(to: Anchorable,
+                        spaces:   [CGFloat] = [0,0,0],
+                        safeArea: Bool = false,
+                        relation: ConstraintRelation = .equal,
+                        priority: UILayoutPriority = .required,
+                        active:   Bool = true) -> UIView {
         
-        fill(to, spacUp: spaces, spacLeft: spaces, spacRight: spaces, spacBottom: spaces,
-             safeArea: safeArea, relation: relation, priority: priority, active: active)
-        
-        return self
-    }
-    
-    @discardableResult
-    public func fill(_ to:     UIView,
-                     spaces:   [CGFloat],
-                     safeArea: Bool = false,
-                     relation: ConstraintRelation = .equal,
-                     priority: UILayoutPriority = .required,
-                     active:   Bool = true) -> UIView {
-        
-        fill(to, spacUp: spaces[0], spacLeft: spaces[1], spacRight: spaces[2], spacBottom: spaces[3],
-             safeArea: safeArea, relation: relation, priority: priority, active: active)
+        xFill(to: to, spacTop: spaces[0], spacLeft: spaces[1], spacRight: spaces[2], spacBottom: spaces[3],
+              relation: relation, priority: priority, isActive: active)
         
         return self
     }
     
     
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
-    // MARK: - With Superview
-    
-    @discardableResult
-    public func fill(spacUp:     CGFloat,
-                     spacLeft:   CGFloat,
-                     spacRight:  CGFloat ,
-                     spacBottom: CGFloat,
-                     safeArea:   Bool,
-                     relation:   ConstraintRelation = .equal,
-                     priority:   UILayoutPriority = .required,
-                     active:     Bool = true) -> UIView {
-        
-        top(spacUp, safeArea: safeArea, relation: relation, priority: priority, active: active)
-        left(spacLeft, safeArea: safeArea, relation: relation, priority: priority, active: active)
-        right(spacRight, safeArea: safeArea, relation: relation, priority: priority, active: active)
-        bottom(spacBottom, safeArea: safeArea, relation: relation, priority: priority, active: active)
-        
-        
-        return self
-    }
+    // MARK: - To superview
     
     @discardableResult
     public func fill(_ spaces:  CGFloat = 0,
-                     safeArea:  Bool = false,
-                     relation:  ConstraintRelation = .equal,
-                     priority:  UILayoutPriority = .required,
-                     active:    Bool = true) -> UIView {
+                        safeArea:  Bool = false,
+                        relation:  ConstraintRelation = .equal,
+                        priority:  UILayoutPriority = .required,
+                        active:    Bool = true) -> UIView {
         
-        fill(spacUp: spaces, spacLeft: spaces, spacRight: spaces, spacBottom: spaces,
-             safeArea: safeArea, relation: relation, priority: priority, active: active)
+        let anchorable = safeAnchorable(for: superview, usingSafeArea: safeArea)
+        xFill(to: anchorable, spacTop: spaces, spacLeft: spaces, spacRight: spaces, spacBottom: spaces,
+              relation: relation, priority: priority, isActive: active)
         
         return self
     }
     
     @discardableResult
     public func fill(_ spaces: [CGFloat],
-                     safeArea: Bool = false,
-                     relation: ConstraintRelation = .equal,
-                     priority: UILayoutPriority = .required,
-                     active:   Bool = true) -> UIView {
+                        safeArea: Bool = false,
+                        relation: ConstraintRelation = .equal,
+                        priority: UILayoutPriority = .required,
+                        active:   Bool = true) -> UIView {
         
-        fill(spacUp: spaces[0], spacLeft: spaces[1], spacRight: spaces[2], spacBottom: spaces[3],
-             safeArea: safeArea, relation: relation, priority: priority, active: active)
+        let anchorable = safeAnchorable(for: superview, usingSafeArea: safeArea)
+        xFill(to: anchorable, spacTop: spaces[0], spacLeft: spaces[1], spacRight: spaces[2], spacBottom: spaces[3],
+              relation: relation, priority: priority, isActive: active)
         
         return self
     }
     
 }
-

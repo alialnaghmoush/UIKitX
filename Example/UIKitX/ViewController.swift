@@ -11,38 +11,48 @@ import UIKitX
 
 class ViewController: UIViewController {
         
-    let x = UIView()
     let y = UIView()
-    
+    let x = UIView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setup2UI()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-
-    }
-    
     
     func setupUI() {
         
         view.addSubview(y)
-        y.fillTop(20, safeArea: true).height(80)
-        y.shadow(.down5).cornerRadius(20).moveUp().fadeIn().gradient(set: .warmFlame, corner: 20)
+        y.backgroundColor = .Blue500
+        y.top(20, safeArea: true).left(20).right(20).height(50)
+        
+//        y.translatesAutoresizingMaskIntoConstraints = false
+//        y.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
+//        y.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+//        y.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+//        y.heightAnchor.constraint(equalToConstant: 50).isActive = true
+
+        y.shadow(.down5).cornerRadius(25).moveUp().fadeIn().gradient(set: .warmFlame, corner: 20)
+        print(y.bounds)
         
     }
     
     func setup2UI() {
         
         view.addSubview(x)
-        x.top(y.bottomAnchor, spacing: 20).left(20).right(20).height(80)
-        x.shadow(.down5).cornerRadius(20).moveUp(delay: 0.2).fadeIn(delay: 0.2).gradient(set: .nightFade, corner: 20)
+        x.backgroundColor = .Blue400
+//        x.top(y, spacing: 40)
+//        x.left(40).right(40).height(60)
+
+        x.top(y.bottomAnchor, spacing: -25)
+        x.left(40)
+        x.right(40)
+        x.height(50)
+        
+        x.shadow(.down5).cornerRadius(25).moveUp(delay: 0.2).fadeIn(delay: 0.2)//.gradient(set: .nightFade, corner: 20)
+        print(x.bounds)
+
         
     }
     
