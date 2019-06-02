@@ -48,8 +48,7 @@ class AlertView: UIView {
         addSubview(container)
         
         
-        let sv = safeSuperview(for: superview)
-        
+        let sv = safeView(superview)
         container.height(50).fillTop(to: sv, spaces: 10, safeArea: true)
         
         
@@ -82,10 +81,10 @@ class AlertView: UIView {
         
         switch self.direction {
         case .rtl:
-            note.right(icon.leadingAnchor, spacing: 10).left(container, spacing: 10)
+            note.right(toLeft: icon, spacing: 10).left(container, spacing: 10)
             note.textAlignment = .right
         case .ltr:
-            note.left(icon.trailingAnchor, spacing: 10).right(container, spacing: 10)
+            note.left(toRight: icon, spacing: 10).right(container, spacing: 10)
             note.textAlignment = .left
         }
         

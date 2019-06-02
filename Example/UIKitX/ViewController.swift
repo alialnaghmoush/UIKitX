@@ -7,53 +7,40 @@
 //
 
 import UIKit
-import UIKitX
 
 class ViewController: UIViewController {
         
-    let y = UIView()
-    let x = UIView()
+    
+    let newX = UIView()
+    let newY = UIView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
-        setup2UI()
+        
+//        newXUI()
+//        newYUI()
+//        
     }
     
     
-    func setupUI() {
+    private func newXUI() {
         
-        view.addSubview(y)
-        y.backgroundColor = .Blue500
-        y.top(20, safeArea: true).left(20).right(20).height(50)
+        view.addSubview(newX)
+//        newX.backgroundColor = UIColor.LightBlue500
+//        newX.cTop(20).cLeft(20).cRight(20).cHeight(50)
         
-//        y.translatesAutoresizingMaskIntoConstraints = false
-//        y.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
-//        y.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-//        y.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
-//        y.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        print(newX.bounds)
 
-        y.shadow(.down5).cornerRadius(25).moveUp().fadeIn().gradient(set: .warmFlame, corner: 20)
-        print(y.bounds)
-        
     }
     
-    func setup2UI() {
+    func newYUI() {
+//
+        view.addSubview(newY)
+//        newY.backgroundColor = UIColor.Gray500
+//        newY.cTop(40).cLeft(20).cRight(20).cHeight(50)
         
-        view.addSubview(x)
-        x.backgroundColor = .Blue400
-//        x.top(y, spacing: 40)
-//        x.left(40).right(40).height(60)
-
-        x.top(y.bottomAnchor, spacing: -25)
-        x.left(40)
-        x.right(40)
-        x.height(50)
         
-        x.shadow(.down5).cornerRadius(25).moveUp(delay: 0.2).fadeIn(delay: 0.2)//.gradient(set: .nightFade, corner: 20)
-        print(x.bounds)
-
-        
+        print(newY.bounds)
     }
     
 }

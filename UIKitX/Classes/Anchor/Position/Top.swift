@@ -32,29 +32,93 @@ extension Anchorable {
     }
 }
 
+//extension UIView {
+//
+//    @discardableResult
+//    public func top(_ to: Anchorable,
+//                    spacing: CGFloat = 0,
+//                    relation: ConstraintRelation = .equal,
+//                    priority: UILayoutPriority = .required,
+//                    active: Bool = true) -> UIView {
+//
+//        xTop(to: to, spacing: spacing, relation: relation, priority: priority, isActive: active)
+//
+//        return self
+//    }
+//
+//    @discardableResult
+//    public func top(_ anchorTo: NSLayoutYAxisAnchor,
+//                    spacing: CGFloat = 0,
+//                    relation: ConstraintRelation = .equal,
+//                    priority: UILayoutPriority = .required,
+//                    active: Bool = true) -> UIView {
+//
+//        let anchorable = safeAnchorable(for: superview)
+//        xTop(to: anchorable, anchorTo, spacing: spacing, relation: relation, priority: priority, isActive: active)
+//
+//        return self
+//    }
+//
+//    @discardableResult
+//    public func top(_ spacing: CGFloat = 0,
+//                    safeArea: Bool = false,
+//                    anchor: NSLayoutYAxisAnchor? = nil,
+//                    relation: ConstraintRelation = .equal,
+//                    priority: UILayoutPriority = .required,
+//                    active: Bool = true) -> UIView {
+//
+//        let anchorable = safeAnchorable(for: superview, usingSafeArea: safeArea)
+//        xTop(to: anchorable, anchor, spacing: spacing, relation: relation, priority: priority, isActive: active)
+//
+//        return self
+//    }
+//}
+
+
 extension UIView {
     
     @discardableResult
-    public func top(_ to: Anchorable,
+    public func top(_ to: UIView,
                     spacing: CGFloat = 0,
+                    safeArea: Bool = false,
                     relation: ConstraintRelation = .equal,
                     priority: UILayoutPriority = .required,
                     active: Bool = true) -> UIView {
         
-        xTop(to: to, spacing: spacing, relation: relation, priority: priority, isActive: active)
+        self.translatesAutoresizingMaskIntoConstraints = false
+        //        let at: ConstraintAttribute = !safeArea ? .top : .topMargin
+        
+        let x = NSLayoutConstraint(item: self, attribute: .top, relatedBy: relation, toItem: to, attribute: .top, multiplier: 1, constant: spacing)
+        
+        x.priority = priority
+        x.isActive = active
+        
+        let sv = safeView(superview)
+        sv.addConstraint(x)
+        self.layoutIfNeeded()
         
         return self
     }
     
     @discardableResult
-    public func top(_ anchorTo: NSLayoutYAxisAnchor,
+    public func top(toBottom: UIView,
                     spacing: CGFloat = 0,
+                    safeArea: Bool = false,
                     relation: ConstraintRelation = .equal,
                     priority: UILayoutPriority = .required,
                     active: Bool = true) -> UIView {
         
-        let anchorable = safeAnchorable(for: superview)
-        xTop(to: anchorable, anchorTo, spacing: spacing, relation: relation, priority: priority, isActive: active)
+        self.translatesAutoresizingMaskIntoConstraints = false
+        //        let at: ConstraintAttribute = !safeArea ? .bottom : .bottomMargin
+        
+        let x = NSLayoutConstraint(item: self, attribute: .top, relatedBy: relation, toItem: toBottom, attribute: .bottomMargin, multiplier: 1, constant: spacing)
+        
+        x.priority = priority
+        x.isActive = active
+        
+        let sv = safeView(superview)
+        sv.addConstraint(x)
+        self.layoutIfNeeded()
         
         return self
     }
@@ -67,9 +131,22 @@ extension UIView {
                     priority: UILayoutPriority = .required,
                     active: Bool = true) -> UIView {
         
-        let anchorable = safeAnchorable(for: superview, usingSafeArea: safeArea)
-        xTop(to: anchorable, anchor, spacing: spacing, relation: relation, priority: priority, isActive: active)
+        self.translatesAutoresizingMaskIntoConstraints = false
+        let sv = safeView(superview)
+//        let at: ConstraintAttribute = !safeArea ? .top : .topMargin
+        
+        let x = NSLayoutConstraint(item: self, attribute: .top, relatedBy: relation, toItem: sv, attribute: .top, multiplier: 1, constant: spacing)
+        
+        x.priority = priority
+        x.isActive = active
+        
+        sv.addConstraint(x)
+        self.layoutIfNeeded()
         
         return self
     }
+    
+    
+    
+    
 }

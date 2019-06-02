@@ -32,6 +32,7 @@ extension UIView: Anchorable {
     @discardableResult
     public func prepareForLayout() -> Self {
         translatesAutoresizingMaskIntoConstraints = false
+        layoutIfNeeded()
         return self
     }
 }

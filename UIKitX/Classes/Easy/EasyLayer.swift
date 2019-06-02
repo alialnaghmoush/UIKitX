@@ -50,9 +50,5 @@ extension CALayer {
     
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
     // MARK: - Besic Layer
-    @discardableResult
-    public func backColor(_ set: CGColor) -> CALayer {
-        backgroundColor = set
-        return self
-    }
+
 }

@@ -1,5 +1,4 @@
 import XCTest
-import UIKitX
 
 class Tests: XCTestCase {
     

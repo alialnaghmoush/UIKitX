@@ -7,13 +7,10 @@
 
 extension UIView {
     
-    public func safeSuperview(for superview: UIView?) -> UIView {
-        guard let superview = superview else {
-            fatalError("Unable to create this constraint to it's superview, because it has no superview.")
-        }
-        return superview
+    public func safeView(_ with: UIView?) -> UIView {
+        guard let v = with else { fatalError() }
+        return v
     }
-    
 }
 
 extension String {
