@@ -49,7 +49,7 @@ class AlertView: UIView {
         
         
         let sv = safeView(superview)
-        container.height(50).fillTop(to: sv, spaces: 10, safeArea: true)
+        container.height(50).fillTop(sv, spaces: 10, safeArea: true)
         
         
         self.swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(dismissAlert))

@@ -5,47 +5,22 @@
 //  Created by Ali AlNaghmoush on 26/05/2019.
 //
 
-//Horizontally
-
-extension Anchorable {
-    
-    @discardableResult
-    func xFillHorizontally(to:       Anchorable,
-                           anchor:     NSLayoutXAxisAnchor? = nil,
-                           spacLeft:   CGFloat = 0,
-                           spacRight:  CGFloat = 0,
-                           relation:   ConstraintRelation = .equal,
-                           priority:   UILayoutPriority = .required,
-                           isActive:   Bool = true) -> Constraints {
-        
-        prepareForLayout()
-        
-        let constraints = [
-            xLeft(to: to, spacing: spacLeft, relation: relation, priority: priority, isActive: isActive),
-            xRight(to: to, spacing: spacRight, relation: relation, priority: priority, isActive: isActive),
-        ]
-        
-        return constraints
-    }
-    
-}
-
 extension UIView {
     
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
-    // MARK: - Main Fill Vertically
+    // MARK: - Main Fill Top
     
     @discardableResult
-    public func fillHorizontally(_ to:      Anchorable,
-                               anchorTo:  NSLayoutXAxisAnchor? = nil,
-                               spacLeft:  CGFloat = 0,
-                               spacRight: CGFloat = 0,
-                               safeArea:  Bool = false,
-                               relation:  ConstraintRelation = .equal,
-                               priority:  UILayoutPriority = .required,
-                               active:    Bool = true) -> UIView {
+    public func fillHorizontally(_ to:       UIView,
+                                 spacLeft:   CGFloat = 0,
+                                 spacRight:  CGFloat = 0,
+                                 safeArea:   Bool = false,
+                                 relation:   AnchorRelation = .equal,
+                                 priority:   AnchorPriority = .required,
+                                 active:     Bool = true) -> UIView {
         
-        xFillHorizontally(to: to, anchor: anchorTo, spacLeft: spacLeft, spacRight: spacRight, relation: relation, priority: priority, isActive: active)
+        left  (to, spacing: spacLeft, safeArea: safeArea, relation: relation, priority: priority, active: active)
+        right (to, spacing: spacRight, safeArea: safeArea, relation: relation, priority: priority, active: active)
         
         return self
     }
@@ -54,87 +29,29 @@ extension UIView {
     // MARK: - To View
     
     @discardableResult
-    public func fillHorizontally(to: Anchorable,
-                               spaces:   CGFloat = 0,
-                               safeArea: Bool = false,
-                               relation: ConstraintRelation = .equal,
-                               priority: UILayoutPriority = .required,
-                               active:   Bool = true) -> UIView {
+    public func fillHorizontally(_ to:     UIView,
+                             spaces:   CGFloat = 0,
+                             safeArea: Bool = false,
+                             relation: AnchorRelation = .equal,
+                             priority: AnchorPriority = .required,
+                             active:   Bool = true) -> UIView {
         
-        xFillHorizontally(to: to, spacLeft: spaces, spacRight: spaces, relation: relation, priority: priority, isActive: active)
-        
-        return self
-    }
-    
-    @discardableResult
-    public func fillHorizontally(to: Anchorable,
-                               spaces:   [CGFloat] = [0,0],
-                               safeArea: Bool = false,
-                               relation: ConstraintRelation = .equal,
-                               priority: UILayoutPriority = .required,
-                               active:   Bool = true) -> UIView {
-        
-        xFillHorizontally(to: to, spacLeft: spaces[0], spacRight: spaces[1], relation: relation, priority: priority, isActive: active)
-        
-        return self
-    }
-    
-    
-    
-    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
-    // MARK: - Horizontally To Left
-    
-    @discardableResult
-    public func fillHorizontally(toLeft: Anchorable,
-                               spaces:   CGFloat = 0,
-                               safeArea: Bool = false,
-                               relation: ConstraintRelation = .equal,
-                               priority: UILayoutPriority = .required,
-                               active:   Bool = true) -> UIView {
-        
-        xFillHorizontally(to: toLeft, anchor: toLeft.leadingAnchor, spacLeft: spaces, spacRight: spaces, relation: relation, priority: priority, isActive: active)
+        left  (to, spacing: spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
+        right (to, spacing: spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
         
         return self
     }
     
     @discardableResult
-    public func fillHorizontally(toLeft: Anchorable,
-                               spaces:   [CGFloat] = [0,0],
-                               safeArea: Bool = false,
-                               relation: ConstraintRelation = .equal,
-                               priority: UILayoutPriority = .required,
-                               active:   Bool = true) -> UIView {
+    public func fillHorizontally(_ to:     UIView,
+                             spaces:   [CGFloat],
+                             safeArea: Bool = false,
+                             relation: AnchorRelation = .equal,
+                             priority: AnchorPriority = .required,
+                             active:   Bool = true) -> UIView {
         
-        xFillHorizontally(to: toLeft, anchor: toLeft.leadingAnchor, spacLeft: spaces[1], spacRight: spaces[2], relation: relation, priority: priority, isActive: active)
-        
-        return self
-    }
-    
-    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
-    // MARK: - Horizontally To Right
-    
-    @discardableResult
-    public func fillHorizontally(toRight: Anchorable,
-                               spaces:   CGFloat = 0,
-                               safeArea: Bool = false,
-                               relation: ConstraintRelation = .equal,
-                               priority: UILayoutPriority = .required,
-                               active:   Bool = true) -> UIView {
-        
-        xFillHorizontally(to: toRight, anchor: toRight.trailingAnchor, spacLeft: spaces, spacRight: spaces, relation: relation, priority: priority, isActive: active)
-        
-        return self
-    }
-    
-    @discardableResult
-    public func fillHorizontally(toRight: Anchorable,
-                               spaces:   [CGFloat] = [0,0],
-                               safeArea: Bool = false,
-                               relation: ConstraintRelation = .equal,
-                               priority: UILayoutPriority = .required,
-                               active:   Bool = true) -> UIView {
-        
-        xFillHorizontally(to: toRight, anchor: toRight.trailingAnchor, spacLeft: spaces[0], spacRight: spaces[1], relation: relation, priority: priority, isActive: active)
+        left  (to, spacing: spaces[0], safeArea: safeArea, relation: relation, priority: priority, active: active)
+        right (to, spacing: spaces[1], safeArea: safeArea, relation: relation, priority: priority, active: active)
         
         return self
     }
@@ -144,27 +61,43 @@ extension UIView {
     // MARK: - To superview
     
     @discardableResult
-    public func fillHorizontally(_ spaces:  CGFloat = 0,
-                               safeArea:  Bool = false,
-                               relation:  ConstraintRelation = .equal,
-                               priority:  UILayoutPriority = .required,
-                               active:    Bool = true) -> UIView {
+    public func fillHorizontally(_ spaces:    CGFloat = 0,
+                             safeArea: Bool = false,
+                             relation: AnchorRelation = .equal,
+                             priority: AnchorPriority = .required,
+                             active:   Bool = true) -> UIView {
         
-        let anchorable = safeAnchorable(for: superview, usingSafeArea: safeArea)
-        xFillHorizontally(to: anchorable, spacLeft: spaces, spacRight: spaces, relation: relation, priority: priority, isActive: active)
+        left  (spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
+        right (spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
+        
         
         return self
     }
     
     @discardableResult
     public func fillHorizontally(_ spaces: [CGFloat],
-                               safeArea: Bool = false,
-                               relation: ConstraintRelation = .equal,
-                               priority: UILayoutPriority = .required,
-                               active:   Bool = true) -> UIView {
+                             safeArea: Bool = false,
+                             relation: AnchorRelation = .equal,
+                             priority: AnchorPriority = .required,
+                             active:   Bool = true) -> UIView {
         
-        let anchorable = safeAnchorable(for: superview, usingSafeArea: safeArea)
-        xFillHorizontally(to: anchorable, spacLeft: spaces[0], spacRight: spaces[1], relation: relation, priority: priority, isActive: active)
+        left  (spaces[0], safeArea: safeArea, relation: relation, priority: priority, active: active)
+        right (spaces[1], safeArea: safeArea, relation: relation, priority: priority, active: active)
+        
+        return self
+    }
+    
+    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+    // MARK: - To FlexibleAnchor Superview
+    
+    @discardableResult
+    public func fillHorizontally(_ spaces: FlexibleAnchor,
+                             safeArea: Bool = false,
+                             priority: AnchorPriority = .required,
+                             active:   Bool = true) -> UIView {
+        
+        left  (spaces.points, safeArea: safeArea, relation: spaces.relation, priority: priority, active: active)
+        right (spaces.points, safeArea: safeArea, relation: spaces.relation, priority: priority, active: active)
         
         return self
     }

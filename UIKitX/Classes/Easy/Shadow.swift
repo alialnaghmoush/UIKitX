@@ -51,11 +51,11 @@ extension UIView {
         
         switch elevation {
             
-            // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+        // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
         // MARK: - None Shadow
         case .none: self.shadow(.clear, 0, 0, 0, 0)
             
-            // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+        // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
         // MARK: - Top Shadow
         case .top1: self.shadow(color, 0.10, 1 , 0,  -1)
         case .top2: self.shadow(color, 0.10, 4 , 0,  -3)
@@ -63,7 +63,7 @@ extension UIView {
         case .top4: self.shadow(color, 0.13, 18, 0, -18)
         case .top5: self.shadow(color, 0.13, 26, 0, -26)
             
-            // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+        // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
         // MARK: - Down Shadow
         case .down1: self.shadow(color, 0.10, 1 , 0,  1)
         case .down2: self.shadow(color, 0.10, 4 , 0,  3)
@@ -71,7 +71,7 @@ extension UIView {
         case .down4: self.shadow(color, 0.13, 18, 0, 18)
         case .down5: self.shadow(color, 0.13, 26, 0, 26)
             
-            // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+        // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
         // MARK: - Left Shadow
         case .left1: self.shadow(color, 0.10, 1 , -1,  0)
         case .left2: self.shadow(color, 0.10, 4 , -3,  0)
@@ -79,7 +79,7 @@ extension UIView {
         case .left4: self.shadow(color, 0.13, 18, -18, 0)
         case .left5: self.shadow(color, 0.13, 26, -26, 0)
             
-            // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+        // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
         // MARK: - Right Shadow
         case .right1: self.shadow(color, 0.10, 1 , 1,  0)
         case .right2: self.shadow(color, 0.10, 4 , 3,  0)
@@ -87,7 +87,7 @@ extension UIView {
         case .right4: self.shadow(color, 0.13, 18, 18, 0)
         case .right5: self.shadow(color, 0.13, 26, 26, 0)
             
-            // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+        // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
             
         }
         

@@ -8,9 +8,10 @@
 public typealias Constraint = NSLayoutConstraint
 public typealias Constraints = [Constraint]
 
-public typealias ConstraintAxis = Constraint.Axis
-public typealias ConstraintRelation = Constraint.Relation
-public typealias ConstraintAttribute = Constraint.Attribute
+public typealias AnchorAxis = Constraint.Axis
+public typealias AnchorRelation = Constraint.Relation
+public typealias AnchorAttribute = Constraint.Attribute
+public typealias AnchorPriority  = UILayoutPriority
 
 public typealias StackAlignment = UIStackView.Alignment
 public typealias StackDistribution = UIStackView.Distribution

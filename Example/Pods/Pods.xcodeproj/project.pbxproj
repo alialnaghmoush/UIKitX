@@ -60,7 +60,6 @@
 		40ECF820229A198D00742016 /* FillBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF81F229A198D00742016 /* FillBottom.swift */; };
 		40ECF822229A199F00742016 /* FillVertically.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF821229A199F00742016 /* FillVertically.swift */; };
 		40ECF824229A19B000742016 /* FillHorizontally.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF823229A19B000742016 /* FillHorizontally.swift */; };
-		40F5F81322A411FA001AF66E /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F5F81222A411FA001AF66E /* Position.swift */; };
 		65448F9C01E76506CFA700A16E35FFE2 /* Pods-UIKitX_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B5C4DA827B6C5893FD85BB41ADE6C090 /* Pods-UIKitX_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70E55F2E8B55988DB2E7FD43F58BD12D /* Pods-UIKitX_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 686686DA5416FC27F1220424B2C1D769 /* Pods-UIKitX_Example-dummy.m */; };
 		87B612B226050ADC17BBAE15B3719A9B /* UIKitX-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0899DCEEC6A2B784F59247CAA5FA6F11 /* UIKitX-dummy.m */; };
@@ -152,7 +151,6 @@
 		40ECF81F229A198D00742016 /* FillBottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FillBottom.swift; path = UIKitX/Classes/Anchor/Fill/FillBottom.swift; sourceTree = "<group>"; };
 		40ECF821229A199F00742016 /* FillVertically.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FillVertically.swift; path = UIKitX/Classes/Anchor/Fill/FillVertically.swift; sourceTree = "<group>"; };
 		40ECF823229A19B000742016 /* FillHorizontally.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FillHorizontally.swift; path = UIKitX/Classes/Anchor/Fill/FillHorizontally.swift; sourceTree = "<group>"; };
-		40F5F81222A411FA001AF66E /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Position.swift; path = UIKitX/Classes/Anchor/Position/Position.swift; sourceTree = "<group>"; };
 		4218CB9D255B12BFBEF1C7E5B433DE7B /* Pods-UIKitX_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UIKitX_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4AA61F03D2237C8ACA8B01D4D6BE3287 /* Pods-UIKitX_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UIKitX_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		4D7B94B8D5214F21DACDB59A302F23D2 /* Pods-UIKitX_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UIKitX_Example-resources.sh"; sourceTree = "<group>"; };
@@ -398,7 +396,6 @@
 				40ECF803229A186500742016 /* Left.swift */,
 				40ECF805229A187500742016 /* Right.swift */,
 				40ECF807229A188500742016 /* Bottom.swift */,
-				40F5F81222A411FA001AF66E /* Position.swift */,
 			);
 			name = Position;
 			sourceTree = "<group>";
@@ -723,7 +720,6 @@
 				40ECF7D5229A114000742016 /* AlertView.swift in Sources */,
 				40ECF7D3229A112800742016 /* AlertStatus.swift in Sources */,
 				40ECF7E1229A12D200742016 /* ResizingBehavior.swift in Sources */,
-				40F5F81322A411FA001AF66E /* Position.swift in Sources */,
 				40ECF7CF229A10FF00742016 /* Alert.swift in Sources */,
 				40ECF7CB229A0FB600742016 /* HexColor.swift in Sources */,
 				40ECF7EC229A138400742016 /* SuccessShape.swift in Sources */,
@@ -995,6 +991,7 @@
 					"@loader_path/Frameworks",
 				);
 				MODULEMAP_FILE = "Target Support Files/UIKitX/UIKitX.modulemap";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_MODULE_NAME = UIKitX;
 				PRODUCT_NAME = UIKitX;
 				SDKROOT = iphoneos;
@@ -1112,6 +1109,7 @@
 					"@loader_path/Frameworks",
 				);
 				MODULEMAP_FILE = "Target Support Files/UIKitX/UIKitX.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_MODULE_NAME = UIKitX;
 				PRODUCT_NAME = UIKitX;
 				SDKROOT = iphoneos;

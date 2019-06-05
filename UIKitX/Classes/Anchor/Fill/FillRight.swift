@@ -5,48 +5,24 @@
 //  Created by Ali AlNaghmoush on 26/05/2019.
 //
 
-extension Anchorable {
-    
-    @discardableResult
-    func xFillRight(to:        Anchorable,
-                   anchor:     NSLayoutXAxisAnchor? = nil,
-                   spacRight:   CGFloat = 0,
-                   spacUp:     CGFloat = 0,
-                   spacBottom: CGFloat = 0,
-                   relation:   ConstraintRelation = .equal,
-                   priority:   UILayoutPriority = .required,
-                   isActive:   Bool = true) -> Constraints {
-        
-        prepareForLayout()
-        
-        let constraints = [
-            xRight(to: to, anchor, spacing: spacRight, relation: relation, priority: priority, isActive: isActive),
-            xTop(to: to, spacing: spacUp, relation: relation, priority: priority, isActive: isActive),
-            xBottom(to: to, spacing: spacBottom, relation: relation, priority: priority, isActive: isActive),
-        ]
-        
-        return constraints
-    }
-    
-}
-
 extension UIView {
     
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
-    // MARK: - Main Fill Right
+    // MARK: - Main Fill Top
     
     @discardableResult
-    public func fillRight(_ to:      Anchorable,
-                         anchorTo:  NSLayoutXAxisAnchor? = nil,
-                         spacRight:  CGFloat = 0,
-                         spacUp:    CGFloat = 0,
-                         spacBottom: CGFloat = 0,
-                         safeArea:  Bool = false,
-                         relation:  ConstraintRelation = .equal,
-                         priority:  UILayoutPriority = .required,
-                         active:    Bool = true) -> UIView {
+    public func fillRight(_ to:       UIView,
+                          spacTop:    CGFloat = 0,
+                          spacRight:  CGFloat = 0,
+                          spacBottom: CGFloat = 0,
+                          safeArea:   Bool = false,
+                          relation:   AnchorRelation = .equal,
+                          priority:   AnchorPriority = .required,
+                          active:     Bool = true) -> UIView {
         
-        xFillRight(to: to, anchor: anchorTo, spacRight: spacRight, spacUp: spacUp, spacBottom: spacBottom, relation: relation, priority: priority, isActive: active)
+        top   (to, spacing: spacTop, safeArea: safeArea, relation: relation, priority: priority, active: active)
+        right (to, spacing: spacRight, safeArea: safeArea, relation: relation, priority: priority, active: active)
+        bottom(to, spacing: spacBottom, safeArea: safeArea, relation: relation, priority: priority, active: active)
         
         return self
     }
@@ -55,87 +31,80 @@ extension UIView {
     // MARK: - To View
     
     @discardableResult
-    public func fillRight(to: Anchorable,
-                         spaces:   CGFloat = 0,
-                         safeArea: Bool = false,
-                         relation: ConstraintRelation = .equal,
-                         priority: UILayoutPriority = .required,
-                         active:   Bool = true) -> UIView {
+    public func fillRight(_ to:     UIView,
+                          spaces:   CGFloat = 0,
+                          safeArea: Bool = false,
+                          relation: AnchorRelation = .equal,
+                          priority: AnchorPriority = .required,
+                          active:   Bool = true) -> UIView {
         
-        xFillRight(to: to, spacRight: spaces, spacUp: spaces, spacBottom: spaces, relation: relation, priority: priority, isActive: active)
-        
-        return self
-    }
-    
-    @discardableResult
-    public func fillRight(to: Anchorable,
-                         spaces:   [CGFloat] = [0,0,0],
-                         safeArea: Bool = false,
-                         relation: ConstraintRelation = .equal,
-                         priority: UILayoutPriority = .required,
-                         active:   Bool = true) -> UIView {
-        
-        xFillRight(to: to, spacRight: spaces[0], spacUp: spaces[1], spacBottom: spaces[2], relation: relation, priority: priority, isActive: active)
-        
-        return self
-    }
-    
-    
-    
-    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
-    // MARK: - Right To Left
-    
-    @discardableResult
-    public func fillRight(toLeft: Anchorable,
-                         spaces:   CGFloat = 0,
-                         safeArea: Bool = false,
-                         relation: ConstraintRelation = .equal,
-                         priority: UILayoutPriority = .required,
-                         active:   Bool = true) -> UIView {
-        
-        xFillRight(to: toLeft, anchor: toLeft.leadingAnchor, spacRight: spaces, spacUp: spaces, spacBottom: spaces, relation: relation, priority: priority, isActive: active)
+        top   (to, spacing: spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
+        right (to, spacing: spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
+        bottom(to, spacing: spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
         
         return self
     }
     
     @discardableResult
-    public func fillRight(toLeft: Anchorable,
-                         spaces:   [CGFloat] = [0,0,0],
-                         safeArea: Bool = false,
-                         relation: ConstraintRelation = .equal,
-                         priority: UILayoutPriority = .required,
-                         active:   Bool = true) -> UIView {
+    public func fillRight(_ to:     UIView,
+                          spaces:   [CGFloat],
+                          safeArea: Bool = false,
+                          relation: AnchorRelation = .equal,
+                          priority: AnchorPriority = .required,
+                          active:   Bool = true) -> UIView {
         
-        xFillRight(to: toLeft, anchor: toLeft.leadingAnchor, spacRight: spaces[0], spacUp: spaces[1], spacBottom: spaces[2], relation: relation, priority: priority, isActive: active)
+        top   (to, spacing: spaces[0], safeArea: safeArea, relation: relation, priority: priority, active: active)
+        right (to, spacing: spaces[1], safeArea: safeArea, relation: relation, priority: priority, active: active)
+        bottom(to, spacing: spaces[2], safeArea: safeArea, relation: relation, priority: priority, active: active)
         
         return self
     }
+    
     
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
     // MARK: - To superview
     
     @discardableResult
-    public func fillRight(_ spaces:  CGFloat = 0,
-                         safeArea:  Bool = false,
-                         relation:  ConstraintRelation = .equal,
-                         priority:  UILayoutPriority = .required,
-                         active:    Bool = true) -> UIView {
+    public func fillRight(_ spaces:    CGFloat = 0,
+                          safeArea: Bool = false,
+                          relation: AnchorRelation = .equal,
+                          priority: AnchorPriority = .required,
+                          active:   Bool = true) -> UIView {
         
-        let anchorable = safeAnchorable(for: superview, usingSafeArea: safeArea)
-        xFillRight(to: anchorable, spacRight: spaces, spacUp: spaces, spacBottom: spaces, relation: relation, priority: priority, isActive: active)
+        top   (spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
+        right (spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
+        bottom(spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
+        
         
         return self
     }
     
     @discardableResult
     public func fillRight(_ spaces: [CGFloat],
-                         safeArea: Bool = false,
-                         relation: ConstraintRelation = .equal,
-                         priority: UILayoutPriority = .required,
-                         active:   Bool = true) -> UIView {
+                          safeArea: Bool = false,
+                          relation: AnchorRelation = .equal,
+                          priority: AnchorPriority = .required,
+                          active:   Bool = true) -> UIView {
         
-        let anchorable = safeAnchorable(for: superview, usingSafeArea: safeArea)
-        xFillRight(to: anchorable, spacRight: spaces[0], spacUp: spaces[1], spacBottom: spaces[2], relation: relation, priority: priority, isActive: active)
+        top   (spaces[0], safeArea: safeArea, relation: relation, priority: priority, active: active)
+        right (spaces[1], safeArea: safeArea, relation: relation, priority: priority, active: active)
+        bottom(spaces[2], safeArea: safeArea, relation: relation, priority: priority, active: active)
+        
+        return self
+    }
+    
+    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+    // MARK: - To FlexibleAnchor Superview
+    
+    @discardableResult
+    public func fillRight(_ spaces: FlexibleAnchor,
+                          safeArea: Bool = false,
+                          priority: AnchorPriority = .required,
+                          active:   Bool = true) -> UIView {
+        
+        top   (spaces.points, safeArea: safeArea, relation: spaces.relation, priority: priority, active: active)
+        right (spaces.points, safeArea: safeArea, relation: spaces.relation, priority: priority, active: active)
+        bottom(spaces.points, safeArea: safeArea, relation: spaces.relation, priority: priority, active: active)
         
         return self
     }

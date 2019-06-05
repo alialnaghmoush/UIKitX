@@ -5,22 +5,20 @@
 //  Created by Ali AlNaghmoush on 02/06/2019.
 //
 
-import UIKit
-
 
 public struct FlexibleAnchor {
     var points: CGFloat!
-    var relation: NSLayoutConstraint.Relation!
+    var relation: AnchorRelation!
 }
 
 prefix operator >=
 @discardableResult
-public prefix func >= (p: CGFloat) -> SteviaFlexibleMargin {
-    return SteviaFlexibleMargin(points: p, relation: .greaterThanOrEqual)
+public prefix func >= (spacing: CGFloat) -> FlexibleAnchor {
+    return FlexibleAnchor(points: spacing, relation: .greaterThanOrEqual)
 }
 
 prefix operator <=
 @discardableResult
-public prefix func <= (p: CGFloat) -> SteviaFlexibleMargin {
-    return SteviaFlexibleMargin(points: p, relation: .lessThanOrEqual)
+public prefix func <= (spacing: CGFloat) -> FlexibleAnchor {
+    return FlexibleAnchor(points: spacing, relation: .lessThanOrEqual)
 }

@@ -5,7 +5,6 @@
 //  Created by Ali AlNaghmoush on 31/05/2019.
 //
 
-import UIKit
 
 
 public extension Constraint {

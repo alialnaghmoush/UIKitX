@@ -16,6 +16,7 @@ extension UIView {
                          end: AxesPoint = .right,
                          locations: [NSNumber]? = nil,
                          corner: CGFloat = 0,
+                         roundEdges: Bool = false,
                          style: CAGradientLayerType = .axial,
                          layerAt: UInt32 = 0) -> UIView {
         
@@ -25,9 +26,9 @@ extension UIView {
         gLayer.startPoint = start.point
         gLayer.endPoint = end.point
         gLayer.colors = colors.map({ $0.cgColor })
-        gLayer.cornerRadius(corner)
         gLayer.type = style
         
+        if roundEdges == true { gLayer.roundEdges(roundEdges) } else { gLayer.cornerRadius(corner) }
         if locations != nil { gLayer.locations = locations }
         
         gLayer.layoutIfNeeded()
@@ -36,34 +37,4 @@ extension UIView {
         
         return self
     }
-    
-}
-
-
-extension UIView {
-    
-    @discardableResult
-    public func gradient(colors: [UIColor],
-                         degree: DegreePoint,
-                         locations: [NSNumber]? = nil,
-                         corner: CGFloat = 0,
-                         style: CAGradientLayerType = .axial,
-                         layerAt: UInt32 = 0) -> UIView {
-        
-        let gLayer = CAGradientLayer()
-        
-        gLayer.frame = bounds
-        gLayer.startPoint = degree.startPoint
-        gLayer.endPoint = degree.endPoint
-        gLayer.colors = colors.map({ $0.cgColor })
-        gLayer.cornerRadius(corner)
-        gLayer.type = style
-        
-        if locations != nil { gLayer.locations = locations }
-        
-        layer.insertSublayer(gLayer, at: layerAt)
-        
-        return self
-    }
-    
 }

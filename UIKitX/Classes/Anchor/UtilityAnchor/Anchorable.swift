@@ -5,39 +5,74 @@
 //  Created by Ali AlNaghmoush on 31/05/2019.
 //
 
-import UIKit
+// --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+// MARK: - Set Anchor
 
-public protocol Anchorable {
-    
-    var topAnchor: NSLayoutYAxisAnchor { get }
-    var bottomAnchor: NSLayoutYAxisAnchor { get }
-    var leftAnchor: NSLayoutXAxisAnchor { get }
-    var rightAnchor: NSLayoutXAxisAnchor { get }
-    var leadingAnchor: NSLayoutXAxisAnchor { get }
-    var trailingAnchor: NSLayoutXAxisAnchor { get }
-    
-    var centerXAnchor: NSLayoutXAxisAnchor { get }
-    var centerYAnchor: NSLayoutYAxisAnchor { get }
-    
-    var widthAnchor: NSLayoutDimension { get }
-    var heightAnchor: NSLayoutDimension { get }
+extension UIView {
     
     @discardableResult
-    func prepareForLayout() -> Self
-    
-}
+    public func setAnchor(anchor: AnchorAttribute,
+                           to: UIView,
+                           anchorTo: AnchorAttribute,
+                           spacing: CGFloat = 0,
+                           isSafeArea: Bool = false,
+                           relation: AnchorRelation = .equal,
+                           priority: AnchorPriority = .required,
+                           active: Bool = true) -> UIView {
+        
+        self.translatesAutoresizingMaskIntoConstraints = false
+        let c = NSLayoutConstraint(item: self, attribute: anchor, relatedBy: relation,
+                                   toItem: to, attribute: anchorTo, multiplier: 1,
+                                   constant: spacing)
+        
+            to.addConstraint(c)
+            to.layoutIfNeeded()
 
-extension UIView: Anchorable {
-    
-    @discardableResult
-    public func prepareForLayout() -> Self {
-        translatesAutoresizingMaskIntoConstraints = false
-        layoutIfNeeded()
+        
         return self
     }
-}
-
-extension UILayoutGuide: Anchorable {
+    
     @discardableResult
-    public func prepareForLayout() -> Self { return self }
+    public func setAnchor(anchor: AnchorAttribute,
+                           spacing: CGFloat = 0,
+                           isSafeArea: Bool = false,
+                           relation: AnchorRelation = .equal,
+                           priority: AnchorPriority = .required,
+                           active: Bool = true) -> UIView {
+        
+        let sv = safeView(superview)
+            self.translatesAutoresizingMaskIntoConstraints = false
+            let c = NSLayoutConstraint(item: self, attribute: anchor, relatedBy: relation,
+                                       toItem: sv, attribute: anchor, multiplier: 1,
+                                       constant: spacing)
+        
+            sv.addConstraint(c)
+            sv.layoutIfNeeded()
+        
+        return self
+    }
+    
+    @discardableResult
+    public func setAnchor(_ spacing: CGFloat = 0,
+                           anchor: AnchorAttribute,
+                           relation: AnchorRelation = .equal,
+                           priority: AnchorPriority = .required,
+                           active: Bool = true) -> UIView {
+        
+            self.translatesAutoresizingMaskIntoConstraints = false
+            let c = NSLayoutConstraint(item: self, attribute: anchor, relatedBy: relation,
+                                       toItem: nil, attribute: .notAnAttribute, multiplier: 1,
+                                       constant: spacing)
+        
+        if let sv = superview {
+            sv.addConstraint(c)
+            sv.layoutIfNeeded()
+        } else {
+            addConstraint(c)
+            layoutIfNeeded()
+        }
+        
+        return self
+    }
+    
 }
