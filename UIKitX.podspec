@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UIKitX'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.swift_version    = '5.0'
   s.summary          = 'UIKitX it is easy & powerful code for human use.'
 
