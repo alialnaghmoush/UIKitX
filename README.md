@@ -4,7 +4,7 @@
 
 [![Language: Swift 2, 3, 4 and 5](https://img.shields.io/badge/Language-swift%205-orange.svg)](https://developer.apple.com/swift)
 ![Platform: iOS 8+](https://img.shields.io/badge/Platform-iOS%20-blue.svg?style=flat)
-[![GitHub tag](https://img.shields.io/badge/Release-v1.0-green.svg?style=flat)]()
+[![GitHub tag](https://img.shields.io/badge/Release-v0.1.4-green.svg?style=flat)]()
 
 ## Installation
 
