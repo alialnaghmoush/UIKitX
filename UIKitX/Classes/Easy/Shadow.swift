@@ -5,7 +5,7 @@
 //  Created by Ali AlNaghmoush on 26/05/2019.
 //
 
-public enum Elevation {
+public enum Elevation: CaseIterable {
     
     case none
     case top1, top2, top3, top4, top5

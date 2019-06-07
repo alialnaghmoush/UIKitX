@@ -8,7 +8,7 @@
 
 import UIKit
 
-public enum Gradients {
+public enum Gradients: CaseIterable {
     
     case warmFlame
     case nightFade

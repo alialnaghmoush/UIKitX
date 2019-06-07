@@ -18,6 +18,7 @@
 		408EB3DD229B460B00548216 /* EasyLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EB3DC229B460B00548216 /* EasyLayer.swift */; };
 		408EB3EB229CB01000548216 /* AxesPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EB3EA229CB01000548216 /* AxesPoint.swift */; };
 		408EB3ED229CB15400548216 /* GradientName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EB3EC229CB15400548216 /* GradientName.swift */; };
+		40C6B4E822A9CF2A0097B0A1 /* Parallax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C6B4E722A9CF2A0097B0A1 /* Parallax.swift */; };
 		40E3E11E229F273000D0F32F /* DegreePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E3E11C229F273000D0F32F /* DegreePoint.swift */; };
 		40ECF7BB229A0D1400742016 /* CornerMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7BA229A0D1400742016 /* CornerMask.swift */; };
 		40ECF7BD229A0D3300742016 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECF7BC229A0D3300742016 /* Direction.swift */; };
@@ -109,6 +110,7 @@
 		408EB3DC229B460B00548216 /* EasyLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EasyLayer.swift; path = UIKitX/Classes/Easy/EasyLayer.swift; sourceTree = "<group>"; };
 		408EB3EA229CB01000548216 /* AxesPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AxesPoint.swift; path = UIKitX/Classes/Helper/AxesPoint.swift; sourceTree = "<group>"; };
 		408EB3EC229CB15400548216 /* GradientName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradientName.swift; path = UIKitX/Classes/Color/GradientColor/GradientName.swift; sourceTree = "<group>"; };
+		40C6B4E722A9CF2A0097B0A1 /* Parallax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Parallax.swift; path = UIKitX/Classes/Easy/Parallax.swift; sourceTree = "<group>"; };
 		40E3E11C229F273000D0F32F /* DegreePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DegreePoint.swift; path = UIKitX/Classes/Helper/DegreePoint.swift; sourceTree = "<group>"; };
 		40ECF7BA229A0D1400742016 /* CornerMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CornerMask.swift; path = UIKitX/Classes/Helper/CornerMask.swift; sourceTree = "<group>"; };
 		40ECF7BC229A0D3300742016 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Direction.swift; path = UIKitX/Classes/Helper/Direction.swift; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 				40ECF7C4229A0DFC00742016 /* EasyView.swift */,
 				408EB3DC229B460B00548216 /* EasyLayer.swift */,
 				40ECF7C6229A0E1800742016 /* Shadow.swift */,
+				40C6B4E722A9CF2A0097B0A1 /* Parallax.swift */,
 			);
 			name = Easy;
 			sourceTree = "<group>";
@@ -707,6 +710,7 @@
 				40ECF7BD229A0D3300742016 /* Direction.swift in Sources */,
 				40ECF7D1229A111B00742016 /* AlertError.swift in Sources */,
 				40E3E11E229F273000D0F32F /* DegreePoint.swift in Sources */,
+				40C6B4E822A9CF2A0097B0A1 /* Parallax.swift in Sources */,
 				40ECF820229A198D00742016 /* FillBottom.swift in Sources */,
 				40ECF7C9229A0F4E00742016 /* Color.swift in Sources */,
 				40ECF806229A187500742016 /* Right.swift in Sources */,
