@@ -7,6 +7,21 @@
 [![Release](https://img.shields.io/badge/Release-v0.1.4%20Beta-green.svg?style=flat)]()
 [![License](https://img.shields.io/badge/%20License-MIT-green.svg?style=flat)]()
 
+## Features
+
+- [X] Clean Swift 5 Code.
+- [X] Shortest possible syntax for all features.
+- [X] Easy UIView syntax call.
+- [X] Easy make or select shadows.
+- [X] Easy make or select Parallax.
+- [X] Convenience call color.
+- [X] Convenience call HexColor.
+- [X] Extension Material Design Color.
+- [X] Easy make or select Gradient.
+- [X] Easy make Modern alerts system.
+- [X] Easy syntax & make layout constraints.
+- [X] Easy syntax & make animation.
+- [X] And more in the future.
 
 ## Installation
 
