@@ -1,5 +1,5 @@
 //
-//  Easy.swift
+//  EasyView.swift
 //  UIKitX
 //
 //  Created by Ali AlNaghmoush on 26/05/2019.

@@ -26,8 +26,8 @@ extension UIView {
     // MARK: - Custom parallax
     
     /// Create custom parallax
-    /// - Parameter min: Set the minimum value in when the element moves.
-    /// - Parameter max: Set the maximum value in when the element moves.
+    /// - Parameter min: Set the minimum value when the element moves.
+    /// - Parameter max: Set the maximum value when the element moves.
     public func parallax(min: CGFloat, max: CGFloat) -> UIView {
         
         removePreviousMotionEffects()
@@ -35,6 +35,24 @@ extension UIView {
         let motionEffectGroup = UIMotionEffectGroup()
         let xMotion = createMotionEffect(motionDirection: .MotionX, minValue: min, maxValue: max)
         let yMotion = createMotionEffect(motionDirection: .MotionY, minValue: min, maxValue: max)
+        motionEffectGroup.motionEffects = [yMotion, xMotion]
+        self.addMotionEffect(motionEffectGroup)
+        
+        return self
+    }
+    
+    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+    // MARK: - Custom parallax
+    
+    /// Create custom parallax
+    /// - Parameter set: Set a negative value for the minimum and positive value for the maximum when the element moves.
+    public func parallax(_ set: CGFloat) -> UIView {
+        
+        removePreviousMotionEffects()
+        
+        let motionEffectGroup = UIMotionEffectGroup()
+        let xMotion = createMotionEffect(motionDirection: .MotionX, minValue: -set, maxValue: set)
+        let yMotion = createMotionEffect(motionDirection: .MotionY, minValue: -set, maxValue: set)
         motionEffectGroup.motionEffects = [yMotion, xMotion]
         self.addMotionEffect(motionEffectGroup)
         

@@ -23,11 +23,9 @@ class ViewController: UIViewController {
             
     }
     
-    
     private func newXUI() {
         
         view.addSubview(newX)
-        newX.parallax(.Low)
         newX.backColor(.LightBlue100)
         newX.top(20, safeArea: true).fillHorizontally(20).height(50)
         newX.roundEdges().gradient(set: .warmFlame, roundEdges: true)
@@ -40,7 +38,6 @@ class ViewController: UIViewController {
     func newYUI() {
 
         view.addSubview(newY)
-        newY.parallax(.High)
         newY.backColor(.LightBlue100)
 //        newY.top(newX, spacing: 60)
         newY.fillHorizontally(20).height(50)
