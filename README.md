@@ -26,9 +26,14 @@
 ## Installation
 
 #### UIKitX is available through [CocoaPods](https://cocoapods.org/pods/UIKitX). To install it, simply add the following line to your Podfile:
-
 ```ruby
-pod 'UIKitX'
+pod 'UIKitX', '~> 0.1.4'
+```
+
+## Usage
+#### Import `UIKitX` module
+```swift
+import UIKitX
 ```
 
 ## Author & License
