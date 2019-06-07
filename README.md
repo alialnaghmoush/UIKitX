@@ -8,7 +8,7 @@
 
 ## Installation
 
-UIKitX is available through [CocoaPods](https://cocoapods.org). To install
+UIKitX is available through [CocoaPods](https://cocoapods.org/pods/UIKitX). To install
 it, simply add the following line to your Podfile:
 
 
