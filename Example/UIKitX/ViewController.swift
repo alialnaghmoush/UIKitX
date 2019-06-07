@@ -10,17 +10,17 @@ import UIKit
 import UIKitX
 
 class ViewController: UIViewController {
-        
     
-        let newX = UIView()
-        let newY = UIView()
+    
+    let newX = UIView()
+    let newY = UIView()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            
-            newXUI()
-            newYUI()
-            
+        newXUI()
+        newYUI()
+        
     }
     
     private func newXUI() {
@@ -32,20 +32,19 @@ class ViewController: UIViewController {
         newX.shadow(.down3).moveUp().fadeIn()
         
         print("DimensionsX: \(newX.bounds)")
-
+        
     }
     
     func newYUI() {
-
+        
         view.addSubview(newY)
         newY.backColor(.LightBlue100)
-//        newY.top(newX, spacing: 60)
+        newY.top(toBottom: newX, spacing: 20)
         newY.fillHorizontally(20).height(50)
-        let x = Constraint(item: newY, attribute: .top, relatedBy: .equal, toItem: newX, attribute: .bottom, multiplier: 1, constant: 20)
-        view.addConstraint(x)
+        
         newY.roundEdges().gradient(set: .frozenDreams, roundEdges: true)
         newY.shadow(.down3).moveUp(delay: 0.2).fadeIn(delay: 0.2)
-
+        
         print("DimensionsY: \(newY.bounds)")
     }
     

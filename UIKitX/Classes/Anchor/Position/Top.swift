@@ -19,6 +19,8 @@ extension UIView {
         return setAnchor(anchor: at, to: to, anchorTo: at, spacing: spacing, isSafeArea: safeArea, relation: relation, priority: priority, active: active)
     }
     
+    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+    // MARK: - Set anchor the top view to Bottom another View
     @discardableResult
     public func top(toBottom: UIView,
                     spacing: CGFloat,
@@ -35,6 +37,8 @@ extension UIView {
     }
     
     
+    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+    // MARK: - Set anchor with spacing to top superview
     @discardableResult
     public func top(_ spacing: CGFloat = 0,
                     safeArea: Bool = false,
@@ -48,6 +52,8 @@ extension UIView {
     }
     
     
+    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+    // MARK: - Set anchor with spacing to top superview Flexible
     @discardableResult
     public func top(_ flexible: FlexibleAnchor,
                     safeArea: Bool = false,
