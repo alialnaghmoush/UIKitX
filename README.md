@@ -38,8 +38,8 @@ import UIKitX
 
 ## Author & License
 #### By: Ali AlNaghmoush | Email: alialnaghmoush@gmail.com
-#### UIKitX is available under the MIT license. See the LICENSE file for more info.
 
+#### UIKitX is available under the MIT license.
 Copyright (c) 2019 Ali AlNaghmoush <alialnaghmoush@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
