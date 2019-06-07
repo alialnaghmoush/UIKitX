@@ -17,5 +17,5 @@ pod 'UIKitX'
 ```
 
 ## Author & License
-By: alialnaghmoush | Email: alialnaghmoush@gmail.com
-UIKitX is available under the MIT license. See the LICENSE file for more info.
+#### By: alialnaghmoush | Email: alialnaghmoush@gmail.com
+#### UIKitX is available under the MIT license. See the LICENSE file for more info.
