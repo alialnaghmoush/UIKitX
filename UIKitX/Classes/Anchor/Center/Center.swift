@@ -38,18 +38,5 @@ extension UIView {
         
         return self
     }
-    
-    @discardableResult
-    public func center(_ move: CGFloat = 0,
-                       safeArea: Bool = false,
-                       relation: AnchorRelation = .equal,
-                       priority: AnchorPriority = .required,
-                       active: Bool = true) -> UIView {
-        
-        centerX(move, safeArea: true, relation: relation, priority: priority, active: active)
-        centerY(move, safeArea: true, relation: relation, priority: priority, active: active)
 
-        return self
-    }
-    
 }

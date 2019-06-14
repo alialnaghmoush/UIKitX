@@ -11,41 +11,52 @@ import UIKitX
 
 class ViewController: UIViewController {
     
-    
-    let newX = UIView()
-    let newY = UIView()
-    
+    var v1 = UIGradient(.warmFlame)
+    let v2 = UIGradient(.nightFade)
+    let v3 = UIGradient(.softBlue)
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupLayout()
+        setupUI()
         
-        newXUI()
-        newYUI()
-        
-    }
-    
-    private func newXUI() {
-        
-        view.addSubview(newX)
-        newX.backColor(.LightBlue100)
-        newX.top(20, safeArea: true).fillHorizontally(20).height(50)
-        newX.roundEdges().gradient(set: .warmFlame, roundEdges: true)
-        newX.shadow(.down3).moveUp().fadeIn()
-        
-        print("DimensionsX: \(newX.bounds)")
+        print("DimensionsV1: \(v1.bounds)")
+        print("DimensionsV2: \(v2.bounds)")
+        print("DimensionsV3: \(v3.bounds)")
         
     }
     
-    func newYUI() {
-        
-        view.addSubview(newY)
-        newY.backColor(.LightBlue100)
-        newY.top(toBottom: newX, spacing: 20)
-        newY.fillHorizontally(20).height(50)
-        
-        newY.roundEdges().gradient(set: .frozenDreams, roundEdges: true)
-        newY.shadow(.down3).moveUp(delay: 0.2).fadeIn(delay: 0.2)
-        
-        print("DimensionsY: \(newY.bounds)")
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupUI()
+
     }
     
+    private func setupLayout() {
+        
+        Alert.show(note: "Welcome to UIKitX", status: .success)
+        
+        let mainStack = UIStackView(arrangedSubviews: [v1,v2,v3])
+        view.addSubview(mainStack)
+        mainStack.fillTop(20, safeArea: true)
+        mainStack.axis = .vertical
+        mainStack.spacing = 10
+        mainStack.distribution = .fillProportionally
+        mainStack.alignment = .fill
+        
+        v2.height(200)
+        
+    }
+    
+    private func setupUI() {
+        
+        v1.cornerEdges = 10
+        v2.cornerEdges = 10
+        v3.cornerEdges = 10
+
+        v1.shadow(.down4).moveUp(delay: 0.0).fadeIn(delay: 0.0)
+        v2.shadow(.down4).moveUp(delay: 0.1).fadeIn(delay: 0.1)
+        v3.shadow(.down4).moveUp(delay: 0.2).fadeIn(delay: 0.2)
+        
+    }
 }

@@ -17,17 +17,5 @@ extension UIView {
         
         return self
         
-    }
-    
-    @discardableResult
-    public func width(_ set: FlexibleAnchor,
-                       priority: AnchorPriority = .required,
-                       active: Bool = true) -> UIView {
-        
-        setAnchor(set.points, anchor: .width, relation: set.relation, priority: priority, active: active)
-        
-        return self
-        
-    }
-    
+    }    
 }

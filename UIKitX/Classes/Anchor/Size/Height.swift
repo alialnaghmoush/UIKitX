@@ -21,15 +21,4 @@ extension UIView {
         
     }
     
-    @discardableResult
-    public func height(_ set: FlexibleAnchor,
-                       priority: AnchorPriority = .required,
-                       active: Bool = true) -> UIView {
-        
-        setAnchor(set.points, anchor: .height, relation: set.relation, priority: priority, active: active)
-        
-        return self
-        
-    }
-    
 }

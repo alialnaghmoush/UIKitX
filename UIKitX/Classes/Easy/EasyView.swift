@@ -31,13 +31,13 @@ extension UIView {
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
     // MARK: - Corners Layer
     @discardableResult
-    public func cornerRadius(_ set: CGFloat) -> UIView {
+    public func cornerEdges(_ set: CGFloat) -> UIView {
         layer.cornerRadius = set
         return self
     }
     
     @discardableResult
-    public func roundEdges(_ active: Bool = true) -> UIView {
+    public func cornerEdges(_ active: Bool = true) -> UIView {
         if active { layer.cornerRadius = frame.height / 2.0 }
         return self
     }
@@ -47,6 +47,23 @@ extension UIView {
         layer.maskedCorners = [set]
         return self
     }
+    
+    
+    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+    // MARK: - Mask Layer
+    
+    @discardableResult
+    public func maskView(_ active: Bool = true) -> UIView {
+        layer.masksToBounds = active
+        return self
+    }
+    
+    @discardableResult
+    public func clipView(_ active: Bool = true) -> UIView {
+        clipsToBounds = active
+        return self
+    }
+    
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
     // MARK: - Besic View
     @discardableResult

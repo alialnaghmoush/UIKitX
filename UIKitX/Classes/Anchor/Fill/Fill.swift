@@ -99,21 +99,4 @@ extension UIView {
         return self
     }
     
-    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
-    // MARK: - To FlexibleAnchor Superview
-    
-    @discardableResult
-    public func fill(_ spaces: FlexibleAnchor,
-                     safeArea: Bool = false,
-                     priority: AnchorPriority = .required,
-                     active:   Bool = true) -> UIView {
-        
-        top   (spaces.points, safeArea: safeArea, relation: spaces.relation, priority: priority, active: active)
-        left  (spaces.points, safeArea: safeArea, relation: spaces.relation, priority: priority, active: active)
-        right (spaces.points, safeArea: safeArea, relation: spaces.relation, priority: priority, active: active)
-        bottom(spaces.points, safeArea: safeArea, relation: spaces.relation, priority: priority, active: active)
-        
-        return self
-    }
-    
 }

@@ -58,13 +58,4 @@ public enum Gradients: CaseIterable {
     case itmeoBranding
     case zeusMiracle
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }

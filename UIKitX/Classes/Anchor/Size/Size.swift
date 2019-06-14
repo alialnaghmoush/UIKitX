@@ -43,16 +43,4 @@ extension UIView {
         
         return self
     }
-    
-    @discardableResult
-    public func size(_ set: FlexibleAnchor,
-                     priority: AnchorPriority = .required,
-                     active: Bool = true) -> UIView {
-        
-        height(set.points, relation: set.relation, priority: priority, active: active)
-        width (set.points, relation: set.relation, priority: priority, active: active)
-        
-        return self
-    }
-    
 }

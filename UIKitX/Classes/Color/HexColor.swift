@@ -19,7 +19,7 @@ extension HexColor {
     /// The string hex value representation of the current color
     var hex: Hex {
         var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0, rgb: Int
-        getRed(&r, green: &g, blue: &b, alpha: &a)
+//        getRed(&r, green: &g, blue: &b, alpha: &a)
         
         if a == 1 { // no alpha value set, we are returning the short version
             rgb = (Int)(r*255)<<16 | (Int)(g*255)<<8 | (Int)(b*255)<<0

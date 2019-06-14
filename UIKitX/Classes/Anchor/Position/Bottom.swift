@@ -15,8 +15,10 @@ extension UIView {
                        priority: AnchorPriority = .required,
                        active: Bool = true) -> UIView {
         
-        let at: AnchorAttribute = !safeArea ? .bottom : .bottomMargin
-        return setAnchor(anchor: at, to: to, anchorTo: at, spacing: -spacing, isSafeArea: safeArea, relation: relation, priority: priority, active: active)
+        let sav: Any = !safeArea ? to : to.safeAreaLayoutGuide
+        return setAnchor(anchor: .bottom, to: sav, anchorTo: .bottom, padding: -spacing,
+                         relation: relation, priority: priority, active: active)
+        
     }
     
     @discardableResult
@@ -27,11 +29,10 @@ extension UIView {
                        priority: AnchorPriority = .required,
                        active: Bool = true) -> UIView {
         
-        let at: AnchorAttribute = !safeArea ? .bottom : .bottomMargin
-        let ato: AnchorAttribute = !safeArea ? .top : .topMargin
+        let sav: Any = !safeArea ? toTop : toTop.safeAreaLayoutGuide
+        return setAnchor(anchor: .bottom, to: sav, anchorTo: .top, padding: -spacing,
+                         relation: relation, priority: priority, active: active)
         
-        return setAnchor(anchor: at, to: toTop, anchorTo: ato, spacing: -spacing,
-                        isSafeArea: safeArea, relation: relation, priority: priority, active: active)
     }
     
     
@@ -42,21 +43,8 @@ extension UIView {
                        priority: AnchorPriority = .required,
                        active: Bool = true) -> UIView {
         
-        let at: AnchorAttribute = !safeArea ? .bottom : .bottomMargin
-        return setAnchor(anchor: at, spacing: -spacing, isSafeArea: safeArea,
-                        relation: relation, priority: priority, active: active)
+        return setAnchor(anchor: .bottom, padding: -spacing, safeArea: safeArea, relation: relation, priority: priority, active: active)
     }
-    
-    
-    @discardableResult
-    public func bottom(_ flexible: FlexibleAnchor,
-                       safeArea: Bool = false,
-                       priority: AnchorPriority = .required,
-                       active: Bool = true) -> UIView {
-        
-        let at: AnchorAttribute = !safeArea ? .bottom : .bottomMargin
-        return setAnchor(anchor: at, spacing: -flexible.points, isSafeArea: safeArea,
-                        relation: flexible.relation, priority: priority, active: active)
-    }
+
     
 }

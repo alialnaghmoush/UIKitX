@@ -31,13 +31,13 @@ extension CALayer {
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
     // MARK: - Corners Layer
     @discardableResult
-    public func cornerRadius(_ set: CGFloat) -> CALayer {
+    public func cornerEdges(_ set: CGFloat) -> CALayer {
         cornerRadius = set
         return self
     }
     
     @discardableResult
-    public func roundEdges(_ active: Bool = true) -> CALayer {
+    public func cornerEdges(_ active: Bool = true) -> CALayer {
         if active { cornerRadius = frame.height / 2.0 }
         return self
     }

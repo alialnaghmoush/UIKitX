@@ -15,8 +15,9 @@ extension UIView {
                     priority: AnchorPriority = .required,
                     active: Bool = true) -> UIView {
         
-        let at: AnchorAttribute = !safeArea ? .top : .topMargin
-        return setAnchor(anchor: at, to: to, anchorTo: at, spacing: spacing, isSafeArea: safeArea, relation: relation, priority: priority, active: active)
+        let sav: Any = !safeArea ? to : to.safeAreaLayoutGuide
+        return setAnchor(anchor: .top, to: sav, anchorTo: .top, padding: spacing,
+                         relation: relation, priority: priority, active: active)
     }
     
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
@@ -29,11 +30,9 @@ extension UIView {
                     priority: AnchorPriority = .required,
                     active: Bool = true) -> UIView {
         
-        let at: AnchorAttribute = !safeArea ? .top : .topMargin
-        let ato: AnchorAttribute = !safeArea ? .bottom : .bottomMargin
-        
-        return setAnchor(anchor: at, to: toBottom, anchorTo: ato, spacing: spacing,
-                        isSafeArea: safeArea, relation: relation, priority: priority, active: active)
+        let sav: Any = !safeArea ? toBottom : toBottom.safeAreaLayoutGuide
+        return setAnchor(anchor: .top, to: sav, anchorTo: .bottom, padding: spacing,
+                         relation: relation, priority: priority, active: active)
     }
     
     
@@ -46,24 +45,8 @@ extension UIView {
                     priority: AnchorPriority = .required,
                     active: Bool = true) -> UIView {
         
-        let at: AnchorAttribute = !safeArea ? .top : .topMargin
-        return setAnchor(anchor: at, spacing: spacing, isSafeArea: safeArea,
-                        relation: relation, priority: priority, active: active)
-    }
-    
-    
-    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
-    // MARK: - Set anchor with spacing to top superview Flexible
-    @discardableResult
-    public func top(_ flexible: FlexibleAnchor,
-                    safeArea: Bool = false,
-                    priority: AnchorPriority = .required,
-                    active: Bool = true) -> UIView {
+        return setAnchor(anchor: .top, padding: spacing, safeArea: safeArea, relation: relation, priority: priority, active: active)
         
-        let at: AnchorAttribute = !safeArea ? .top : .topMargin
-        return setAnchor(anchor: at, spacing: flexible.points, isSafeArea: safeArea,
-                        relation: flexible.relation, priority: priority, active: active)
     }
-    
     
 }

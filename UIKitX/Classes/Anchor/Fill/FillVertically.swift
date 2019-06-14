@@ -8,10 +8,11 @@
 extension UIView {
     
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
-    // MARK: - Main Fill Top
+    // MARK: - Main Fill Vertically
     
     @discardableResult
-    public func fillVertically(_ to:       UIView,
+    public func fillVertically(toTop:      UIView,
+                               toBottom:  UIView,
                                spacTop:    CGFloat = 0,
                                spacBottom: CGFloat = 0,
                                safeArea:   Bool = false,
@@ -19,8 +20,8 @@ extension UIView {
                                priority:   AnchorPriority = .required,
                                active:     Bool = true) -> UIView {
         
-        top   (to, spacing: spacTop, safeArea: safeArea, relation: relation, priority: priority, active: active)
-        bottom(to, spacing: spacBottom, safeArea: safeArea, relation: relation, priority: priority, active: active)
+        top(toBottom: toTop, spacing: spacTop, safeArea: safeArea, relation: relation, priority: priority, active: active)
+        bottom(toBottom, spacing: spacBottom, safeArea: safeArea, relation: relation, priority: priority, active: active)
         
         return self
     }
@@ -29,30 +30,31 @@ extension UIView {
     // MARK: - To View
     
     @discardableResult
-    public func fillVertically(_ to:     UIView,
+    public func fillVertically(toTop:    UIView,
+                               toBottom: UIView,
                                spaces:   CGFloat = 0,
                                safeArea: Bool = false,
                                relation: AnchorRelation = .equal,
                                priority: AnchorPriority = .required,
                                active:   Bool = true) -> UIView {
         
-        top   (to, spacing: spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
-        bottom(to, spacing: spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
+        top(toBottom: toTop, spacing: spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
+        bottom(toTop: toBottom, spacing: spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
         
         return self
     }
     
     @discardableResult
-    public func fillVertically(_ to:     UIView,
+    public func fillVertically(toTop:     UIView,
+                               toBottom:  UIView,
                                spaces:   [CGFloat],
                                safeArea: Bool = false,
                                relation: AnchorRelation = .equal,
                                priority: AnchorPriority = .required,
                                active:   Bool = true) -> UIView {
         
-        top   (to, spacing: spaces[0], safeArea: safeArea, relation: relation, priority: priority, active: active)
-        bottom(to, spacing: spaces[1], safeArea: safeArea, relation: relation, priority: priority, active: active)
-        
+        top(toBottom: toTop, spacing: spaces[0], safeArea: safeArea, relation: relation, priority: priority, active: active)
+        bottom(toTop: toBottom, spacing: spaces[1], safeArea: safeArea, relation: relation, priority: priority, active: active)
         return self
     }
     
@@ -61,13 +63,13 @@ extension UIView {
     // MARK: - To superview
     
     @discardableResult
-    public func fillVertically(_ spaces:    CGFloat = 0,
+    public func fillVertically(_ spaces: CGFloat = 0,
                                safeArea: Bool = false,
                                relation: AnchorRelation = .equal,
                                priority: AnchorPriority = .required,
                                active:   Bool = true) -> UIView {
         
-        top   (spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
+        top(spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
         bottom(spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
         
         
@@ -81,23 +83,8 @@ extension UIView {
                                priority: AnchorPriority = .required,
                                active:   Bool = true) -> UIView {
         
-        top   (spaces[0], safeArea: safeArea, relation: relation, priority: priority, active: active)
+        top(spaces[0], safeArea: safeArea, relation: relation, priority: priority, active: active)
         bottom(spaces[1], safeArea: safeArea, relation: relation, priority: priority, active: active)
-        
-        return self
-    }
-    
-    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
-    // MARK: - To FlexibleAnchor Superview
-    
-    @discardableResult
-    public func fillVertically(_ spaces: FlexibleAnchor,
-                               safeArea: Bool = false,
-                               priority: AnchorPriority = .required,
-                               active:   Bool = true) -> UIView {
-        
-        top   (spaces.points, safeArea: safeArea, relation: spaces.relation, priority: priority, active: active)
-        bottom(spaces.points, safeArea: safeArea, relation: spaces.relation, priority: priority, active: active)
         
         return self
     }

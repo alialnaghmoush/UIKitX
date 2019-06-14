@@ -7,16 +7,20 @@
 
 class AlertView: UIView {
     
+    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+    // MARK: - Properties
     private var container = UIView()
-    private var icon = UIView()
-    private var note = UILabel()
+    private var icon      = UIView()
+    private var note      = UILabel()
     
     private var isFinish: Bool = false
     private var keyWindow: UIWindow { return UIApplication.shared.keyWindow ?? UIWindow() }
     private var swipeUp = UISwipeGestureRecognizer()
     
-    public var direction: Direction = .rtl
+    public var direction: Direction = .ltr
     
+    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+    // MARK: - Initializers
     public init(note: String, status: AlertStatus) {
         super.init(frame: CGRect.zero)
         
@@ -27,9 +31,13 @@ class AlertView: UIView {
         
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        play()
+    required init?(coder: NSCoder) {
+        fatalError()
+    }
+    
+    open override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        configAlert()
     }
     
     override public func layoutSubviews() {
@@ -37,8 +45,8 @@ class AlertView: UIView {
         configAlert()
     }
     
-    //MARK: - Configure UI
-    
+    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+    //MARK: - Configure UI    
     private func configAlert() {
         containerUI(); iconUI(); noteUI()
     }
@@ -47,17 +55,15 @@ class AlertView: UIView {
         
         addSubview(container)
         
-        
         let sv = safeView(superview)
-        container.height(50).fillTop(sv, spaces: 10, safeArea: true)
-        
+        container.fillTop(sv, spaces: 10, safeArea: true).height(50)
         
         self.swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(dismissAlert))
         self.swipeUp.direction = .up
         sv.addGestureRecognizer(swipeUp)
         
         container.shadow(.down5)
-        container.roundEdges()
+        container.cornerEdges()
         
     }
     

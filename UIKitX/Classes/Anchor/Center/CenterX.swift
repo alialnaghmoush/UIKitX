@@ -16,7 +16,7 @@ extension UIView {
                         active: Bool = true) -> UIView {
         
         let at: AnchorAttribute = !safeArea ? .centerX : .centerXWithinMargins
-        setAnchor(anchor: at, to: to, anchorTo: at, spacing: move, isSafeArea: safeArea, relation: relation, priority: priority, active: active)
+        setAnchor(anchor: at, to: to, anchorTo: at, padding: move, relation: relation, priority: priority, active: active)
         
         return self
     }
@@ -30,22 +30,8 @@ extension UIView {
                         active: Bool = true) -> UIView {
         
         let at: AnchorAttribute = !safeArea ? .centerX : .centerXWithinMargins
-        setAnchor(anchor: at, spacing: move, isSafeArea: safeArea, relation: relation, priority: priority, active: active)
+        setAnchor(anchor: at, padding: move, relation: relation, priority: priority, active: active)
         
         return self
     }
-    
-    @discardableResult
-    public func centerX(_ move: FlexibleAnchor,
-                        safeArea: Bool = false,
-                        relation: AnchorRelation = .equal,
-                        priority: AnchorPriority = .required,
-                        active: Bool = true) -> UIView {
-        
-        let at: AnchorAttribute = !safeArea ? .centerX : .centerXWithinMargins
-        setAnchor(anchor: at, spacing: move.points, isSafeArea: safeArea, relation: move.relation, priority: priority, active: active)
-        
-        return self
-    }
-    
 }
