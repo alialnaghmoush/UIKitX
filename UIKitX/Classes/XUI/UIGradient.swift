@@ -30,11 +30,7 @@ public class UIGradient: UIView {
     required init?(coder: NSCoder) {
         fatalError()
     }
-    
-//    public init() {
-//        super.init(frame: UIScreen.main.bounds)
-//    }
-    
+        
     public init(colors: [UIColor],
                 start: AxesPoint = .topRight,
                 end: AxesPoint = .bottomLeft,

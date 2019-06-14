@@ -9,6 +9,7 @@ class AlertView: UIView {
     
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
     // MARK: - Properties
+    
     private var container = UIView()
     private var icon      = UIView()
     private var note      = UILabel()
@@ -17,10 +18,11 @@ class AlertView: UIView {
     private var keyWindow: UIWindow { return UIApplication.shared.keyWindow ?? UIWindow() }
     private var swipeUp = UISwipeGestureRecognizer()
     
-    public var direction: Direction = .ltr
+    public var direction: Direction = .rtl
     
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
     // MARK: - Initializers
+    
     public init(note: String, status: AlertStatus) {
         super.init(frame: CGRect.zero)
         
@@ -46,7 +48,8 @@ class AlertView: UIView {
     }
     
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
-    //MARK: - Configure UI    
+    //MARK: - Configure UI
+    
     private func configAlert() {
         containerUI(); iconUI(); noteUI()
     }

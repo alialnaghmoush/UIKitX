@@ -7,7 +7,7 @@
 
 public struct Alert {
 
-    static public func show(note: String, status: AlertStatus, direction: Direction = .ltr) {
+    static public func show(note: String, status: AlertStatus, direction: Direction = .rtl) {
         let alertView = AlertView(note: note, status: status)
         alertView.direction = direction
         alertView.play()
