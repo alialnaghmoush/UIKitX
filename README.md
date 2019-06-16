@@ -128,13 +128,13 @@ x1.borderColor(.white, views: x2,x3)
 cornerEdges(_ set: CGFloat)
 ```
 ```swift
-cornerEdges(_ active: Bool = true)
+cornerEdges(_ active: Bool) // Active as default is true
 ```
 ```swift
 cornerEdges(_ set: CGFloat, views: UIView...)
 ```
 ```swift
-cornerEdges(_ active: Bool = true, views: UIView...)
+cornerEdges(_ active: Bool, views: UIView...) // Active as default is true
 ```
 
 ### Examples Usage `cornerEdges`
