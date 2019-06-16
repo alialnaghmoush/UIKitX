@@ -238,6 +238,7 @@ x1.backColor(.purple, views: x2,x3)
 ```
 
 ### Easy: `addSubviews` syntax
+```swift
 addSubviews(_ views: UIView...)
 ```
 ### Examples Usage `addSubviews`
