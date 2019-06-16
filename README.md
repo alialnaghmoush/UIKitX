@@ -1,6 +1,12 @@
 ![](https://github.com/alialnaghmoush/UIKitX/blob/master/Design/LogoX.png)
 
 Welcome to **UIKitX**, a UI/UX framework easy & powerful for human use to create beautiful applications.
+
+[![Language: Swift 2, 3, 4 and 5](https://img.shields.io/badge/Language-Swift%205-orange.svg?style=flat)]()
+[![Platform](https://img.shields.io/badge/Platform-iOS%20-blue.svg?style=flat)]()
+[![Release](https://img.shields.io/badge/Release-v0.1.7%20Beta-green.svg?style=flat)]()
+[![License](https://img.shields.io/badge/%20License-MIT-green.svg?style=flat)]()
+
 <div align="center">
 <img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Easy.png" height="120">
 <img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Color.png" height="120">
@@ -10,12 +16,6 @@ Welcome to **UIKitX**, a UI/UX framework easy & powerful for human use to create
 <img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Animat.png" height="120">
 <img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Shapes.png" height="120">
 </div>
-
-
-[![Language: Swift 2, 3, 4 and 5](https://img.shields.io/badge/Language-Swift%205-orange.svg?style=flat)]()
-[![Platform](https://img.shields.io/badge/Platform-iOS%20-blue.svg?style=flat)]()
-[![Release](https://img.shields.io/badge/Release-v0.1.7%20Beta-green.svg?style=flat)]()
-[![License](https://img.shields.io/badge/%20License-MIT-green.svg?style=flat)]()
 
 ## Features
 
