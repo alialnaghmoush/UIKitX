@@ -47,17 +47,17 @@ import UIKitX
 ```
 ## Easy
 <div align="center">
-<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/1border.png" width="200">
-<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/2borderWidth.png" width="200">
-<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/3borderColor.png" width="200">
-<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/4cornerEdges.png" width="200">
-<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/5maskedCorners.png" width="200">
-<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/6maskView.png" width="200">
-<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/7clipView.png" width="200">
-<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/8backColor.png" width="200">
-<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/9addSubviews.png" width="200">
-<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/10Parallax.png" width="200">
-<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/11Shadow.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Easy/1border.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Easy/2borderWidth.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Easy/3borderColor.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Easy/4cornerEdges.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Easy/5maskedCorners.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Easy/6maskView.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Easy/7clipView.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Easy/8backColor.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Easy/9addSubviews.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Easy/10Parallax.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Easy/11Shadow.png" width="200">
 </div>
 
 ### Easy: `border` syntax
@@ -325,4 +325,57 @@ x.shadow(.down4)
 ```swift
 let x = UIView()
 x.shadow(.down4, color: .purple)
+```
+## Color
+<div align="center">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Color/1convenience.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Color/2hexColor.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Color/3materialColor.png" width="200">
+</div>
+
+### Color: `convenience UIColor` syntax
+```swift
+UIColor(r: CGFloat, g: CGFloat, b: CGFloat)
+```
+```swift
+UIColor(r: CGFloat, g: CGFloat, b: CGFloat,_ opacity: CGFloat)
+```
+```swift
+UIColor(red: CGFloat, green: CGFloat, blue: CGFloat)
+```
+```swift
+UIColor(red: CGFloat, green: CGFloat, blue: CGFloat,_ opacity: CGFloat)
+```
+```swift
+UIColor.getRandomColor()
+```
+### Examples Usage `convenience UIColor`
+```swift
+let x = UIView()
+let c = UIColor(r: 218, g: 68, b: 83)
+
+x.backColor(c)
+```
+```swift
+let x = UIView()
+let c = UIColor(r: 218, g: 68, b: 83, 0.5)
+
+x.backColor(c)
+```
+```swift
+let x = UIView()
+let c = UIColor(red: 102, green: 230, blue: 255)
+
+x.backColor(c)
+```
+```swift
+let x = UIView()
+let c = UIColor(red: 102, green: 230, blue: 255, 0.8)
+
+x.backColor(c)
+```
+```swift
+let x = UIView()
+
+x.backColor(.getRandomColor())
 ```
