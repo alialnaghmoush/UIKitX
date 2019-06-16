@@ -101,6 +101,15 @@ extension UIView {
         return self
     }
     
+    @discardableResult
+    public func maskedCorners(_ set: CACornerMask, views: UIView...) -> UIView{
+        layer.maskedCorners = [set]
+        views.forEach { (view) in
+            view.layer.maskedCorners = [set]
+        }
+        return self
+    }
+    
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
     // MARK: - Mask Layer
     
@@ -117,6 +126,28 @@ extension UIView {
     }
     
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+    // MARK: - Mask Layer with more then views
+    
+    @discardableResult
+    public func maskView(_ active: Bool = true, views: UIView...) -> UIView {
+        layer.masksToBounds = active
+        views.forEach { (view) in
+            view.layer.masksToBounds = active
+        }
+        return self
+    }
+    
+    @discardableResult
+    public func clipView(_ active: Bool = true, views: UIView...) -> UIView {
+        clipsToBounds = active
+        views.forEach { (view) in
+            view.clipsToBounds = active
+        }
+        return self
+    }
+    
+    
+    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
     // MARK: - Background Color for View
     @discardableResult
     public func backColor(_ set: UIColor) -> UIView {
@@ -126,6 +157,7 @@ extension UIView {
     
     @discardableResult
     public func backColor(_ set: UIColor, views: UIView...) -> UIView {
+        backgroundColor = set
         views.forEach { (view) in
             view.backgroundColor = set
         }

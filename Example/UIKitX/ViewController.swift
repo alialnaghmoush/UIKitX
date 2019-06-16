@@ -51,10 +51,10 @@ class ViewController: UIViewController {
     
     private func setupUI() {
         v1.addSubview(v4)
-        view.backColor(.Blue600, views: v1,v2,v3)
+        v1.backColor(.Blue600, views: v1,v2,v3)
         v1.cornerEdges(true, views: v2,v3)
-        v4.fill(14).backColor(.white).cornerEdges(true)
-
+        v4.fill(14).backColor(.white).cornerEdges(5)
+        v4.maskedCorners(.top)
 
         v1.shadow(.down4).moveUp(delay: 0.0).fadeIn(delay: 0.0)
         v2.shadow(.down4).moveUp(delay: 0.1).fadeIn(delay: 0.1)
