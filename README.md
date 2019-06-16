@@ -448,3 +448,94 @@ x.shadow(.down4, color: .Blue200)
 <img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Color/MaterialColors/Grey.png" width="200">
 <img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Color/MaterialColors/BlueGrey.png" width="200">
 </div>
+
+## Gradient
+### Gradient: `Initializers` syntax
+```swift
+UIGradient(colors: [UIColor])
+```
+```swift
+UIGradient(colors: [UIColor],
+           start: AxesPoint,
+           end: AxesPoint,
+           locations: [NSNumber]?,
+           cornerEdges: CGFloat,
+           roundEdges: Bool,
+           style: CAGradientLayerType)
+```
+```swift
+UIGradient(_ set: Gradients)
+```
+```swift
+UIGradient(_ set: Gradients,
+           start: AxesPoint,
+           end: AxesPoint,
+           locations: [NSNumber]?,
+           cornerEdges: CGFloat,
+           roundEdges: Bool,
+           style: CAGradientLayerType)
+```
+
+### Gradient: `Properties`
+`colors: [UIColor]` | ` start: AxesPoint` | `end: AxesPoint` | `locations: [NSNumber]?` | `cornerEdges: CGFloat` | `roundEdges: Bool` | `style: CAGradientLayerType` | `layerAt: UInt32`
+
+### Examples Usage `Gradient`
+```swift
+let x = UIGradient([.Red400, .Red900])
+view.addSubview(x)
+```
+```swift
+let x = UIGradient(colors: [.Red400,.Red800], start: .top, end: .bottom, locations: nil, cornerEdges: 20, roundEdges: false, style: .axial)
+view.addSubview(x)
+```
+```swift
+let x = UIGradient(.warmFlame)
+view.addSubview(x)
+```
+```swift
+let x = UIGradient(.softBlue, cornerEdges: 20)
+view.addSubview(x)
+```
+```swift
+let x = UIGradient(.softBlue, start: .top, end: .bottom, locations: nil, cornerEdges: 20, roundEdges: false, style: .axial)
+view.addSubview(x)
+```
+
+### Gradient: `Gradient Color`
+<div align="center">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/001.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/002.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/003.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/004.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/005.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/006.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/007.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/008.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/009.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/010.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/011.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/012.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/013.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/014.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/015.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/016.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/017.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/018.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/019.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/020.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/021.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/022.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/023.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/024.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/025.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/026.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/027.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/028.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/029.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/030.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/031.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/032.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/033.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/034.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/035.png" width="200">       
+</div>
