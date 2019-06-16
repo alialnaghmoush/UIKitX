@@ -120,3 +120,65 @@ let x3 = UIView()
 
 x1.borderColor(.white, views: x2,x3)
 ```
+
+### Easy: `cornerEdges` syntax
+```swift
+cornerEdges(_ set: CGFloat)
+```
+```swift
+cornerEdges(_ active: Bool = true)
+```
+```swift
+cornerEdges(_ set: CGFloat, views: UIView...)
+```
+```swift
+cornerEdges(_ active: Bool = true, views: UIView...)
+```
+
+### Examples Usage `cornerEdges`
+```swift
+let x = UIView()
+x.cornerEdges(13)
+```
+```swift
+let x = UIView()
+x.cornerEdges(true)
+```
+```swift
+let x1 = UIView()
+let x2 = UIView()
+let x3 = UIView()
+
+x1.cornerEdges(8, views: x2,x3)
+```
+```swift
+let x1 = UIView()
+let x2 = UIView()
+let x3 = UIView()
+
+x1.cornerEdges(true, views: x2,x3)
+```
+
+### Easy: `maskedCorners` syntax
+```swift
+maskedCorners(_ set: CACornerMask)
+```
+```swift
+maskedCorners(_ set: CACornerMask, views: UIView...)
+```
+### Examples Usage `maskedCorners`
+```swift
+let x = UIView()
+x.maskedCorners(.topLeft)
+```
+```swift
+let x = UIView()
+x.maskedCorners([.topLeft,.bottomRight])
+```
+```swift
+let x1 = UIView()
+let x2 = UIView()
+let x3 = UIView()
+
+x1.maskedCorners([.topLeft,.bottomRight], views: x2,x3)
+```
