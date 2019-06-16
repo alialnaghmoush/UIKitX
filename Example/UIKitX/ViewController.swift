@@ -53,8 +53,7 @@ class ViewController: UIViewController {
         v1.addSubview(v4)
         v1.backColor(.Blue600, views: v1,v2,v3)
         v1.cornerEdges(true, views: v2,v3)
-        v4.fill(14).backColor(.white).cornerEdges(5)
-        v4.maskedCorners(.top)
+        v4.fill(14).backColor(UIColor("#03A9F4", alpha: 0.3)).cornerEdges(true)
 
         v1.shadow(.down4).moveUp(delay: 0.0).fadeIn(delay: 0.0)
         v2.shadow(.down4).moveUp(delay: 0.1).fadeIn(delay: 0.1)

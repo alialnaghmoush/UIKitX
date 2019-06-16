@@ -7,11 +7,14 @@
 
 extension HexColor {
         
-    convenience public init?(_ hex: Hex, alpha: CGFloat? = nil) {
+    convenience public init(_ hex: Hex, alpha: CGFloat? = nil) {
         
-        guard let hexType = Type(from: hex), let components = hexType.components() else {
-            return nil
-        }
+//        guard let hexType = Type(from: hex), let components = hexType.components() else {
+//            return nil
+//        }
+        
+        let hexType = Type(from: hex)
+        let components = hexType!.components()
         
         self.init(red: components.red, green: components.green, blue: components.blue, alpha: alpha ?? components.alpha)
     }
@@ -19,7 +22,7 @@ extension HexColor {
     /// The string hex value representation of the current color
     var hex: Hex {
         var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0, rgb: Int
-//        getRed(&r, green: &g, blue: &b, alpha: &a)
+        getRed(&r, green: &g, blue: &b, alpha: &a)
         
         if a == 1 { // no alpha value set, we are returning the short version
             rgb = (Int)(r*255)<<16 | (Int)(g*255)<<8 | (Int)(b*255)<<0
@@ -78,12 +81,13 @@ extension HexColor {
         }
         
         typealias rgbComponents = (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)
-        func components() -> rgbComponents? {
+        func components() -> rgbComponents {
             
             var hexValue: UInt32 = 0
-            guard Scanner(string: value).scanHexInt32(&hexValue) else {
-                return nil
-            }
+//            guard Scanner(string: value).scanHexInt32(&hexValue) else {
+//                return nil
+//            }
+            Scanner(string: value).scanHexInt32(&hexValue)
             
             let r, g, b, a, divisor: CGFloat
             

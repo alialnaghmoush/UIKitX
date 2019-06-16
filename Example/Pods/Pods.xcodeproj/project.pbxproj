@@ -317,7 +317,6 @@
 				40ECF7C8229A0F4E00742016 /* Color.swift */,
 				40ECF7CA229A0FB600742016 /* HexColor.swift */,
 				40ECF7CC229A0FC700742016 /* MaterialColor.swift */,
-				402DFA12229ACC6E0027FF71 /* GradientColor */,
 			);
 			name = Color;
 			sourceTree = "<group>";
@@ -463,6 +462,7 @@
 				40ECF7D9229A11D100742016 /* Helper */,
 				40ECF7DB229A11FE00742016 /* Easy */,
 				40ECF7DD229A121400742016 /* Color */,
+				402DFA12229ACC6E0027FF71 /* GradientColor */,
 				40ECF7D7229A11AC00742016 /* Alert */,
 				40ECF7FC229A151000742016 /* Anchor */,
 				40ECF7EF229A140800742016 /* Animat */,
