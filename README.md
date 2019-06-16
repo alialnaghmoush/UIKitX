@@ -303,10 +303,10 @@ shadow(_ elevation: Elevation)
 shadow(_ elevation: Elevation, color: UIColor)
 ```
 ### Select Elevation
-`.none`
-`.top1` | `.top2` | `.top3` | `.top4` | `.top5`
-`.down1` | `.down2` | `.down3` | `.down4` | `.down5`
-`.left1` | `.left2` | `.left3` | `.left4` | `.left5`
+`.none`</br>
+`.top1` | `.top2` | `.top3` | `.top4` | `.top5`</br>
+`.down1` | `.down2` | `.down3` | `.down4` | `.down5`</br>
+`.left1` | `.left2` | `.left3` | `.left4` | `.left5`</br>
 `.right1` | `.right2` | `.right3` | `.right4` | `.right5`
 
 ### Examples Usage `shadow`
