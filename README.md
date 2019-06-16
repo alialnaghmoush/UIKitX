@@ -182,3 +182,69 @@ let x3 = UIView()
 
 x1.maskedCorners([.topLeft,.bottomRight], views: x2,x3)
 ```
+
+### Easy: `maskView` syntax
+```swift
+maskView(_ active: Bool) // As default is true
+```
+```swift
+maskView(_ active: Bool = true, views: UIView...) // As default is true
+```
+### Examples Usage `maskView`
+```swift
+let x = UIView()
+x.maskView()
+```
+```swift
+let x = UIView()
+x.maskView(true, views: x2,x3)
+```
+
+### Easy: `clipView` syntax
+```swift
+clipView(_ active: Bool) // As default is true
+```
+```swift
+clipView(_ active: Bool = true, views: UIView...) // As default is true
+```
+### Examples Usage `clipView`
+```swift
+let x = UIView()
+x.clipView()
+```
+```swift
+let x = UIView()
+x.clipView(false, views: x2,x3)
+```
+
+### Easy: `backColor` syntax
+```swift
+backColor(_ set: UIColor)
+```
+```swift
+backColor(_ set: UIColor, views: UIView...)
+```
+### Examples Usage `backColor`
+```swift
+let x = UIView()
+x.backColor(.white)
+```
+```swift
+let x1 = UIView()
+let x2 = UIView()
+let x3 = UIView()
+
+x1.backColor(.purple, views: x2,x3)
+```
+
+### Easy: `addSubviews` syntax
+addSubviews(_ views: UIView...)
+```
+### Examples Usage `addSubviews`
+```swift
+let x1 = UIView()
+let x2 = UIView()
+let x3 = UIView()
+
+view.addSubviews(1x,x2,x3)
+```
