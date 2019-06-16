@@ -405,5 +405,5 @@ x.border(width: 5, color: UIColor("03A9F4"))
 ```
 ```swift
 let x = UIView()
-x.shadow(UIColor("03A9F4"))
+x.shadow(UIColor("#03A9F4", alpha: 0.3))
 ```
