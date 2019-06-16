@@ -79,4 +79,44 @@ let x3 = UIView()
 x1.border(width: 5, color: .white, views: x2,x3)
 ```
 
+### Easy: `borderWidth` syntax
+```swift
+borderWidth(_ set: CGFloat)
+```
+```swift
+borderWidth(_ set: CGFloat, views: UIView...)
+```
+### Examples Usage `borderWidth`
+```swift
+let x = UIView()
+x.borderWidth(5)
+```
 
+```swift
+let x1 = UIView()
+let x2 = UIView()
+let x3 = UIView()
+
+x1.borderWidth(5, views: x2,x3)
+```
+
+### Easy: `borderColor` syntax
+```swift
+borderColor(_ set: UIColor)
+```
+```swift
+borderColor(_ set: UIColor, views: UIView...)
+```
+### Examples Usage `borderColor`
+```swift
+let x = UIView()
+x.borderColor(.purple)
+```
+
+```swift
+let x1 = UIView()
+let x2 = UIView()
+let x3 = UIView()
+
+x1.borderColor(.white, views: x2,x3)
+```
