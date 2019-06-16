@@ -1,4 +1,4 @@
-![](https://github.com/alialnaghmoush/UIKitX/blob/master/Design/LogoX.png)
+![](https://github.com/alialnaghmoush/UIKitX/blob/master/Design/HeaderX.png)
 
 Welcome to **UIKitX**, a UI/UX framework easy & powerful for human use to create beautiful applications.
 
