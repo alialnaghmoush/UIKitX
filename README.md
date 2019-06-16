@@ -45,3 +45,15 @@ pod 'UIKitX', '~> 0.1.6'
 ```swift
 import UIKitX
 ```
+## Easy
+<div align="center">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/1border.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/2borderWidth.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/3borderColor.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/4cornerEdges.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/5maskedCorners.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/6maskView.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/7clipView.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/8backColor.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/9addSubviews.png" width="200">
+</div>
