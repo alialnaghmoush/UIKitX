@@ -253,3 +253,45 @@ let x3 = UIView()
 
 view.addSubviews(x1,x2,x3)
 ```
+
+### Easy: `shadow` syntax
+```swift
+shadow()
+```
+```swift
+shadow(_ color: UIColor, // As default is .black
+       _ opacity: Float, // As default is 0.10
+       _ blur: CGFloat,  // As default is 10.0
+       _ x: CGFloat,     // As default is 0.0
+       _ y: CGFloat)     // As default is 8.0
+```
+```swift
+shadow(_ elevation: Elevation)
+```
+```swift
+shadow(_ elevation: Elevation, color: UIColor)
+```
+### Select Elevation
+`.none`
+`.top1` | `.top2` | `.top3` | `.top4` | `.top5`
+`.down1` | `.down2` | `.down3` | `.down4` | `.down5`
+`.left1` | `.left2` | `.left3` | `.left4` | `.left5`
+`.right1` | `.right2` | `.right3` | `.right4` | `.right5`
+
+### Examples Usage `shadow`
+```swift
+let x = UIView()
+x.shadow()
+```
+```swift
+let x = UIView()
+x.shadow(.black, 0.10, 10.0, 0.0, 8.0)
+```
+```swift
+let x = UIView()
+x.shadow(.down4)
+```
+```swift
+let x = UIView()
+x.shadow(.down4, color: .purple)
+```
