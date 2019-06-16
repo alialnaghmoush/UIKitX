@@ -1,13 +1,15 @@
 ![](https://github.com/alialnaghmoush/UIKitX/blob/master/Design/LogoX.png)
 
-Welcome to **UIKitX**, a UI/UX framework easy & powerful for human use to create beautiful applications. 
-![](https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Easy.png)
-![](https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Color.png)
-![](https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Gradient.png)
-![](https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Alert.png)
-![](https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Anchor.png)
-![](https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Animat.png)
-![](https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Shapes.png)
+Welcome to **UIKitX**, a UI/UX framework easy & powerful for human use to create beautiful applications.
+<div align="center">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Easy.png" height="120">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Color.png" height="120">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Gradient.png" height="120">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Alert.png" height="120">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Anchor.png" height="120">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Animat.png" height="120">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Shapes.png" height="120">
+</div>
 
 
 [![Language: Swift 2, 3, 4 and 5](https://img.shields.io/badge/Language-Swift%205-orange.svg?style=flat)]()
