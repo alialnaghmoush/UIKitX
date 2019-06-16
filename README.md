@@ -249,5 +249,5 @@ let x1 = UIView()
 let x2 = UIView()
 let x3 = UIView()
 
-view.addSubviews(1x,x2,x3)
+view.addSubviews(x1,x2,x3)
 ```
