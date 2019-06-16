@@ -13,19 +13,17 @@ public enum Gradients: CaseIterable {
     case warmFlame
     case nightFade
     case springWarmth
-    
     case juicyPeach
     case youngPassion
-    case ladyLips
     
+    case ladyLips
     case sunnyMorning
     case rainyAshville
     case frozenDreams
-    
     case winterNeva
+    
     case dustyGrass
     case temptingAzure
-    
     case heavyRain
     case amyCrisp
     case meanFruit
@@ -33,19 +31,17 @@ public enum Gradients: CaseIterable {
     case softBlue
     case ripeMalinka
     case cloudyKnoxville
-    
     case malibuBeach
     case newLife
-    case trueSunset
     
+    case trueSunset
     case morpheusDen
     case rareWind
     case nearMoon
-    
     case wildApple
+    
     case saintPetersburg
     case ariellesSmile
-    
     case plumPlate
     case everlastingSky
     case happyFisher
@@ -53,9 +49,9 @@ public enum Gradients: CaseIterable {
     case blessing
     case sharpeyeEagle
     case ladogaBottom
-    
     case lemonGate
     case itmeoBranding
+    
     case zeusMiracle
     
 }

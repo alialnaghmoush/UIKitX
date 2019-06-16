@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     var v1 = UIGradient(.warmFlame, cornerEdges: 20)
     var v2 = UIGradient(.nightFade, cornerEdges: 20)
     var v3 = UIGradient(.softBlue, cornerEdges: 20)
-    var v4 = UIView()
+    var v4 = UIGradient(colors: [.Red400,.Red800], start: .top, end: .bottom, locations: nil, cornerEdges: 20, roundEdges: false, style: .axial)
 
     override func viewDidLoad() {
         super.viewDidLoad()
