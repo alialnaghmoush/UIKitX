@@ -254,6 +254,37 @@ let x3 = UIView()
 view.addSubviews(x1,x2,x3)
 ```
 
+### Easy: `parallax` syntax
+```swift
+parallax(_ set: CGFloat)
+```
+```swift
+parallax(min: CGFloat, max: CGFloat)
+```
+```swift
+parallax(_ strength: ParallaxStrength)
+```
+### Select Strength
+`.ExtraLow` | `.Low` | `.Mid` | `.High` | `.ExtraHigh`
+
+### Examples Usage `parallax`
+```swift
+let x = UIView()
+x.parallax()
+```
+```swift
+let x = UIView()
+x.parallax(15)
+```
+```swift
+let x = UIView()
+x.parallax(min: -20, max: 35)
+```
+```swift
+let x = UIView()
+x.parallax(.High)
+```
+
 ### Easy: `shadow` syntax
 ```swift
 shadow()
