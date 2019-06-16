@@ -189,10 +189,10 @@ x1.maskedCorners([.topLeft,.bottomRight], views: x2,x3)
 
 ### Easy: `maskView` syntax
 ```swift
-maskView(_ active: Bool) // As default is true
+maskView(_ active: Bool) // Active as default is true
 ```
 ```swift
-maskView(_ active: Bool = true, views: UIView...) // As default is true
+maskView(_ active: Bool = true, views: UIView...) // Active as default is true
 ```
 ### Examples Usage `maskView`
 ```swift
@@ -206,10 +206,10 @@ x.maskView(true, views: x2,x3)
 
 ### Easy: `clipView` syntax
 ```swift
-clipView(_ active: Bool) // As default is true
+clipView(_ active: Bool) // Active as default is true
 ```
 ```swift
-clipView(_ active: Bool = true, views: UIView...) // As default is true
+clipView(_ active: Bool, views: UIView...) // Active as default is true
 ```
 ### Examples Usage `clipView`
 ```swift
