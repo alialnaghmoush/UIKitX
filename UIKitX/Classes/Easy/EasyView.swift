@@ -29,6 +29,38 @@ extension UIView {
     }
     
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+    // MARK: - Border Layer with more then views
+    
+    @discardableResult
+    public func border(width: CGFloat, color: UIColor, views: UIView...) -> UIView {
+        layer.borderWidth = width
+        layer.borderColor = color.cgColor
+        views.forEach { (view) in
+            view.layer.borderWidth = width
+            view.layer.borderColor = color.cgColor
+        }
+        return self
+    }
+    
+    @discardableResult
+    public func borderWidth(_ set: CGFloat, views: UIView...) -> UIView {
+        layer.borderWidth = set
+        views.forEach { (view) in
+            view.layer.borderWidth = set
+        }
+        return self
+    }
+    
+    @discardableResult
+    public func borderColor(_ set: UIColor, views: UIView...) -> UIView {
+        layer.borderColor = set.cgColor
+        views.forEach { (view) in
+            view.layer.borderColor = set.cgColor
+        }
+        return self
+    }
+    
+    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
     // MARK: - Corners Layer
     @discardableResult
     public func cornerEdges(_ set: CGFloat) -> UIView {
@@ -48,6 +80,26 @@ extension UIView {
         return self
     }
     
+    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+    // MARK: - Corners Layer with more then views
+    
+    @discardableResult
+    public func cornerEdges(_ set: CGFloat, views: UIView...) -> UIView {
+        layer.cornerRadius = set
+        views.forEach { (view) in
+            view.layer.cornerRadius = set
+        }
+        return self
+    }
+    
+    @discardableResult
+    public func cornerEdges(_ active: Bool = true, views: UIView...) -> UIView {
+        layer.cornerRadius = frame.height / 2.0
+        views.forEach { (view) in
+            if active { view.layer.cornerRadius = frame.height / 2.0 }
+        }
+        return self
+    }
     
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
     // MARK: - Mask Layer
@@ -65,12 +117,28 @@ extension UIView {
     }
     
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
-    // MARK: - Besic View
+    // MARK: - Background Color for View
     @discardableResult
     public func backColor(_ set: UIColor) -> UIView {
         backgroundColor = set
         return self
     }
     
+    @discardableResult
+    public func backColor(_ set: UIColor, views: UIView...) -> UIView {
+        views.forEach { (view) in
+            view.backgroundColor = set
+        }
+        return self
+    }
+    
+    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+    // MARK: - add Subviews
+    public func addSubviews(_ views: UIView...) -> UIView {
+        views.forEach { (view) in
+            addSubview(view)
+        }
+        return self
+    }
     
 }

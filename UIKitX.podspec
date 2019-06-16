@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UIKitX'
-  s.version          = '0.1.7'
+  s.version          = '0.1.8'
   s.swift_version    = '5.0'
   s.summary          = 'UIKitX it is easy & powerful code for human use.'
 
@@ -26,5 +26,5 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
     s.frameworks = 'UIKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+
 end
