@@ -12,7 +12,7 @@ public class UIGradient: UIView {
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
     // MARK: - Properties
     
-    private var gradientView = CAGradientLayer()
+    public var gradientView = CAGradientLayer()
     
     public var colors: [UIColor] = [#colorLiteral(red: 0.7725490196, green: 0.8156862745, blue: 0.8862745098, alpha: 1),#colorLiteral(red: 0.9568627451, green: 0.9647058824, blue: 0.9764705882, alpha: 1)]
     public var start: AxesPoint = .topRight
@@ -37,8 +37,7 @@ public class UIGradient: UIView {
                 locations: [NSNumber]? = nil,
                 cornerEdges: CGFloat = 0,
                 roundEdges: Bool = false,
-                style: CAGradientLayerType = .axial,
-                layerAt: UInt32 = 0) {
+                style: CAGradientLayerType = .axial) {
         
         self.colors = colors
         self.start = start
@@ -47,7 +46,6 @@ public class UIGradient: UIView {
         self.cornerEdges = cornerEdges
         self.roundEdges = roundEdges
         self.style = style
-        self.layerAt = layerAt
         
         super.init(frame: UIScreen.main.bounds)
         gradientView.startPoint = start.point
@@ -75,7 +73,7 @@ public class UIGradient: UIView {
     // MARK: - Configuration
     
     private func config() {
-        layer.addSublayer(gradientView)
+        layer.insertSublayer(gradientView, at: layerAt)
         setupGradientLayer()
     }
     

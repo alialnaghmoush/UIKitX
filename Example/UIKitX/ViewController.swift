@@ -11,9 +11,9 @@ import UIKitX
 
 class ViewController: UIViewController {
     
-    var v1 = UIView()//UIGradient(.warmFlame)
-    var v2 = UIView()//UIGradient(.nightFade)
-    var v3 = UIView()//UIGradient(.softBlue)
+    var v1 = UIGradient(.warmFlame, cornerEdges: 20)
+    var v2 = UIGradient(.nightFade, cornerEdges: 20)
+    var v3 = UIGradient(.softBlue, cornerEdges: 20)
     var v4 = UIView()
 
     override func viewDidLoad() {
@@ -41,19 +41,17 @@ class ViewController: UIViewController {
         view.addSubview(mainStack)
         mainStack.fillTop(20, safeArea: true)
         mainStack.axis = .vertical
-        mainStack.spacing = 10
+        mainStack.spacing = 20
         mainStack.distribution = .fillProportionally
         mainStack.alignment = .fill
         
-        v2.height(50)
+        v2.height(200)
         
     }
     
     private func setupUI() {
         v1.addSubview(v4)
-        v1.backColor(.Blue600, views: v1,v2,v3)
-        v1.cornerEdges(true, views: v2,v3)
-        v4.fill(14).backColor(UIColor("#03A9F4", alpha: 0.3)).cornerEdges(true)
+        v4.fill(20).backColor(.white).cornerEdges(20)
 
         v1.shadow(.down4).moveUp(delay: 0.0).fadeIn(delay: 0.0)
         v2.shadow(.down4).moveUp(delay: 0.1).fadeIn(delay: 0.1)
