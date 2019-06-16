@@ -58,15 +58,25 @@ import UIKitX
 <img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/9addSubviews.png" width="200">
 </div>
 
-### Easy: `border` syntax
+### Easy: <img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/1border.png" width="140"> syntax
 ```swift
 border(width: CGFloat, color: UIColor)
 ```
-
-### Example Usage `border`
+```swift
+border(width: CGFloat, color: UIColor, views: UIView...)
+```
+### Example Usage <img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/1border.png" width="140">
 ```swift
 let x = UIView()
 x.border(width: 5, color: .white)
+```
+
+```swift
+let x1 = UIView()
+let x2 = UIView()
+let x3 = UIView()
+
+x1.border(width: 5, color: .white, views: x2,x3)
 ```
 
 
