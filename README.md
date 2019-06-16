@@ -166,14 +166,16 @@ maskedCorners(_ set: CACornerMask)
 ```swift
 maskedCorners(_ set: CACornerMask, views: UIView...)
 ```
+### Select one or more
+`.top` | `.left` | `.right` | `.bottom` | `.topRight` | `.topLeft` | `.bottomRight` | `.bottomLeft`
 ### Examples Usage `maskedCorners`
 ```swift
 let x = UIView()
-x.maskedCorners(.topLeft)
+x.cornerEdges(10).maskedCorners(.top)
 ```
 ```swift
 let x = UIView()
-x.maskedCorners([.topLeft,.bottomRight])
+x.cornerEdges(20).maskedCorners([.topLeft,.bottomRight])
 ```
 ```swift
 let x1 = UIView()
