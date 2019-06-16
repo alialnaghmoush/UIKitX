@@ -56,8 +56,8 @@ import UIKitX
 <img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/7clipView.png" width="200">
 <img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/8backColor.png" width="200">
 <img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/9addSubviews.png" width="200">
-  <img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/10Shadow.png" width="200">
-<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/11Parallax.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/10Parallax.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design//Easy/11Shadow.png" width="200">
 </div>
 
 ### Easy: `border` syntax
