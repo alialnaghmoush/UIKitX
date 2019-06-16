@@ -385,7 +385,7 @@ UIColor(_ hex: Hex, alpha: CGFloat?)
 `hex6: Six-digit hexadecimal value` | `RGB defines to the color #RRGGBB`</br>
 `hex8: Eight-digit hexadecimal value` | `RGBA defines to the color #RRGGBBAA`
 
-### Examples Usage `convenience UIColor`
+### Examples Usage `hexColor`
 ```swift
 let x = UIView()
 let c = UIColor("#03A9F4")
