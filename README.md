@@ -371,3 +371,39 @@ let c = UIColor(red: 102, green: 230, blue: 255, 0.8)
 
 x.backColor(c)
 ```
+
+### Color: `hexColor` syntax
+```swift
+UIColor(_ hex: Hex)
+```
+```swift
+UIColor(_ hex: Hex, alpha: CGFloat?)
+```
+### Hexadecimal value
+`hex3: Three-digit hexadecimal value` | `RGB defines to the color #RGB`</br>
+`hex4: Four-digit hexadecimal value` | `RGBA defines to the color #RGBA`</br>
+`hex6: Six-digit hexadecimal value` | `RGB defines to the color #RRGGBB`</br>
+`hex8: Eight-digit hexadecimal value` | `RGBA defines to the color #RRGGBBAA`
+
+### Examples Usage `convenience UIColor`
+```swift
+let x = UIView()
+let c = UIColor("#03A9F4")
+
+x.backColor(c)
+```
+Or with out #
+```swift
+let x = UIView()
+let c = UIColor("03A9F4")
+
+x.backColor(c)
+```
+```swift
+let x = UIView()
+x.backColor(UIColor("03A9F4"))
+```
+```swift
+let x = UIView()
+x.backColor(UIColor("03A9F4", alpha: 0.3))
+```
