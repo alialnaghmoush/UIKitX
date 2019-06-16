@@ -482,23 +482,18 @@ UIGradient(_ set: Gradients,
 ### Examples Usage `Gradient`
 ```swift
 let x = UIGradient([.Red400, .Red900])
-view.addSubview(x)
 ```
 ```swift
 let x = UIGradient(colors: [.Red400,.Red800], start: .top, end: .bottom, locations: nil, cornerEdges: 20, roundEdges: false, style: .axial)
-view.addSubview(x)
 ```
 ```swift
 let x = UIGradient(.warmFlame)
-view.addSubview(x)
 ```
 ```swift
 let x = UIGradient(.softBlue, cornerEdges: 20)
-view.addSubview(x)
 ```
 ```swift
 let x = UIGradient(.softBlue, start: .top, end: .bottom, locations: nil, cornerEdges: 20, roundEdges: false, style: .axial)
-view.addSubview(x)
 ```
 
 ### Gradient: `Gradient Color`
