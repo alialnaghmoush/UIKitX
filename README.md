@@ -407,3 +407,44 @@ x.border(width: 5, color: UIColor("03A9F4"))
 let x = UIView()
 x.shadow(UIColor("#03A9F4", alpha: 0.3))
 ```
+
+### Color: `materialColor` syntax
+```swift
+UIColor.materialColor
+```
+
+### Examples Usage `hexColor`
+```swift
+let x = UIView()
+x.backColor(.Red500)
+```
+```swift
+let x = UIView()
+x.border(width: 5, color: UIColor("03A9F4"))
+```
+```
+let x = UIView()
+x.shadow(.down4, color: .Blue200)
+```
+
+### Material colors palette
+<div align="center">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Color/MaterialColors/Red.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Color/MaterialColors/Pink.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Color/MaterialColors/Purple.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Color/MaterialColors/DeepPurple.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Color/MaterialColors/Indigo.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Color/MaterialColors/Blue.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Color/MaterialColors/LightBlue.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Color/MaterialColors/Cyan.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Color/MaterialColors/Teal.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Color/MaterialColors/Green.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Color/MaterialColors/LightGreen.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Color/MaterialColors/Lime.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Color/MaterialColors/Amber.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Color/MaterialColors/Orange.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Color/MaterialColors/DeepOrange.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Color/MaterialColors/Brown.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Color/MaterialColors/Grey.png" width="200">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/Color/MaterialColors/BlueGrey.png" width="200">
+</div>
