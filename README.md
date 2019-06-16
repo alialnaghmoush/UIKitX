@@ -346,9 +346,6 @@ UIColor(red: CGFloat, green: CGFloat, blue: CGFloat)
 ```swift
 UIColor(red: CGFloat, green: CGFloat, blue: CGFloat,_ opacity: CGFloat)
 ```
-```swift
-UIColor.getRandomColor()
-```
 ### Examples Usage `convenience UIColor`
 ```swift
 let x = UIView()
@@ -373,9 +370,4 @@ let x = UIView()
 let c = UIColor(red: 102, green: 230, blue: 255, 0.8)
 
 x.backColor(c)
-```
-```swift
-let x = UIView()
-
-x.backColor(.getRandomColor())
 ```
