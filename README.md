@@ -420,11 +420,11 @@ x.backColor(.Red500)
 ```
 ```swift
 let x = UIView()
-x.border(width: 5, color: UIColor("03A9F4"))
+x.border(width: 5, color: .DeepPurple500)
 ```
-```
+```swift
 let x = UIView()
-x.shadow(.down4, color: .Blue200)
+x.shadow(.down4, color: .Teal200)
 ```
 
 ### Material colors palette
