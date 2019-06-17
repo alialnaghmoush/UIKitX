@@ -8,6 +8,8 @@
 public enum AlertStatus {
     case success, error, warning, info
     
+    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+    // MARK: - Container View
     var container: UIView {
         
         switch self {
@@ -28,8 +30,10 @@ public enum AlertStatus {
             container.backgroundColor = #colorLiteral(red: 0.04705882353, green: 0.4, blue: 1, alpha: 1)
             return container
         }
-    } // end container
+    }
     
+    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+    // MARK: - Icon in container
     var icon: UIView {
         
         switch self {
@@ -50,8 +54,11 @@ public enum AlertStatus {
             icon.iconColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             return icon
         }
-    } // end icon
+    }
     
+    
+    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+    // MARK: - Note in container
     var note: UILabel {
         
         switch self {
@@ -72,6 +79,6 @@ public enum AlertStatus {
             note.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             return note
         }
-    } // end note
+    }
     
 }

@@ -166,6 +166,7 @@ extension UIView {
     
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
     // MARK: - add Subviews
+    @discardableResult
     public func addSubviews(_ views: UIView...) -> UIView {
         views.forEach { (view) in
             addSubview(view)

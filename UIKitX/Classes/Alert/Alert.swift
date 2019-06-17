@@ -12,6 +12,6 @@ public struct Alert {
         alertView.direction = direction
         alertView.play()
     }
-
+    
 }
 

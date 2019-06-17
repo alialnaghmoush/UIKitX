@@ -20,19 +20,6 @@ extension UIView {
     }
     
     @discardableResult
-    public func size(_ h: FlexibleAnchor,
-                     _ w: FlexibleAnchor,
-                     priority: AnchorPriority = .required,
-                     active: Bool = true) -> UIView {
-        
-        height(h.points, relation: h.relation, priority: priority, active: active)
-        width (w.points, relation: w.relation, priority: priority, active: active)
-        
-        return self
-    }
-    
-    
-    @discardableResult
     public func size(_ set: CGFloat,
                      relation: AnchorRelation = .equal,
                      priority: AnchorPriority = .required,

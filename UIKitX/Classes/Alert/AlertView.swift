@@ -5,7 +5,7 @@
 //  Created by Ali AlNaghmoush on 26/05/2019.
 //
 
-class AlertView: UIView {
+public class AlertView: UIView {
     
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
     // MARK: - Properties
@@ -18,7 +18,7 @@ class AlertView: UIView {
     private var keyWindow: UIWindow { return UIApplication.shared.keyWindow ?? UIWindow() }
     private var swipeUp = UISwipeGestureRecognizer()
     
-    public var direction: Direction = .rtl
+    public var direction: Direction = .ltr
     
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
     // MARK: - Initializers
@@ -33,19 +33,23 @@ class AlertView: UIView {
         
     }
     
-    required init?(coder: NSCoder) {
-        fatalError()
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
     }
     
     open override func draw(_ rect: CGRect) {
         super.draw(rect)
-        configAlert()
     }
     
     override public func layoutSubviews() {
         super.layoutSubviews()
         configAlert()
     }
+    
     
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
     //MARK: - Configure UI
@@ -57,9 +61,11 @@ class AlertView: UIView {
     private func containerUI() {
         
         addSubview(container)
-        
+        container.addSubviews(icon,note)
+
         let sv = safeView(superview)
-        container.fillTop(sv, spaces: 10, safeArea: true).height(50)
+
+        container.fillTop(sv, spaces: 10).height(50)
         
         self.swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(dismissAlert))
         self.swipeUp.direction = .up
@@ -72,8 +78,6 @@ class AlertView: UIView {
     
     private func iconUI() {
         
-        container.addSubview(icon)
-        
         switch self.direction {
         case .rtl:
             icon.right(container, spacing: 20).height(16).width(16).centerY(container)
@@ -85,8 +89,6 @@ class AlertView: UIView {
     }
     
     private func noteUI() {
-        
-        container.addSubview(note)
         
         switch self.direction {
         case .rtl:
@@ -113,13 +115,13 @@ class AlertView: UIView {
     }
     
     /// Show Alert and Hide
-    func play() {
+    public func play() {
         show()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) { self.hide() }
     }
     
     /// Show Alert
-    fileprivate func show(_ animatTime: TimeInterval = 0.5) {
+    public func show(_ animatTime: TimeInterval = 0.5) {
         
         self.keyWindow.addSubview(self)
         container.moveDown(duration: animatTime, curve: .EaseOut)
@@ -127,7 +129,7 @@ class AlertView: UIView {
     }
     
     /// Hide Alert
-    fileprivate func hide(_ timeOut: TimeInterval = 0.3) {
+    public func hide(_ timeOut: TimeInterval = 0.3) {
         
         container.moveUp(fromX: 0, fromY: 0, toX: 0, toY: -40,duration: timeOut, curve: .EaseIn)
         container.fadeOut(duration: timeOut, curve: .EaseIn)
