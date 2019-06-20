@@ -534,3 +534,52 @@ let x = UIGradient(.softBlue, start: .top, end: .bottom, locations: nil, cornerE
 <img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/034.png" width="200">
 <img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/GradientColor/035.png" width="200">       
 </div>
+
+## Alert
+<div align="center">
+<img src="https://github.com/alialnaghmoush/UIKitX/blob/master/Design/AlertHeader.png">
+</div>
+
+### Alert: `Show` syntax
+```swift
+Alert.show(note: String, status: AlertStatus)
+```
+```swift
+Alert.show(note: String, status: AlertStatus, direction: Direction)
+```
+### Select Status
+Success`.success`</br>
+Error `.error`</br>
+Warning`.warning`</br>
+Info `.info`
+
+### Select Direction
+Left to Right`.ltr`</br>
+Right to Left `.rtl`
+
+### Examples Usage `Alert`
+```swift
+var x = UIButton(type: .system)
+view.addSubview(x)
+x.fillBottom(20, safeArea: true).height(60)
+x.addTarget(self, action: #selector(alarto), for: .touchUpInside)
+
+@objc func alarto() {
+        
+        Alert.show(note: "Welcome to UIKitX", status: .warning)
+        
+    }
+    
+```
+```swift
+var x = UIButton(type: .system)
+
+{...}
+
+@objc func alarto() {
+        
+        Alert.show(note: "مرحبا بكم في يو أي كت أكس", status: .success, direction: .rtl)
+        
+    }
+    
+```
