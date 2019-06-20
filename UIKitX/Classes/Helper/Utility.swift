@@ -11,6 +11,22 @@ extension UIView {
         guard let v = with else { fatalError() }
         return v
     }
+    
+    public var safeSuperview: UIView {
+        return safeView(superview)
+    }
+    
+    public var safeArea: UILayoutGuide {
+        return safeAreaLayoutGuide
+    }
+    
+    @discardableResult
+    public func prepareLayout() -> Self {
+        translatesAutoresizingMaskIntoConstraints = false
+        layoutIfNeeded()
+        return self
+    }
+    
 }
 
 extension String {

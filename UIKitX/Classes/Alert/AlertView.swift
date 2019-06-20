@@ -37,14 +37,6 @@ public class AlertView: UIView {
         super.init(coder: aDecoder)
     }
     
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    open override func draw(_ rect: CGRect) {
-        super.draw(rect)
-    }
-    
     override public func layoutSubviews() {
         super.layoutSubviews()
         configAlert()
@@ -62,18 +54,16 @@ public class AlertView: UIView {
         
         addSubview(container)
         container.addSubviews(icon,note)
+        
+        container.top(safeSuperview, spacing: 10, safeArea: true).height(50)
+            .left(safeSuperview, spacing: 10).right(safeSuperview, spacing: 10)
+            .shadow(.down5).cornerEdges()
+        
+        swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(dismissAlert))
+        swipeUp.direction = .up
+        container.addGestureRecognizer(swipeUp)
+        safeSuperview.addGestureRecognizer(swipeUp)
 
-        let sv = safeView(superview)
-
-        container.fillTop(sv, spaces: 10).height(50)
-        
-        self.swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(dismissAlert))
-        self.swipeUp.direction = .up
-        sv.addGestureRecognizer(swipeUp)
-        
-        container.shadow(.down5)
-        container.cornerEdges()
-        
     }
     
     private func iconUI() {

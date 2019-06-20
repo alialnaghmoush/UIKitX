@@ -13,6 +13,8 @@ public typealias AnchorRelation = Constraint.Relation
 public typealias AnchorAttribute = Constraint.Attribute
 public typealias AnchorPriority  = UILayoutPriority
 
+public typealias AnchorPrior = UILayoutGuide
+
 public typealias StackAlignment = UIStackView.Alignment
 public typealias StackDistribution = UIStackView.Distribution
 

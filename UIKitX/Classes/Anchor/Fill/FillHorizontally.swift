@@ -8,53 +8,98 @@
 extension UIView {
     
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
-    // MARK: - Main Fill Horizontally
+    // MARK: - To View
     
     @discardableResult
-    public func fillHorizontally(toleft:    UIView,
-                                 toRight:   UIView,
-                                 spacLeft:  CGFloat = 0,
-                                 spacRight: CGFloat = 0,
-                                 safeArea:  Bool = false,
-                                 relation:  AnchorRelation = .equal,
-                                 priority:  AnchorPriority = .required,
-                                 active:    Bool = true) -> UIView {
+    public func fillX(_ to:     UIView,
+                      spaces:   CGFloat = 0,
+                      safeArea: Bool = false,
+                      relation: AnchorRelation = .equal,
+                      priority: AnchorPriority = .required,
+                      active:   Bool = true) -> UIView {
         
-        left(toRight: toleft, spacing: spacLeft, safeArea: safeArea, relation: relation, priority: priority, active: active)
-        right(toLeft: toRight, spacing: spacRight, safeArea: safeArea, relation: relation, priority: priority, active: active)
+        left   (to, spacing: spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
+        right  (to, spacing: spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
+        
+        return self
+    }
+    
+    @discardableResult
+    public func fillX(_ to:    UIView,
+                      spaces:   [CGFloat],
+                      safeArea: Bool = false,
+                      relation: AnchorRelation = .equal,
+                      priority: AnchorPriority = .required,
+                      active:   Bool = true) -> UIView {
+        
+        left   (to, spacing: spaces[0], safeArea: safeArea, relation: relation, priority: priority, active: active)
+        right  (to, spacing: spaces[1], safeArea: safeArea, relation: relation, priority: priority, active: active)
         
         return self
     }
     
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
-    // MARK: - To View
+    // MARK: - Set anchor to left and Right another View
     
     @discardableResult
-    public func fillHorizontally(toleft:    UIView,
-                                 toRight:   UIView,
-                                 spaces:   CGFloat = 0,
-                                 safeArea: Bool = false,
-                                 relation: AnchorRelation = .equal,
-                                 priority: AnchorPriority = .required,
-                                 active:   Bool = true) -> UIView {
+    public func fillX(toLeft:     UIView,
+                      toRight:     UIView,
+                      spaces:   CGFloat = 0,
+                      safeArea: Bool = false,
+                      relation: AnchorRelation = .equal,
+                      priority: AnchorPriority = .required,
+                      active:   Bool = true) -> UIView {
         
-        left(toRight: toleft, spacing: spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
-        right(toLeft: toRight, spacing: spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
+        left   (toRight: toRight, spacing: spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
+        right  (toLeft: toLeft, spacing: spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
         
         return self
     }
     
     @discardableResult
-    public func fillHorizontally(toleft:    UIView,
-                                 toRight:   UIView,
-                                 spaces:   [CGFloat],
-                                 safeArea: Bool = false,
-                                 relation: AnchorRelation = .equal,
-                                 priority: AnchorPriority = .required,
-                                 active:   Bool = true) -> UIView {
+    public func fillX(toLeft:     UIView,
+                      toRight:     UIView,
+                      spaces:   [CGFloat],
+                      safeArea: Bool = false,
+                      relation: AnchorRelation = .equal,
+                      priority: AnchorPriority = .required,
+                      active:   Bool = true) -> UIView {
         
-        left(toRight: toleft, spacing: spaces[0], safeArea: safeArea, relation: relation, priority: priority, active: active)
-        right(toLeft: toRight, spacing: spaces[1], safeArea: safeArea, relation: relation, priority: priority, active: active)
+        left   (toRight: toRight, spacing: spaces[0], safeArea: safeArea, relation: relation, priority: priority, active: active)
+        right  (toLeft: toLeft, spacing: spaces[1], safeArea: safeArea, relation: relation, priority: priority, active: active)
+        
+        return self
+    }
+    
+    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+    // MARK: - Set anchor to left and Right another View with align
+    
+    @discardableResult
+    public func fillX(toAlignLeft:     UIView,
+                      toAlignRight:     UIView,
+                      spaces:   CGFloat = 0,
+                      safeArea: Bool = false,
+                      relation: AnchorRelation = .equal,
+                      priority: AnchorPriority = .required,
+                      active:   Bool = true) -> UIView {
+        
+        left   (toRight: toAlignRight, spacing: spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
+        right  (toLeft: toAlignLeft, spacing: spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
+        
+        return self
+    }
+    
+    @discardableResult
+    public func fillX(toAlignLeft:     UIView,
+                      toAlignRight:     UIView,
+                      spaces:   [CGFloat],
+                      safeArea: Bool = false,
+                      relation: AnchorRelation = .equal,
+                      priority: AnchorPriority = .required,
+                      active:   Bool = true) -> UIView {
+        
+        left   (toRight: toAlignRight, spacing: spaces[0], safeArea: safeArea, relation: relation, priority: priority, active: active)
+        right  (toLeft: toAlignLeft, spacing: spaces[1], safeArea: safeArea, relation: relation, priority: priority, active: active)
         
         return self
     }
@@ -64,27 +109,28 @@ extension UIView {
     // MARK: - To superview
     
     @discardableResult
-    public func fillHorizontally(_ spaces: CGFloat = 0,
-                                 safeArea: Bool = false,
-                                 relation: AnchorRelation = .equal,
-                                 priority: AnchorPriority = .required,
-                                 active:   Bool = true) -> UIView {
+    public func fillX(_ spaces: CGFloat = 0,
+                      safeArea: Bool = false,
+                      relation: AnchorRelation = .equal,
+                      priority: AnchorPriority = .required,
+                      active:   Bool = true) -> UIView {
         
-        left(spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
-        right(spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
+        left   (spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
+        right  (spaces, safeArea: safeArea, relation: relation, priority: priority, active: active)
+        
         
         return self
     }
     
     @discardableResult
-    public func fillHorizontally(_ spaces: [CGFloat],
-                                 safeArea: Bool = false,
-                                 relation: AnchorRelation = .equal,
-                                 priority: AnchorPriority = .required,
-                                 active:   Bool = true) -> UIView {
+    public func fillX(_ spaces: [CGFloat],
+                      safeArea: Bool = false,
+                      relation: AnchorRelation = .equal,
+                      priority: AnchorPriority = .required,
+                      active:   Bool = true) -> UIView {
         
-        left(spaces[0], safeArea: safeArea, relation: relation, priority: priority, active: active)
-        right(spaces[1], safeArea: safeArea, relation: relation, priority: priority, active: active)
+        left   (spaces[0], safeArea: safeArea, relation: relation, priority: priority, active: active)
+        right  (spaces[1], safeArea: safeArea, relation: relation, priority: priority, active: active)
         
         return self
     }

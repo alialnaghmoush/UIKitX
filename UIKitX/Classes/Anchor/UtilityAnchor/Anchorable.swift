@@ -8,6 +8,7 @@
 
 extension UIView {
     
+    
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
     // MARK: - Set new anchor with View
     @discardableResult
@@ -44,9 +45,9 @@ extension UIView {
                           relation: AnchorRelation = .equal,
                           priority: AnchorPriority = .required,
                           active: Bool = true) -> UIView {
-        
-        var c = NSLayoutConstraint()
+
         let sv = safeView(superview)
+        var c = NSLayoutConstraint()
         self.translatesAutoresizingMaskIntoConstraints = false
         
         let sav: Any = !safeArea ? sv : sv.safeAreaLayoutGuide
@@ -84,33 +85,31 @@ extension UIView {
         sv.addConstraint(c)
         sv.layoutIfNeeded()
         
-//        if  sv == superview {
-//            sv.addConstraint(c)
-//            sv.layoutIfNeeded()
-//        }
-//        } else {
-//            addConstraint(c)
-//            layoutIfNeeded()
-//        }
-        
         return self
     }
     
 }
 
 // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
-// MARK: - return func Anchor (priority or isActive)
+// MARK: - return func Anchor (padding or priority or isActive)
 
 extension Constraint {
     
-    @objc
-    public func with(_ p: UILayoutPriority) -> Self {
-        priority = p
+    @discardableResult
+    public func padding(_ set: CGFloat) -> Self {
+        constant = set
         return self
     }
     
-    public func set(_ active: Bool) -> Self {
-        isActive = active
+    @discardableResult
+    public func priority(_ set: UILayoutPriority) -> Self {
+        priority = set
+        return self
+    }
+    
+    @discardableResult
+    public func active(_ set: Bool) -> Self {
+        isActive = set
         return self
     }
 }

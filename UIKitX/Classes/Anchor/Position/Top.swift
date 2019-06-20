@@ -8,6 +8,27 @@
 extension UIView {
     
     @discardableResult
+    public func anchorTop(to: NSLayoutYAxisAnchor,
+                          padding: CGFloat = 0,
+                          relation: AnchorRelation = .equal,
+                          priority: AnchorPriority = .required,
+                          isActive: Bool = true ) -> Constraint {
+        
+        prepareLayout()
+        
+        switch relation {
+        case .lessThanOrEqual: return topAnchor.constraint(lessThanOrEqualTo: to).padding(padding).priority(priority).active(isActive)
+        case .equal: return topAnchor.constraint(equalTo: to).padding(padding).priority(priority).active(isActive)
+        case .greaterThanOrEqual: return topAnchor.constraint(greaterThanOrEqualTo: to).padding(padding).priority(priority).active(isActive)
+        @unknown default: fatalError()
+        }
+                
+    }
+    
+    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+    // MARK: - Set anchor the top view to another View
+    
+    @discardableResult
     public func top(_ to: UIView,
                     spacing: CGFloat = 0,
                     safeArea: Bool = false,
@@ -15,9 +36,9 @@ extension UIView {
                     priority: AnchorPriority = .required,
                     active: Bool = true) -> UIView {
         
-        let sav: Any = !safeArea ? to : to.safeAreaLayoutGuide
-        return setAnchor(anchor: .top, to: sav, anchorTo: .top, padding: spacing,
-                         relation: relation, priority: priority, active: active)
+        let sav = !safeArea ? to.topAnchor : to.safeArea.topAnchor
+        anchorTop(to: sav, padding: spacing, relation: relation, priority: priority, isActive: active)
+        return self
     }
     
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
@@ -30,9 +51,9 @@ extension UIView {
                     priority: AnchorPriority = .required,
                     active: Bool = true) -> UIView {
         
-        let sav: Any = !safeArea ? toBottom : toBottom.safeAreaLayoutGuide
-        return setAnchor(anchor: .top, to: sav, anchorTo: .bottom, padding: spacing,
-                         relation: relation, priority: priority, active: active)
+        let sav = !safeArea ? toBottom.bottomAnchor : toBottom.safeArea.bottomAnchor
+        anchorTop(to: sav, padding: spacing, relation: relation, priority: priority, isActive: active)
+        return self
     }
     
     
@@ -45,8 +66,10 @@ extension UIView {
                     priority: AnchorPriority = .required,
                     active: Bool = true) -> UIView {
         
-        return setAnchor(anchor: .top, padding: spacing, safeArea: safeArea, relation: relation, priority: priority, active: active)
-        
+        let sav = !safeArea ? safeSuperview.topAnchor : safeSuperview.safeArea.topAnchor
+        anchorTop(to: sav, padding: spacing, relation: relation, priority: priority, isActive: active)
+        return self
+                
     }
     
 }
