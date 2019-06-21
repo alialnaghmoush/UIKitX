@@ -16,8 +16,9 @@ class ViewController: UIViewController {
     var v3 = UIGradient(.softBlue, cornerEdges: 20)
     var v4 = UIButton(type: .system)
     var v5 = UIGradient(.softBlue, cornerEdges: 20)
+    var im = UIImageView()
     var mainStack = UIStackView()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
@@ -38,20 +39,13 @@ class ViewController: UIViewController {
     }
     
     private func setupLayout() {
-        mainStack = UIStackView(arrangedSubviews: [v1,v2,v3])
-        view.addSubview(mainStack)
-        mainStack.fillBottom(20, safeArea: true)
-        mainStack.axis = .vertical
-        mainStack.spacing = 20
-        mainStack.distribution = .fillEqually
-        mainStack.alignment = .fill
-
+        view.addSubviews(mainStack)
         v1.height(140)
+        mainStack.VStack(v1,v2,v3).spacing(20).distribution(.fillEqually).fillBottom(20, safeArea: true)
+//        v5.fillTop(20, safeArea: true).height(60).cornerEdges().shadow(.down4).moveUp().fadeIn()
         
-        view.addSubview(v5)
-        v5.fillTop(20, safeArea: true).height(60).cornerEdges().shadow(.down4).moveUp().fadeIn()
+        
         mainStack.layoutIfNeeded()
-        
         printo()
     }
     
@@ -59,7 +53,7 @@ class ViewController: UIViewController {
         
         v1.addSubview(v4)
         v4.fill(10).backColor(.white).cornerEdges(20)
-
+        
         v1.shadow(.down4).moveUp(delay: 0.0).fadeIn(delay: 0.0)
         v2.shadow(.down4).moveUp(delay: 0.1).fadeIn(delay: 0.1)
         v3.shadow(.down4).moveUp(delay: 0.2).fadeIn(delay: 0.2)
@@ -69,7 +63,6 @@ class ViewController: UIViewController {
     }
     
     @objc func alarto() {
-        
-        Alert.show(note: "Welcome to UIKitX", status: .warning)
+        Alert.show(note: "Welcome to UIKitX", status: .success, direction: .ltr)
     }
 }

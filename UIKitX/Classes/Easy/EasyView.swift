@@ -3,7 +3,7 @@
 //  UIKitX
 //
 //  Created by Ali AlNaghmoush on 26/05/2019.
-//
+// EasyImage
 
 extension UIView {
     
@@ -32,30 +32,30 @@ extension UIView {
     // MARK: - Border Layer with more then views
     
     @discardableResult
-    public func border(width: CGFloat, color: UIColor, views: UIView...) -> UIView {
+    public func border(width: CGFloat, color: UIColor, with: UIView...) -> UIView {
         layer.borderWidth = width
         layer.borderColor = color.cgColor
-        views.forEach { (view) in
-            view.layer.borderWidth = width
-            view.layer.borderColor = color.cgColor
+        with.forEach { (x) in
+            x.layer.borderWidth = width
+            x.layer.borderColor = color.cgColor
         }
         return self
     }
     
     @discardableResult
-    public func borderWidth(_ set: CGFloat, views: UIView...) -> UIView {
+    public func borderWidth(_ set: CGFloat, with: UIView...) -> UIView {
         layer.borderWidth = set
-        views.forEach { (view) in
-            view.layer.borderWidth = set
+        with.forEach { (x) in
+            x.layer.borderWidth = set
         }
         return self
     }
     
     @discardableResult
-    public func borderColor(_ set: UIColor, views: UIView...) -> UIView {
+    public func borderColor(_ set: UIColor, with: UIView...) -> UIView {
         layer.borderColor = set.cgColor
-        views.forEach { (view) in
-            view.layer.borderColor = set.cgColor
+        with.forEach { (x) in
+            x.layer.borderColor = set.cgColor
         }
         return self
     }
@@ -70,7 +70,7 @@ extension UIView {
     
     @discardableResult
     public func cornerEdges(_ active: Bool = true) -> UIView {
-        if active { layer.cornerRadius = frame.height / 2.0 }
+        if active { layer.cornerRadius = bounds.height / 2.0 }
         return self
     }
     
@@ -86,26 +86,26 @@ extension UIView {
     @discardableResult
     public func cornerEdges(_ set: CGFloat, views: UIView...) -> UIView {
         layer.cornerRadius = set
-        views.forEach { (view) in
-            view.layer.cornerRadius = set
+        views.forEach { (x) in
+            x.layer.cornerRadius = set
         }
         return self
     }
     
     @discardableResult
-    public func cornerEdges(_ active: Bool = true, views: UIView...) -> UIView {
+    public func cornerEdges(_ active: Bool = true, with: UIView...) -> UIView {
         layer.cornerRadius = frame.height / 2.0
-        views.forEach { (view) in
-            if active { view.layer.cornerRadius = frame.height / 2.0 }
+        with.forEach { (x) in
+            if active { x.layer.cornerRadius = frame.height / 2.0 }
         }
         return self
     }
     
     @discardableResult
-    public func maskedCorners(_ set: CACornerMask, views: UIView...) -> UIView{
+    public func maskedCorners(_ set: CACornerMask, with: UIView...) -> UIView{
         layer.maskedCorners = [set]
-        views.forEach { (view) in
-            view.layer.maskedCorners = [set]
+        with.forEach { (x) in
+            x.layer.maskedCorners = [set]
         }
         return self
     }
@@ -129,19 +129,19 @@ extension UIView {
     // MARK: - Mask Layer with more then views
     
     @discardableResult
-    public func maskView(_ active: Bool = true, views: UIView...) -> UIView {
+    public func maskView(_ active: Bool = true, with: UIView...) -> UIView {
         layer.masksToBounds = active
-        views.forEach { (view) in
-            view.layer.masksToBounds = active
+        with.forEach { (x) in
+            x.layer.masksToBounds = active
         }
         return self
     }
     
     @discardableResult
-    public func clipView(_ active: Bool = true, views: UIView...) -> UIView {
+    public func clipView(_ active: Bool = true, with: UIView...) -> UIView {
         clipsToBounds = active
-        views.forEach { (view) in
-            view.clipsToBounds = active
+        with.forEach { (x) in
+            x.clipsToBounds = active
         }
         return self
     }
@@ -156,10 +156,62 @@ extension UIView {
     }
     
     @discardableResult
-    public func backColor(_ set: UIColor, views: UIView...) -> UIView {
+    public func backColor(_ set: UIColor, with: UIView...) -> UIView {
         backgroundColor = set
-        views.forEach { (view) in
-            view.backgroundColor = set
+        with.forEach { (x) in
+            x.backgroundColor = set
+        }
+        return self
+    }
+    
+    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+    // MARK: - Tint Color for View
+    @discardableResult
+    public func tintColor(_ set: UIColor) -> UIView {
+        tintColor = set
+        return self
+    }
+    
+    @discardableResult
+    public func tintColor(_ set: UIColor, with: UIView...) -> UIView {
+        tintColor = set
+        with.forEach { (x) in
+            x.tintColor = set
+        }
+        return self
+    }
+    
+    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+    // MARK: - Content Mode
+    @discardableResult
+    public func contentMode(_ set: ContentMode) -> UIView {
+        contentMode = set
+        return self
+    }
+    
+    @discardableResult
+    public func contentMode(_ set: ContentMode, with: UIView...) -> UIView {
+        contentMode = set
+        with.forEach { (x) in
+            x.contentMode = set
+        }
+        return self
+    }
+    
+    
+    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+    // MARK: - Opacity
+    @discardableResult
+    public func opacity(_ set: CGFloat) -> UIView {
+        alpha = set
+        return self
+    }
+    
+    @discardableResult
+    public func opacity(_ set: CGFloat, with: UIView...) -> UIView {
+        alpha = set
+        with.forEach { (x) in
+            x.alpha = set
         }
         return self
     }
@@ -167,9 +219,9 @@ extension UIView {
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
     // MARK: - add Subviews
     @discardableResult
-    public func addSubviews(_ views: UIView...) -> UIView {
-        views.forEach { (view) in
-            addSubview(view)
+    public func addSubviews(_ with: UIView...) -> UIView {
+        with.forEach { (x) in
+            addSubview(x)
         }
         return self
     }

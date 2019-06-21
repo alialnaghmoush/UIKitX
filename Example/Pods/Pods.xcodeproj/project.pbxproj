@@ -12,6 +12,9 @@
 		402DFA11229ACC660027FF71 /* GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402DFA10229ACC660027FF71 /* GradientColor.swift */; };
 		402DFA14229ACD810027FF71 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402DFA13229ACD810027FF71 /* Position.swift */; };
 		403052EA22AC1D7700386C63 /* KeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403052E922AC1D7700386C63 /* KeyPath.swift */; };
+		4056302622BD382400267175 /* EasyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4056302522BD382400267175 /* EasyImage.swift */; };
+		4056302822BD5E4100267175 /* EasyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4056302722BD5E4100267175 /* EasyLabel.swift */; };
+		4056302A22BD7AD700267175 /* EasyStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4056302922BD7AD700267175 /* EasyStack.swift */; };
 		40601E3322A42B32004E3E3F /* FlexibleAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40601E3122A42B32004E3E3F /* FlexibleAnchor.swift */; };
 		4068F9E722ADDC2A00475CF9 /* UIGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4068F9E622ADDC2A00475CF9 /* UIGradient.swift */; };
 		406D389422A1651F00A1C39D /* Anchorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406D389222A1651F00A1C39D /* Anchorable.swift */; };
@@ -104,6 +107,9 @@
 		402DFA10229ACC660027FF71 /* GradientColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradientColor.swift; path = UIKitX/Classes/Color/GradientColor/GradientColor.swift; sourceTree = "<group>"; };
 		402DFA13229ACD810027FF71 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Position.swift; path = UIKitX/Classes/Helper/Position.swift; sourceTree = "<group>"; };
 		403052E922AC1D7700386C63 /* KeyPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeyPath.swift; path = UIKitX/Classes/Animat/AnimatUtility/KeyPath.swift; sourceTree = "<group>"; };
+		4056302522BD382400267175 /* EasyImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EasyImage.swift; path = UIKitX/Classes/Easy/EasyImage.swift; sourceTree = "<group>"; };
+		4056302722BD5E4100267175 /* EasyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EasyLabel.swift; path = UIKitX/Classes/Easy/EasyLabel.swift; sourceTree = "<group>"; };
+		4056302922BD7AD700267175 /* EasyStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EasyStack.swift; path = UIKitX/Classes/Easy/EasyStack.swift; sourceTree = "<group>"; };
 		40601E3122A42B32004E3E3F /* FlexibleAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FlexibleAnchor.swift; path = UIKitX/Classes/Anchor/UtilityAnchor/FlexibleAnchor.swift; sourceTree = "<group>"; };
 		4068F9E622ADDC2A00475CF9 /* UIGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIGradient.swift; path = UIKitX/Classes/XUI/UIGradient.swift; sourceTree = "<group>"; };
 		406D389222A1651F00A1C39D /* Anchorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Anchorable.swift; path = UIKitX/Classes/Anchor/UtilityAnchor/Anchorable.swift; sourceTree = "<group>"; };
@@ -304,6 +310,9 @@
 			isa = PBXGroup;
 			children = (
 				40ECF7C4229A0DFC00742016 /* EasyView.swift */,
+				4056302922BD7AD700267175 /* EasyStack.swift */,
+				4056302522BD382400267175 /* EasyImage.swift */,
+				4056302722BD5E4100267175 /* EasyLabel.swift */,
 				408EB3DC229B460B00548216 /* EasyLayer.swift */,
 				40ECF7C6229A0E1800742016 /* Shadow.swift */,
 				40C6B4E722A9CF2A0097B0A1 /* Parallax.swift */,
@@ -678,6 +687,7 @@
 			files = (
 				40ECF7F2229A145A00742016 /* CurveType.swift in Sources */,
 				40ECF81E229A197A00742016 /* FillRight.swift in Sources */,
+				4056302A22BD7AD700267175 /* EasyStack.swift in Sources */,
 				40ECF7F7229A14C100742016 /* AnimatMove.swift in Sources */,
 				4068F9E722ADDC2A00475CF9 /* UIGradient.swift in Sources */,
 				40ECF810229A18E500742016 /* CenterY.swift in Sources */,
@@ -695,6 +705,7 @@
 				40601E3322A42B32004E3E3F /* FlexibleAnchor.swift in Sources */,
 				40ECF808229A188500742016 /* Bottom.swift in Sources */,
 				40ECF822229A199F00742016 /* FillVertically.swift in Sources */,
+				4056302622BD382400267175 /* EasyImage.swift in Sources */,
 				40ECF824229A19B000742016 /* FillHorizontally.swift in Sources */,
 				403052EA22AC1D7700386C63 /* KeyPath.swift in Sources */,
 				40ECF81A229A195600742016 /* FillTop.swift in Sources */,
@@ -721,6 +732,7 @@
 				40ECF804229A186500742016 /* Left.swift in Sources */,
 				406D389422A1651F00A1C39D /* Anchorable.swift in Sources */,
 				40ECF7F9229A14D500742016 /* AnimatRotat.swift in Sources */,
+				4056302822BD5E4100267175 /* EasyLabel.swift in Sources */,
 				40ECF7D5229A114000742016 /* AlertView.swift in Sources */,
 				40ECF7D3229A112800742016 /* AlertStatus.swift in Sources */,
 				40ECF7E1229A12D200742016 /* ResizingBehavior.swift in Sources */,

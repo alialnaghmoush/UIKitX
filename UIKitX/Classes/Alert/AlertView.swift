@@ -5,7 +5,7 @@
 //  Created by Ali AlNaghmoush on 26/05/2019.
 //
 
-public class AlertView: UIView {
+class AlertView: UIView {
     
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
     // MARK: - Properties
