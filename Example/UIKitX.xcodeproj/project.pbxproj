@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1A0A38CC1F04A3BF31A8B0D0 /* Pods_UIKitX_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F3671B2BB8B403B81694F9C /* Pods_UIKitX_Tests.framework */; };
+		4056302C22BD937600267175 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4056302B22BD937600267175 /* LoginController.swift */; };
+		4056303422BD942800267175 /* Changa-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4056302D22BD942700267175 /* Changa-Medium.ttf */; };
+		4056303522BD942800267175 /* Changa-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4056302E22BD942700267175 /* Changa-SemiBold.ttf */; };
+		4056303622BD942800267175 /* Changa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4056302F22BD942700267175 /* Changa-Regular.ttf */; };
+		4056303722BD942800267175 /* Changa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4056303022BD942700267175 /* Changa-Light.ttf */; };
+		4056303822BD942800267175 /* Changa-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4056303122BD942700267175 /* Changa-ExtraBold.ttf */; };
+		4056303922BD942800267175 /* Changa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4056303222BD942800267175 /* Changa-Bold.ttf */; };
+		4056303A22BD942800267175 /* Changa-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4056303322BD942800267175 /* Changa-ExtraLight.ttf */; };
+		4056303D22BD949A00267175 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4056303C22BD949A00267175 /* LoginView.swift */; };
 		5094925CD6A9DD797B0B53D9 /* Pods_UIKitX_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6219DB36ED58597328A020B /* Pods_UIKitX_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -30,6 +39,15 @@
 /* Begin PBXFileReference section */
 		0B5C78B93FF705935A38ABAD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2F3671B2BB8B403B81694F9C /* Pods_UIKitX_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIKitX_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4056302B22BD937600267175 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		4056302D22BD942700267175 /* Changa-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Changa-Medium.ttf"; sourceTree = "<group>"; };
+		4056302E22BD942700267175 /* Changa-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Changa-SemiBold.ttf"; sourceTree = "<group>"; };
+		4056302F22BD942700267175 /* Changa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Changa-Regular.ttf"; sourceTree = "<group>"; };
+		4056303022BD942700267175 /* Changa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Changa-Light.ttf"; sourceTree = "<group>"; };
+		4056303122BD942700267175 /* Changa-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Changa-ExtraBold.ttf"; sourceTree = "<group>"; };
+		4056303222BD942800267175 /* Changa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Changa-Bold.ttf"; sourceTree = "<group>"; };
+		4056303322BD942800267175 /* Changa-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Changa-ExtraLight.ttf"; sourceTree = "<group>"; };
+		4056303C22BD949A00267175 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		52D74AEAB9DF54BF5FDF9DD3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* UIKitX_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitX_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +98,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4056303B22BD943800267175 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4056303222BD942800267175 /* Changa-Bold.ttf */,
+				4056303122BD942700267175 /* Changa-ExtraBold.ttf */,
+				4056303322BD942800267175 /* Changa-ExtraLight.ttf */,
+				4056303022BD942700267175 /* Changa-Light.ttf */,
+				4056302D22BD942700267175 /* Changa-Medium.ttf */,
+				4056302F22BD942700267175 /* Changa-Regular.ttf */,
+				4056302E22BD942700267175 /* Changa-SemiBold.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -105,10 +137,13 @@
 			isa = PBXGroup;
 			children = (
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				4056302B22BD937600267175 /* LoginController.swift */,
+				4056303C22BD949A00267175 /* LoginView.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				4056303B22BD943800267175 /* Fonts */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for UIKitX";
@@ -248,8 +283,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				4056303722BD942800267175 /* Changa-Light.ttf in Resources */,
+				4056303A22BD942800267175 /* Changa-ExtraLight.ttf in Resources */,
+				4056303422BD942800267175 /* Changa-Medium.ttf in Resources */,
+				4056303522BD942800267175 /* Changa-SemiBold.ttf in Resources */,
+				4056303822BD942800267175 /* Changa-ExtraBold.ttf in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				4056303922BD942800267175 /* Changa-Bold.ttf in Resources */,
+				4056303622BD942800267175 /* Changa-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +379,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				4056302C22BD937600267175 /* LoginController.swift in Sources */,
+				4056303D22BD949A00267175 /* LoginView.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

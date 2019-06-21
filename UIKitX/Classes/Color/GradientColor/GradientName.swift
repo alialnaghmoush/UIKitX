@@ -53,5 +53,31 @@ public enum Gradients: CaseIterable {
     case itmeoBranding
     
     case zeusMiracle
+    case oldHat
+    case starWine
+    case deepBlue
+    case coupDeGrace
+    
+    case happyAcid
+    case awesomePine
+    case newYork
+    case shyRainbow
+    case loonCrest
+    
+    case mixedHopes
+    case flyHigh
+    case strongBliss
+    case freshMilk
+    case snowAgain
+    
+    case februaryInk
+    case kindSteel
+    case softGrass
+    case grownEarly
+    case sharpBlues
+    
+    
+    
+    
     
 }

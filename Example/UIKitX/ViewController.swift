@@ -15,8 +15,6 @@ class ViewController: UIViewController {
     var v2 = UIGradient(.nightFade, cornerEdges: 20)
     var v3 = UIGradient(.softBlue, cornerEdges: 20)
     var v4 = UIButton(type: .system)
-    var v5 = UIGradient(.softBlue, cornerEdges: 20)
-    var im = UIImageView()
     var mainStack = UIStackView()
     
     override func viewDidLoad() {
@@ -42,7 +40,6 @@ class ViewController: UIViewController {
         view.addSubviews(mainStack)
         v1.height(140)
         mainStack.VStack(v1,v2,v3).spacing(20).distribution(.fillEqually).fillBottom(20, safeArea: true)
-//        v5.fillTop(20, safeArea: true).height(60).cornerEdges().shadow(.down4).moveUp().fadeIn()
         
         
         mainStack.layoutIfNeeded()
