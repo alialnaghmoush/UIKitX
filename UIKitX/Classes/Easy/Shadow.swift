@@ -27,11 +27,25 @@ extension UIView {
     /// - Parameter x: There is a direction of the shadow from the right in case the number is positive (+) and the amy in case the number is negative (-) - (0.0 is the default).
     /// - Parameter y: There is a direction of the shadow from the bottom in case the number is positive (+) and the highest in case the number is negative (-) - (8.0 is the default).
     @discardableResult
+    public func shadow(color: UIColor = .black,
+                       opacity: Float = 0.10,
+                       blur: CGFloat = 10.0,
+                       x: CGFloat = 0.0,
+                       y: CGFloat = 8.0) -> UIView {
+        
+        layer.shadowColor = color.cgColor
+        layer.shadowOpacity = opacity
+        layer.shadowRadius = blur
+        layer.shadowOffset = CGSize(width: x, height: y)
+        return self
+    }
+    
+    @discardableResult
     public func shadow(_ color: UIColor = .black,
-                _ opacity: Float = 0.10,
-                _ blur: CGFloat = 10.0,
-                _ x: CGFloat = 0.0,
-                _ y: CGFloat = 8.0) -> UIView {
+                       _ opacity: Float = 0.10,
+                       _ blur: CGFloat = 10.0,
+                       _ x: CGFloat = 0.0,
+                       _ y: CGFloat = 8.0) -> UIView {
         
         layer.shadowColor = color.cgColor
         layer.shadowOpacity = opacity
@@ -51,11 +65,11 @@ extension UIView {
         
         switch elevation {
             
-        // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+            // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
         // MARK: - None Shadow
         case .none: self.shadow(.clear, 0, 0, 0, 0)
             
-        // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+            // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
         // MARK: - Top Shadow
         case .top1: self.shadow(color, 0.10, 1 , 0,  -1)
         case .top2: self.shadow(color, 0.10, 4 , 0,  -3)
@@ -63,7 +77,7 @@ extension UIView {
         case .top4: self.shadow(color, 0.13, 18, 0, -18)
         case .top5: self.shadow(color, 0.13, 26, 0, -26)
             
-        // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+            // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
         // MARK: - Down Shadow
         case .down1: self.shadow(color, 0.10, 1 , 0,  1)
         case .down2: self.shadow(color, 0.10, 4 , 0,  3)
@@ -71,7 +85,7 @@ extension UIView {
         case .down4: self.shadow(color, 0.13, 18, 0, 18)
         case .down5: self.shadow(color, 0.13, 26, 0, 26)
             
-        // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+            // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
         // MARK: - Left Shadow
         case .left1: self.shadow(color, 0.10, 1 , -1,  0)
         case .left2: self.shadow(color, 0.10, 4 , -3,  0)
@@ -79,7 +93,7 @@ extension UIView {
         case .left4: self.shadow(color, 0.13, 18, -18, 0)
         case .left5: self.shadow(color, 0.13, 26, -26, 0)
             
-        // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+            // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
         // MARK: - Right Shadow
         case .right1: self.shadow(color, 0.10, 1 , 1,  0)
         case .right2: self.shadow(color, 0.10, 4 , 3,  0)
@@ -87,7 +101,7 @@ extension UIView {
         case .right4: self.shadow(color, 0.13, 18, 18, 0)
         case .right5: self.shadow(color, 0.13, 26, 26, 0)
             
-        // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+            // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
             
         }
         

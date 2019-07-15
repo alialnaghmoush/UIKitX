@@ -57,4 +57,31 @@ extension UIView {
         return self
     }
     
+    /**
+     Scale In Out(XY) a view with a duration and delay
+     
+     - parameter duration: custom animation duration
+     - parameter delay: custom animation delay
+     */
+    @discardableResult public func scaleInOut(fromX: CGFloat = 0.95, fromY: CGFloat = 0.95,
+                                              toX: CGFloat = 1, toY: CGFloat = 1,
+                                              duration: TimeInterval = 0.5,
+                                              delay: TimeInterval = 0.0,
+                                              curve: CurveType = .Pop) -> UIView {
+        
+        self.transform = CGAffineTransform(scaleX: fromX, y: fromY)
+        
+        let controlPoint = timingFunction(curve)
+        
+        UIViewPropertyAnimator(duration: duration - delay,
+                               controlPoint1: controlPoint[0],
+                               controlPoint2: controlPoint[1]) {
+                                
+                                self.transform = CGAffineTransform(scaleX: toX, y: toY)
+                                
+            }.startAnimation(afterDelay: delay)
+        
+        return self
+    }
+    
 }

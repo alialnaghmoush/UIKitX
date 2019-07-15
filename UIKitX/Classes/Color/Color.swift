@@ -22,4 +22,8 @@ extension UIColor {
         return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
     }
     
+    public static func hex(_ set: Hex, alpha: CGFloat? = nil) -> UIColor {
+        return HexColor(set, alpha: alpha)
+    }
+    
 }

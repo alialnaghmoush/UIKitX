@@ -102,7 +102,7 @@ extension UIView {
     }
     
     @discardableResult
-    public func maskedCorners(_ set: CACornerMask, with: UIView...) -> UIView{
+    public func cornerMask(_ set: CACornerMask, with: UIView...) -> UIView{
         layer.maskedCorners = [set]
         with.forEach { (x) in
             x.layer.maskedCorners = [set]

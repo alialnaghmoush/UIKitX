@@ -14,8 +14,12 @@ class LoginController: UIViewController {
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
     // MARK: - Properties
     
+    let theme = Style(darkMode: true)
+    
+    var bTopView = UIView()
     var topView = UIGradient(.sharpBlues)
     var topImage = UIImageView()
+    var switcher = UIButton(type: .system)
     
     var textStack = UIStackView()
     var textOne = UILabel()
@@ -28,20 +32,11 @@ class LoginController: UIViewController {
     var password = UITextField()
     
     var buttonStack = UIStackView()
-    var signin = UIButton(type: .system)
+    var signin = UIButton()
     var forgot = UIButton(type: .system)
     
     var signup = UIButton(type: .system)
     
-    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
-    // MARK: - color
-    
-    let baseColor = UIColor("242B38")
-    let secondColor = UIColor("212630")
-    let secondTextColor = UIColor("ffffff", alpha: 0.34)
-    let borderColor = UIColor("007FFE")
-    let fieldColor = UIColor("ffffff", alpha: 0.05)
-    let buttonColor = UIColor("212630")
     
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
     // MARK: - Status bar
@@ -55,6 +50,7 @@ class LoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         subViewsUI()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,8 +60,31 @@ class LoginController: UIViewController {
     }
     
     private func subViewsUI() {
-        view.addSubviews(topView, textLogin, signup, fieldStack, buttonStack)
+        view.addSubviews(bTopView, topView, textLogin, signup, fieldStack, buttonStack)
         topView.addSubviews(topImage, textStack)
+        view.addSubview(switcher)
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        UIView.animate(withDuration: 0.5) {
+            self.view.endEditing(true)
+        }
+    }
+    
+}
+
+// --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+// MARK: - Extension UITextField
+extension UITextField {
+    
+    public func padding(left: CGFloat = 20, right: CGFloat = 20) {
+        
+        let viewL = UIView(frame: CGRect(x: 0, y: 0, width: left, height: self.bounds.height))
+        let viewR = UIView(frame: CGRect(x: 0, y: 0, width: right, height: self.bounds.height))
+        
+        self.leftView = viewL
+        self.rightView = viewR
+        self.leftViewMode = .always
+        self.rightViewMode = .always
+    }
 }

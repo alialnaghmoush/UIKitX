@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A0A38CC1F04A3BF31A8B0D0 /* Pods_UIKitX_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F3671B2BB8B403B81694F9C /* Pods_UIKitX_Tests.framework */; };
+		4012E81E22BEC52A00245B96 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4012E81D22BEC52A00245B96 /* Theme.swift */; };
 		4056302C22BD937600267175 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4056302B22BD937600267175 /* LoginController.swift */; };
 		4056303422BD942800267175 /* Changa-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4056302D22BD942700267175 /* Changa-Medium.ttf */; };
 		4056303522BD942800267175 /* Changa-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4056302E22BD942700267175 /* Changa-SemiBold.ttf */; };
@@ -17,9 +18,10 @@
 		4056303922BD942800267175 /* Changa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4056303222BD942800267175 /* Changa-Bold.ttf */; };
 		4056303A22BD942800267175 /* Changa-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4056303322BD942800267175 /* Changa-ExtraLight.ttf */; };
 		4056303D22BD949A00267175 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4056303C22BD949A00267175 /* LoginView.swift */; };
+		4057BA8222C21C920042D941 /* DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057BA8122C21C920042D941 /* DarkTheme.swift */; };
+		4057BA8422C21CBC0042D941 /* LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057BA8322C21CBC0042D941 /* LightTheme.swift */; };
 		5094925CD6A9DD797B0B53D9 /* Pods_UIKitX_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6219DB36ED58597328A020B /* Pods_UIKitX_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
@@ -39,6 +41,7 @@
 /* Begin PBXFileReference section */
 		0B5C78B93FF705935A38ABAD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2F3671B2BB8B403B81694F9C /* Pods_UIKitX_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIKitX_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4012E81D22BEC52A00245B96 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		4056302B22BD937600267175 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		4056302D22BD942700267175 /* Changa-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Changa-Medium.ttf"; sourceTree = "<group>"; };
 		4056302E22BD942700267175 /* Changa-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Changa-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -48,11 +51,12 @@
 		4056303222BD942800267175 /* Changa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Changa-Bold.ttf"; sourceTree = "<group>"; };
 		4056303322BD942800267175 /* Changa-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Changa-ExtraLight.ttf"; sourceTree = "<group>"; };
 		4056303C22BD949A00267175 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		4057BA8122C21C920042D941 /* DarkTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTheme.swift; sourceTree = "<group>"; };
+		4057BA8322C21CBC0042D941 /* LightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTheme.swift; sourceTree = "<group>"; };
 		52D74AEAB9DF54BF5FDF9DD3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* UIKitX_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitX_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -101,15 +105,25 @@
 		4056303B22BD943800267175 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				4056303222BD942800267175 /* Changa-Bold.ttf */,
-				4056303122BD942700267175 /* Changa-ExtraBold.ttf */,
 				4056303322BD942800267175 /* Changa-ExtraLight.ttf */,
 				4056303022BD942700267175 /* Changa-Light.ttf */,
-				4056302D22BD942700267175 /* Changa-Medium.ttf */,
 				4056302F22BD942700267175 /* Changa-Regular.ttf */,
+				4056302D22BD942700267175 /* Changa-Medium.ttf */,
 				4056302E22BD942700267175 /* Changa-SemiBold.ttf */,
+				4056303222BD942800267175 /* Changa-Bold.ttf */,
+				4056303122BD942700267175 /* Changa-ExtraBold.ttf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		4057BA8022C21C580042D941 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				4012E81D22BEC52A00245B96 /* Theme.swift */,
+				4057BA8322C21CBC0042D941 /* LightTheme.swift */,
+				4057BA8122C21C920042D941 /* DarkTheme.swift */,
+			);
+			name = Theme;
 			sourceTree = "<group>";
 		};
 		607FACC71AFB9204008FA782 = {
@@ -136,13 +150,11 @@
 		607FACD21AFB9204008FA782 /* Example for UIKitX */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				4056302B22BD937600267175 /* LoginController.swift */,
 				4056303C22BD949A00267175 /* LoginView.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
-				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				4056303B22BD943800267175 /* Fonts */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
@@ -153,6 +165,8 @@
 		607FACD31AFB9204008FA782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4057BA8022C21C580042D941 /* Theme */,
+				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD41AFB9204008FA782 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -378,9 +392,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				4057BA8222C21C920042D941 /* DarkTheme.swift in Sources */,
 				4056302C22BD937600267175 /* LoginController.swift in Sources */,
+				4012E81E22BEC52A00245B96 /* Theme.swift in Sources */,
 				4056303D22BD949A00267175 /* LoginView.swift in Sources */,
+				4057BA8422C21CBC0042D941 /* LightTheme.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

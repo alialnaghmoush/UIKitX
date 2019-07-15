@@ -15,6 +15,7 @@
 		4056302622BD382400267175 /* EasyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4056302522BD382400267175 /* EasyImage.swift */; };
 		4056302822BD5E4100267175 /* EasyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4056302722BD5E4100267175 /* EasyLabel.swift */; };
 		4056302A22BD7AD700267175 /* EasyStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4056302922BD7AD700267175 /* EasyStack.swift */; };
+		4057BA8622C3C1B20042D941 /* Percent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057BA8522C3C1B20042D941 /* Percent.swift */; };
 		40601E3322A42B32004E3E3F /* FlexibleAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40601E3122A42B32004E3E3F /* FlexibleAnchor.swift */; };
 		4068F9E722ADDC2A00475CF9 /* UIGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4068F9E622ADDC2A00475CF9 /* UIGradient.swift */; };
 		406D389422A1651F00A1C39D /* Anchorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406D389222A1651F00A1C39D /* Anchorable.swift */; };
@@ -110,6 +111,7 @@
 		4056302522BD382400267175 /* EasyImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EasyImage.swift; path = UIKitX/Classes/Easy/EasyImage.swift; sourceTree = "<group>"; };
 		4056302722BD5E4100267175 /* EasyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EasyLabel.swift; path = UIKitX/Classes/Easy/EasyLabel.swift; sourceTree = "<group>"; };
 		4056302922BD7AD700267175 /* EasyStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EasyStack.swift; path = UIKitX/Classes/Easy/EasyStack.swift; sourceTree = "<group>"; };
+		4057BA8522C3C1B20042D941 /* Percent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Percent.swift; path = UIKitX/Classes/Helper/Percent.swift; sourceTree = "<group>"; };
 		40601E3122A42B32004E3E3F /* FlexibleAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FlexibleAnchor.swift; path = UIKitX/Classes/Anchor/UtilityAnchor/FlexibleAnchor.swift; sourceTree = "<group>"; };
 		4068F9E622ADDC2A00475CF9 /* UIGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIGradient.swift; path = UIKitX/Classes/XUI/UIGradient.swift; sourceTree = "<group>"; };
 		406D389222A1651F00A1C39D /* Anchorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Anchorable.swift; path = UIKitX/Classes/Anchor/UtilityAnchor/Anchorable.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				408EB3EA229CB01000548216 /* AxesPoint.swift */,
 				40E3E11C229F273000D0F32F /* DegreePoint.swift */,
 				40ECF7BA229A0D1400742016 /* CornerMask.swift */,
+				4057BA8522C3C1B20042D941 /* Percent.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -703,6 +706,7 @@
 				40ECF7E8229A135A00742016 /* ErrorShape.swift in Sources */,
 				40ECF7BB229A0D1400742016 /* CornerMask.swift in Sources */,
 				40601E3322A42B32004E3E3F /* FlexibleAnchor.swift in Sources */,
+				4057BA8622C3C1B20042D941 /* Percent.swift in Sources */,
 				40ECF808229A188500742016 /* Bottom.swift in Sources */,
 				40ECF822229A199F00742016 /* FillVertically.swift in Sources */,
 				4056302622BD382400267175 /* EasyImage.swift in Sources */,

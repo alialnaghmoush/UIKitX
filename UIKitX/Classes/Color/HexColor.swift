@@ -9,10 +9,6 @@ extension HexColor {
         
     convenience public init(_ hex: Hex, alpha: CGFloat? = nil) {
         
-//        guard let hexType = Type(from: hex), let components = hexType.components() else {
-//            return nil
-//        }
-        
         let hexType = Type(from: hex)
         let components = hexType!.components()
         
@@ -24,7 +20,7 @@ extension HexColor {
         var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0, rgb: Int
         getRed(&r, green: &g, blue: &b, alpha: &a)
         
-        if a == 1 { // no alpha value set, we are returning the short version
+        if a == 1 {
             rgb = (Int)(r*255)<<16 | (Int)(g*255)<<8 | (Int)(b*255)<<0
             return String(format: "#%06x", rgb)
         } else {
